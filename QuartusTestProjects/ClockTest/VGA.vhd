@@ -1,4 +1,4 @@
-0LIBRARY ieee;
+LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY VGA IS
@@ -54,7 +54,7 @@ BEGIN
 	
 			IF(h_count < 800 AND v_count < 600) THEN
 				red <= "11111111";
-				blue <= "00000000";
+				blue <= "10000000";
 				green <= "00000000";
 			ELSE
 				red <= "00000000";

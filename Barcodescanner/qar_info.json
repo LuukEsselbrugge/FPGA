@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/luuk/FPGA/QuartusTestProjects/barcodescanner/",
+	"acds_version" : "Version 18.1.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 19.10",
+	"qpf" : "barcodescanner.qpf"
+}

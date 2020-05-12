@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "blue[7]",
+					"strict" : false
+				},
+				{
 					"name" : "red[7]",
 					"strict" : false
 				},

@@ -1,0 +1,8 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package types is 
+  subtype BYTE_T            is std_logic_vector(7 downto 0);
+  type    BYTE_A            is array (natural range <>) of BYTE_T;
+  type    my_bus_array_type is array (0 to 3) of BYTE_T;
+end package types;

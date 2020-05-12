@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ClockTest
-Mon May 11 13:44:27 2020
-Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
+Tue May 12 12:51:20 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -26,9 +26,9 @@ Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -38,23 +38,22 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 11 13:44:27 2020       ;
-; Quartus Prime Version              ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue May 12 12:51:20 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ClockTest                                   ;
 ; Top-level Entity Name              ; ClockTest                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 111                                         ;
+; Total logic elements               ; 112                                         ;
 ;     Total combinational functions  ; 104                                         ;
-;     Dedicated logic registers      ; 58                                          ;
-; Total registers                    ; 58                                          ;
+;     Dedicated logic registers      ; 59                                          ;
+; Total registers                    ; 59                                          ;
 ; Total pins                         ; 31                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -154,27 +153,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
-; ClockTest.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/ClockTest.bdf ;         ;
-; Clock.vhd                        ; yes             ; User VHDL File                     ; C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/Clock.vhd     ;         ;
-; VGA.vhd                          ; yes             ; User VHDL File                     ; C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/VGA.vhd       ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; ClockTest.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/luuk/FPGA/QuartusTestProjects/ClockTest/ClockTest.bdf ;         ;
+; Clock.vhd                        ; yes             ; User VHDL File                     ; /home/luuk/FPGA/QuartusTestProjects/ClockTest/Clock.vhd     ;         ;
+; VGA.vhd                          ; yes             ; User VHDL File                     ; /home/luuk/FPGA/QuartusTestProjects/ClockTest/VGA.vhd       ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -182,7 +181,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 111           ;
+; Estimated Total logic elements              ; 112           ;
 ;                                             ;               ;
 ; Total combinational functions               ; 104           ;
 ; Logic element usage by number of LUT inputs ;               ;
@@ -194,8 +193,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- normal mode                          ; 60            ;
 ;     -- arithmetic mode                      ; 44            ;
 ;                                             ;               ;
-; Total registers                             ; 58            ;
-;     -- Dedicated logic registers            ; 58            ;
+; Total registers                             ; 59            ;
+;     -- Dedicated logic registers            ; 59            ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 31            ;
@@ -203,8 +202,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clockIN~input ;
-; Maximum fan-out                             ; 59            ;
-; Total fan-out                               ; 485           ;
+; Maximum fan-out                             ; 60            ;
+; Total fan-out                               ; 488           ;
 ; Average fan-out                             ; 2.17          ;
 +---------------------------------------------+---------------+
 
@@ -214,9 +213,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; |ClockTest                 ; 104 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |ClockTest             ; ClockTest   ; work         ;
+; |ClockTest                 ; 104 (0)             ; 59 (0)                    ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |ClockTest             ; ClockTest   ; work         ;
 ;    |CLOCK:inst4|           ; 42 (42)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ClockTest|CLOCK:inst4 ; CLOCK       ; work         ;
-;    |VGA:inst|              ; 62 (62)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ClockTest|VGA:inst    ; VGA         ; work         ;
+;    |VGA:inst|              ; 62 (62)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ClockTest|VGA:inst    ; VGA         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -227,8 +226,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
 ; VGA:inst|green[0..7]                   ; Stuck at GND due to stuck port data_in ;
-; VGA:inst|blue[0..7]                    ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 16 ;                                        ;
+; VGA:inst|blue[0..6]                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 15 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -237,7 +236,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
+; Total registers                              ; 59    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 27    ;
@@ -272,9 +271,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 31                          ;
-; cycloneiii_ff         ; 58                          ;
+; cycloneiii_ff         ; 59                          ;
 ;     CLR               ; 27                          ;
-;     plain             ; 31                          ;
+;     plain             ; 32                          ;
 ; cycloneiii_lcell_comb ; 106                         ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 43                          ;
@@ -287,7 +286,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 40                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.98                        ;
+; Average LUT depth     ; 3.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,7 +295,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -305,30 +304,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Mon May 11 13:44:11 2020
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue May 12 12:51:07 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ClockTest -c ClockTest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file clocktest.bdf
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ClockTest.bdf
     Info (12023): Found entity 1: ClockTest
-Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: CLOCK-ClockFunction File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/Clock.vhd Line: 13
-    Info (12023): Found entity 1: CLOCK File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/Clock.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
-    Info (12022): Found design unit 1: VGA-behavior File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/VGA.vhd Line: 17
-    Info (12023): Found entity 1: VGA File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/VGA.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file clockconvertervhd.vhd
-    Info (12022): Found design unit 1: ClockConverter-converter File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/ClockConvertervhd.vhd Line: 10
-    Info (12023): Found entity 1: ClockConverter File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/ClockConvertervhd.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Clock.vhd
+    Info (12022): Found design unit 1: CLOCK-ClockFunction File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/Clock.vhd Line: 13
+    Info (12023): Found entity 1: CLOCK File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/Clock.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file VGA.vhd
+    Info (12022): Found design unit 1: VGA-behavior File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/VGA.vhd Line: 17
+    Info (12023): Found entity 1: VGA File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/VGA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ClockConvertervhd.vhd
+    Info (12022): Found design unit 1: ClockConverter-converter File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/ClockConvertervhd.vhd Line: 10
+    Info (12023): Found entity 1: ClockConverter File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/ClockConvertervhd.vhd Line: 4
 Info (12127): Elaborating entity "ClockTest" for the top level hierarchy
 Info (12128): Elaborating entity "CLOCK" for hierarchy "CLOCK:inst4"
-Warning (10542): VHDL Variable Declaration warning at Clock.vhd(16): used initial value expression for variable "clockSecs" because variable was never assigned a value File: C:/Users/stefa/OneDrive/Documenten/Stenden/Jaar 3/Periode 4/FPGA/ClockTest/Clock.vhd Line: 16
+Warning (10542): VHDL Variable Declaration warning at Clock.vhd(16): used initial value expression for variable "clockSecs" because variable was never assigned a value File: /home/luuk/FPGA/QuartusTestProjects/ClockTest/Clock.vhd Line: 16
 Info (12128): Elaborating entity "VGA" for hierarchy "VGA:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blank" is stuck at VCC
     Warning (13410): Pin "sync" is stuck at GND
-    Warning (13410): Pin "blue[7]" is stuck at GND
     Warning (13410): Pin "blue[6]" is stuck at GND
     Warning (13410): Pin "blue[5]" is stuck at GND
     Warning (13410): Pin "blue[4]" is stuck at GND
@@ -347,14 +345,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 124 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Mon May 11 13:44:27 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:31
+    Info (21061): Implemented 125 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 947 megabytes
+    Info: Processing ended: Tue May 12 12:51:20 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
 
 
