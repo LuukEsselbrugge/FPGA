@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'barcodescanner_nios'
 # SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
 #
-# Generated: Tue May 12 22:45:54 CEST 2020
+# Generated: Thu May 14 21:20:26 CEST 2020
 
 # DO NOT MODIFY THIS FILE
 #
@@ -46,8 +46,8 @@
 # The cache attribute is specified which improves GDB performance
 # by allowing GDB to cache memory contents on the host.
 
-# onchip_memory2_1
-memory 0x0 0x9c4 cache
+# VideoRAM
+memory 0x0 0x2710 cache
 
 # onchip_memory2_0
-memory 0x2000 0x3000 cache
+memory 0x5000 0x6000 cache

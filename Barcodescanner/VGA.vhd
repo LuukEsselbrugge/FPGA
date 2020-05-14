@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 ENTITY VGA IS
 	PORT(
 		clock				:	IN		STD_LOGIC;
-		video_data	:	IN		STD_LOGIC_VECTOR(7 DOWNTO 0);
+		video_data	:	IN		STD_LOGIC_VECTOR(31 DOWNTO 0);
 		red				:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
 		blue				:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
 		green				:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -27,7 +27,7 @@ BEGIN
 	PROCESS(clock)
 		VARIABLE h_count	:	INTEGER RANGE 0 TO h_pixels - 1 := 0;
 		VARIABLE v_count	:	INTEGER RANGE 0 TO v_pixels - 1 := 0;
-		--VARIABLE total_count	:	INTEGER RANGE 0 TO 50*50 := 0;
+		--VARIABLE total_count	:	INTEGER RANGE 0 TO 50 := 0;
 	BEGIN
 		IF(clock'EVENT AND clock = '1') THEN
 			-- counters
@@ -66,15 +66,17 @@ BEGIN
 				blue <= "00000000";
 				green <= "00000000";
 			END IF;
-	
+			
+			
 			IF(h_count < 50 AND v_count < 50) THEN
 				--change pixel read adress
-				video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count, video_adress'length));
-			
-				red <= video_data;
-				blue <= video_data;
-				green <= video_data;
+				video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count+50*v_count, video_adress'length));
+				red <= video_data(7 downto 0);
+				blue <= video_data(15 downto 8);
+				green <= video_data(23 downto 16);
 			END IF;
+	
+			
 		END IF;
 	END PROCESS;
 END behavior;

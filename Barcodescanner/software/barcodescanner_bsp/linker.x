@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'barcodescanner_nios'
  * SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
  *
- * Generated: Tue May 12 22:45:54 CEST 2020
+ * Generated: Thu May 14 21:20:26 CEST 2020
  */
 
 /*
@@ -50,14 +50,14 @@
 
 MEMORY
 {
-    onchip_memory2_1 : ORIGIN = 0x0, LENGTH = 2500
-    reset : ORIGIN = 0x2000, LENGTH = 32
-    onchip_memory2_0 : ORIGIN = 0x2020, LENGTH = 4064
+    VideoRAM : ORIGIN = 0x0, LENGTH = 10000
+    reset : ORIGIN = 0x5000, LENGTH = 32
+    onchip_memory2_0 : ORIGIN = 0x5020, LENGTH = 4064
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_onchip_memory2_1 = 0x0;
-__alt_mem_onchip_memory2_0 = 0x2000;
+__alt_mem_VideoRAM = 0x0;
+__alt_mem_onchip_memory2_0 = 0x5000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -309,15 +309,15 @@ SECTIONS
      *
      */
 
-    .onchip_memory2_1 : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .VideoRAM : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
-        PROVIDE (_alt_partition_onchip_memory2_1_start = ABSOLUTE(.));
-        *(.onchip_memory2_1 .onchip_memory2_1. onchip_memory2_1.*)
+        PROVIDE (_alt_partition_VideoRAM_start = ABSOLUTE(.));
+        *(.VideoRAM .VideoRAM. VideoRAM.*)
         . = ALIGN(4);
-        PROVIDE (_alt_partition_onchip_memory2_1_end = ABSOLUTE(.));
-    } > onchip_memory2_1
+        PROVIDE (_alt_partition_VideoRAM_end = ABSOLUTE(.));
+    } > VideoRAM
 
-    PROVIDE (_alt_partition_onchip_memory2_1_load_addr = LOADADDR(.onchip_memory2_1));
+    PROVIDE (_alt_partition_VideoRAM_load_addr = LOADADDR(.VideoRAM));
 
     /*
      *
@@ -326,7 +326,7 @@ SECTIONS
      *
      */
 
-    .onchip_memory2_0 LOADADDR (.onchip_memory2_1) + SIZEOF (.onchip_memory2_1) : AT ( LOADADDR (.onchip_memory2_1) + SIZEOF (.onchip_memory2_1) )
+    .onchip_memory2_0 LOADADDR (.VideoRAM) + SIZEOF (.VideoRAM) : AT ( LOADADDR (.VideoRAM) + SIZEOF (.VideoRAM) )
     {
         PROVIDE (_alt_partition_onchip_memory2_0_start = ABSOLUTE(.));
         *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
@@ -386,7 +386,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x3000;
+__alt_data_end = 0x6000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -402,4 +402,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x3000 );
+PROVIDE( __alt_heap_limit    = 0x6000 );

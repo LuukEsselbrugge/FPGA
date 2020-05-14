@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 12, 2020 11:16:02 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1589318162897</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 14, 2020 9:20:25 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1589484025420</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/luuk/FPGA/Barcodescanner/software/barcodescanner_bsp</BspGeneratedLocation>
         <BspSettingsFile>/home/luuk/FPGA/Barcodescanner/software/barcodescanner_bsp/settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../barcodescanner_nios.sopcinfo</SopcDesignFile>
@@ -899,32 +899,32 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>onchip_memory2_1</slaveDescriptor>
-                <addressRange>0x00000000 - 0x000009C3</addressRange>
-                <addressSpan>2500</addressSpan>
+                <slaveDescriptor>VideoRAM</slaveDescriptor>
+                <addressRange>0x00000000 - 0x0000270F</addressRange>
+                <addressSpan>10000</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>onchip_memory2_0</slaveDescriptor>
-                <addressRange>0x00002000 - 0x00002FFF</addressRange>
+                <addressRange>0x00005000 - 0x00005FFF</addressRange>
                 <addressSpan>4096</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x00004000 - 0x0000400F</addressRange>
+                <addressRange>0x00007000 - 0x0000700F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>leds</slaveDescriptor>
-                <addressRange>0x00004010 - 0x0000401F</addressRange>
+                <addressRange>0x00007010 - 0x0000701F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00004020 - 0x00004027</addressRange>
+                <addressRange>0x00007020 - 0x00007027</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
