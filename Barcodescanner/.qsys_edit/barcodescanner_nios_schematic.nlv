@@ -1,23 +1,29 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst barcodescanner_nios.onchip_memory2_0 -pg 1 -lvl 2 -y 150
-preplace inst barcodescanner_nios.switches -pg 1 -lvl 2 -y 420
-preplace inst barcodescanner_nios.clk_0 -pg 1 -lvl 2 -y 540
-preplace inst barcodescanner_nios.nios2_gen2_0.cpu -pg 1
-preplace inst barcodescanner_nios.nios2_gen2_0.reset_bridge -pg 1
-preplace inst barcodescanner_nios.nios2_gen2_0.clock_bridge -pg 1
-preplace inst barcodescanner_nios.nios2_gen2_0 -pg 1 -lvl 1 -y 70
-preplace inst barcodescanner_nios.VideoRAM -pg 1 -lvl 3 -y 300
-preplace inst barcodescanner_nios.leds -pg 1 -lvl 2 -y 240
-preplace inst barcodescanner_nios.jtag_uart_0 -pg 1 -lvl 2 -y 50
+preplace inst barcodescanner_nios.eth_tse.i_tse_mac -pg 1
+preplace inst barcodescanner_nios.sys_clk -pg 1 -lvl 1 -y 420
+preplace inst barcodescanner_nios.nios2 -pg 1 -lvl 6 -y 400
+preplace inst barcodescanner_nios.onchip_memory -pg 1 -lvl 7 -y 610
+preplace inst barcodescanner_nios.sgdma_tx -pg 1 -lvl 7 -y 150
+preplace inst barcodescanner_nios.descriptor_memory -pg 1 -lvl 7 -y 700
+preplace inst barcodescanner_nios.jtag_uart -pg 1 -lvl 7 -y 310
+preplace inst barcodescanner_nios.VideoRAM -pg 1 -lvl 7 -y 30
+preplace inst barcodescanner_nios.eth_tse -pg 1 -lvl 7 -y 810
+preplace inst barcodescanner_nios.sgdma_rx -pg 1 -lvl 11 -y 510
 preplace inst barcodescanner_nios -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)switches.external_connection,(SLAVE)barcodescanner_nios.switches_external_connection) 1 0 2 NJ 450 NJ
-preplace netloc INTERCONNECT<net_container>barcodescanner_nios</net_container>(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)jtag_uart_0.reset,(SLAVE)clk_0.clk_in_reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)leds.reset,(SLAVE)VideoRAM.reset1,(SLAVE)switches.reset,(SLAVE)nios2_gen2_0.reset) 1 0 3 230 230 590 410 930
-preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 550 NJ
-preplace netloc FAN_OUT<net_container>barcodescanner_nios</net_container>(SLAVE)leds.clk,(MASTER)clk_0.clk,(SLAVE)switches.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)VideoRAM.clk1,(SLAVE)jtag_uart_0.clk) 1 0 3 210 30 650 390 910
-preplace netloc INTERCONNECT<net_container>barcodescanner_nios</net_container>(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)leds.s1,(SLAVE)switches.s1,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)VideoRAM.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)nios2_gen2_0.debug_mem_slave) 1 0 3 210 210 610 350 N
-preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.videoram,(SLAVE)VideoRAM.s2) 1 0 3 NJ 370 NJ 370 NJ
-preplace netloc POINT_TO_POINT<net_container>barcodescanner_nios</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 1 1 630
-preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.leds_external_connection,(SLAVE)leds.external_connection) 1 0 2 NJ 270 NJ
-levelinfo -pg 1 0 180 1150
-levelinfo -hier barcodescanner_nios 190 350 740 1060 1140
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)eth_tse.mac_rgmii_connection,(SLAVE)barcodescanner_nios.eth_tse_mac_rgmii_connection) 1 0 7 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ
+preplace netloc INTERCONNECT<net_container>barcodescanner_nios</net_container>(MASTER)sgdma_rx.descriptor_read,(MASTER)sgdma_rx.m_write,(MASTER)sgdma_tx.descriptor_read,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sgdma_rx.csr,(MASTER)sgdma_rx.descriptor_write,(MASTER)nios2.data_master,(MASTER)sgdma_tx.descriptor_write,(MASTER)nios2.instruction_master,(SLAVE)onchip_memory.s1,(MASTER)sgdma_tx.m_read,(SLAVE)eth_tse.control_port,(SLAVE)sgdma_tx.csr,(SLAVE)descriptor_memory.s1,(SLAVE)VideoRAM.s1,(SLAVE)nios2.jtag_debug_module) 1 5 7 1900 550 2270 140 2710 200 NJ 200 NJ 200 2870 500 3090
+preplace netloc POINT_TO_POINT<net_container>barcodescanner_nios</net_container>(SLAVE)sgdma_rx.in,(MASTER)eth_tse.receive) 1 7 4 NJ 580 NJ 580 NJ 580 NJ
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)sys_clk.clk_in,(SLAVE)barcodescanner_nios.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.reset,(SLAVE)sys_clk.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>barcodescanner_nios</net_container>(SLAVE)sgdma_rx.csr_irq,(SLAVE)sgdma_tx.csr_irq,(SLAVE)jtag_uart.irq,(MASTER)nios2.d_irq) 1 6 5 2330 430 NJ 430 NJ 430 NJ 430 2850
+preplace netloc FAN_OUT<net_container>barcodescanner_nios</net_container>(SLAVE)sgdma_tx.clk,(SLAVE)eth_tse.receive_clock_connection,(SLAVE)nios2.clk,(MASTER)sys_clk.clk,(SLAVE)descriptor_memory.clk1,(SLAVE)VideoRAM.clk1,(SLAVE)eth_tse.transmit_clock_connection,(SLAVE)sgdma_rx.clk,(SLAVE)eth_tse.control_port_clock_connection,(SLAVE)onchip_memory.clk1,(SLAVE)jtag_uart.clk) 1 1 10 NJ 430 NJ 430 NJ 430 NJ 430 1880 530 2290 560 NJ 560 NJ 560 NJ 560 2830
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.videoram,(SLAVE)VideoRAM.s2) 1 0 7 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)eth_tse.pcs_mac_tx_clock_connection,(SLAVE)barcodescanner_nios.eth_tse_pcs_mac_tx_clock_connection) 1 0 7 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)eth_tse.pcs_mac_rx_clock_connection,(SLAVE)barcodescanner_nios.eth_tse_pcs_mac_rx_clock_connection) 1 0 7 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)barcodescanner_nios.eth_tse_mac_mdio_connection,(SLAVE)eth_tse.mac_mdio_connection) 1 0 7 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ
+preplace netloc POINT_TO_POINT<net_container>barcodescanner_nios</net_container>(SLAVE)eth_tse.transmit,(MASTER)sgdma_tx.out) 1 6 2 2330 600 2710
+preplace netloc EXPORT<net_container>barcodescanner_nios</net_container>(SLAVE)eth_tse.mac_status_connection,(SLAVE)barcodescanner_nios.eth_tse_mac_status_connection) 1 0 7 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ
+preplace netloc INTERCONNECT<net_container>barcodescanner_nios</net_container>(SLAVE)jtag_uart.reset,(SLAVE)sgdma_rx.reset,(SLAVE)sgdma_tx.reset,(SLAVE)descriptor_memory.reset1,(SLAVE)VideoRAM.reset1,(SLAVE)eth_tse.reset_connection,(SLAVE)onchip_memory.reset1,(SLAVE)nios2.reset_n,(MASTER)nios2.jtag_debug_module_reset,(MASTER)sys_clk.clk_reset) 1 1 10 NJ 450 NJ 450 NJ 450 NJ 450 1860 570 2310 540 NJ 540 NJ 540 NJ 540 2810
+levelinfo -pg 1 0 200 3130
+levelinfo -hier barcodescanner_nios 210 240 690 1060 1600 1840 2050 2550 2750 2770 2790 2900 3110
