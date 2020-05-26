@@ -5,8 +5,8 @@
 #include "sys/alt_stdio.h"
 #include "sys/alt_irq.h"
 #include <unistd.h>
-
 #include "network.h"
+
 
 
 // Function Prototypes
@@ -19,8 +19,8 @@ unsigned int text_length;
 unsigned char tx_frame[1024] = {
 	0x00,0x00, 						// for 32-bit alignment
 	0xFF,0xFF,0xFF,0xFF,0xFF,0xFF, 	// destination address (broadcast)
-	0x01,0x60,0x6E,0x11,0x02,0x0F, 	// source address
-	0x00,0x2E, 						// length or type of the payload data
+	0x69,0x69,0x69,0x69,0x69,0xAA, 	// source address
+	0x69,0x69, 						// length or type of the payload data
 	'\0' 							// payload data (ended with termination character)
 };
 
@@ -86,38 +86,59 @@ void setup(void)
 	while ( *(tse + 0xA0) & 0x8000  )
 		;
 
-	// Enable read and write transfers, gigabit Ethernet operation, and CRC forwarding
-	*(tse + 2) = *(tse + 2) | 0x00000043;
+	// Enable read and write transfers, 100 mbit Ethernet operation, and CRC forwarding
+	//*(tse + 2) = *(tse + 2) | 0x00000043;
 
-	// Create transmit sgdma descriptor
-	alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
-	// Set up non-blocking transfer of sgdma transmit descriptor
-	alt_avalon_sgdma_do_async_transfer( sgdma_tx_dev, &tx_descriptor );
-	// Wait until transmit descriptor transfer is complete
-	while (alt_avalon_sgdma_check_descriptor_status(&tx_descriptor) != 0);
+	// Enable read and write transfers, gigabit Ethernet operation, and CRC forwarding
+	*(tse + 2) = *(tse + 2) | 0x0000004B;
 }
 
 void refresh_ethernet(){
 	// Create transmit sgdma descriptor
-	alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
+	//alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
+
+	// Set up non-blocking transfer of sgdma transmit descriptor
+	//alt_avalon_sgdma_do_async_transfer( sgdma_tx_dev, &tx_descriptor );
+
+	// Wait until transmit descriptor transfer is complete
+	//while (alt_avalon_sgdma_check_descriptor_status(&tx_descriptor) != 0)
+
 }
 
 void rx_ethernet_isr (void *context)
 {
-	// Wait until receive descriptor transfer is complete
-	while (alt_avalon_sgdma_check_descriptor_status(&rx_descriptor) != 0);
+	int i;
 
-	// Output received text
-	alt_printf( " %s\n", rx_frame + 44);
+		// Wait until receive descriptor transfer is complete
+		while (alt_avalon_sgdma_check_descriptor_status(&rx_descriptor) != 0)
+			;
 
-	// Create new receive sgdma descriptor
-	alt_avalon_sgdma_construct_stream_to_mem_desc( &rx_descriptor, &rx_descriptor_end, (alt_u32 *)rx_frame, 0, 0 );
-	// Set up non-blocking transfer of sgdma receive descriptor
-	alt_avalon_sgdma_do_async_transfer( sgdma_rx_dev, &rx_descriptor );
+		// Clear input line before writing
+		for (i = 0; i < (6 + text_length); i++) {
+			alt_printf( "%c", 0x08 );		 // 0x08 --> backspace
+		}
+		//alt_printf( "got: %s\n", rx_frame + 16);
+		if(rx_frame[2] == 0x69){
+
+			callback(rx_frame);
+		}
+
+		alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
+		// Create new receive sgdma descriptor
+		alt_avalon_sgdma_construct_stream_to_mem_desc( &rx_descriptor, &rx_descriptor_end, (alt_u32 *)rx_frame, 0, 0 );
+
+
+		// Set up non-blocking transfer of sgdma receive descriptor
+		alt_avalon_sgdma_do_async_transfer( sgdma_rx_dev, &rx_descriptor );
+
+		// Output received text
+			for(int x = 0; x < 1024; x++){
+						rx_frame[x] = 0;
+			}
 }
 
 void tx_ethernet_isr(char *chars){
-			for(int x = 0; x < 6; x++){
+			for(int x = 0; x < strlen(chars); x++){
 				tx_frame[16 + x] = chars[x];
 			}
 			// Create transmit sgdma descriptor
