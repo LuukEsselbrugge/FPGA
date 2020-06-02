@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
  * SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
  *
- * Generated: Mon May 25 13:01:27 CEST 2020
+ * Generated: Mon Jun 01 13:14:03 CEST 2020
  */
 
 /*
@@ -65,11 +65,11 @@
  *
  */
 
-#define DESCRIPTOR_MEMORY_REGION_BASE 0x100000
+#define DESCRIPTOR_MEMORY_REGION_BASE 0x8000
 #define DESCRIPTOR_MEMORY_REGION_SPAN 4096
-#define ONCHIP_MEMORY_REGION_BASE 0x80020
+#define ONCHIP_MEMORY_REGION_BASE 0x180020
 #define ONCHIP_MEMORY_REGION_SPAN 307168
-#define RESET_REGION_BASE 0x80000
+#define RESET_REGION_BASE 0x180000
 #define RESET_REGION_SPAN 32
 #define VIDEORAM_REGION_BASE 0x0
 #define VIDEORAM_REGION_SPAN 10000

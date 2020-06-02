@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
  * SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
  *
- * Generated: Fri May 22 16:04:30 CEST 2020
+ * Generated: Fri May 29 12:05:55 CEST 2020
  */
 
 /*
@@ -58,7 +58,7 @@
  * Device headers
  */
 
-#include "altera_nios2_qsys_irq.h"
+#include "altera_nios2_gen2_irq.h"
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_sgdma.h"
 #include "altera_eth_tse.h"
@@ -67,7 +67,7 @@
  * Allocate the device storage
  */
 
-ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( NIOS2, nios2);
+ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS2, nios2);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_SGDMA_INSTANCE ( SGDMA_RX, sgdma_rx);
 ALTERA_AVALON_SGDMA_INSTANCE ( SGDMA_TX, sgdma_tx);
@@ -83,7 +83,7 @@ ALTERA_ETH_TSE_INSTANCE ( ETH_TSE, eth_tse);
 
 void alt_irq_init ( const void* base )
 {
-    ALTERA_NIOS2_QSYS_IRQ_INIT ( NIOS2, nios2);
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2, nios2);
     alt_irq_cpu_enable_interrupts();
 }
 

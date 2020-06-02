@@ -20,6 +20,7 @@ module barcodescanner_nios (
 		input  wire        eth_tse_pcs_mac_rx_clock_connection_clk, // eth_tse_pcs_mac_rx_clock_connection.clk
 		input  wire        eth_tse_pcs_mac_tx_clock_connection_clk, // eth_tse_pcs_mac_tx_clock_connection.clk
 		input  wire        reset_reset_n,                           //                               reset.reset_n
+		input  wire [7:0]  switches_export,                         //                            switches.export
 		input  wire [11:0] videoram_address,                        //                            videoram.address
 		input  wire        videoram_chipselect,                     //                                    .chipselect
 		input  wire        videoram_clken,                          //                                    .clken
@@ -38,7 +39,7 @@ module barcodescanner_nios (
 	wire   [1:0] sgdma_tx_out_empty;                                        // sgdma_tx:out_empty -> eth_tse:ff_tx_mod
 	wire  [31:0] nios2_data_master_readdata;                                // mm_interconnect_0:nios2_data_master_readdata -> nios2:d_readdata
 	wire         nios2_data_master_waitrequest;                             // mm_interconnect_0:nios2_data_master_waitrequest -> nios2:d_waitrequest
-	wire         nios2_data_master_debugaccess;                             // nios2:jtag_debug_module_debugaccess_to_roms -> mm_interconnect_0:nios2_data_master_debugaccess
+	wire         nios2_data_master_debugaccess;                             // nios2:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_data_master_debugaccess
 	wire  [20:0] nios2_data_master_address;                                 // nios2:d_address -> mm_interconnect_0:nios2_data_master_address
 	wire   [3:0] nios2_data_master_byteenable;                              // nios2:d_byteenable -> mm_interconnect_0:nios2_data_master_byteenable
 	wire         nios2_data_master_read;                                    // nios2:d_read -> mm_interconnect_0:nios2_data_master_read
@@ -66,7 +67,6 @@ module barcodescanner_nios (
 	wire         nios2_instruction_master_waitrequest;                      // mm_interconnect_0:nios2_instruction_master_waitrequest -> nios2:i_waitrequest
 	wire  [20:0] nios2_instruction_master_address;                          // nios2:i_address -> mm_interconnect_0:nios2_instruction_master_address
 	wire         nios2_instruction_master_read;                             // nios2:i_read -> mm_interconnect_0:nios2_instruction_master_read
-	wire         nios2_instruction_master_readdatavalid;                    // mm_interconnect_0:nios2_instruction_master_readdatavalid -> nios2:i_readdatavalid
 	wire  [31:0] sgdma_tx_m_read_readdata;                                  // mm_interconnect_0:sgdma_tx_m_read_readdata -> sgdma_tx:m_read_readdata
 	wire         sgdma_tx_m_read_waitrequest;                               // mm_interconnect_0:sgdma_tx_m_read_waitrequest -> sgdma_tx:m_read_waitrequest
 	wire  [31:0] sgdma_tx_m_read_address;                                   // sgdma_tx:m_read_address -> mm_interconnect_0:sgdma_tx_m_read_address
@@ -102,14 +102,14 @@ module barcodescanner_nios (
 	wire         mm_interconnect_0_sgdma_tx_csr_read;                       // mm_interconnect_0:sgdma_tx_csr_read -> sgdma_tx:csr_read
 	wire         mm_interconnect_0_sgdma_tx_csr_write;                      // mm_interconnect_0:sgdma_tx_csr_write -> sgdma_tx:csr_write
 	wire  [31:0] mm_interconnect_0_sgdma_tx_csr_writedata;                  // mm_interconnect_0:sgdma_tx_csr_writedata -> sgdma_tx:csr_writedata
-	wire  [31:0] mm_interconnect_0_nios2_jtag_debug_module_readdata;        // nios2:jtag_debug_module_readdata -> mm_interconnect_0:nios2_jtag_debug_module_readdata
-	wire         mm_interconnect_0_nios2_jtag_debug_module_waitrequest;     // nios2:jtag_debug_module_waitrequest -> mm_interconnect_0:nios2_jtag_debug_module_waitrequest
-	wire         mm_interconnect_0_nios2_jtag_debug_module_debugaccess;     // mm_interconnect_0:nios2_jtag_debug_module_debugaccess -> nios2:jtag_debug_module_debugaccess
-	wire   [8:0] mm_interconnect_0_nios2_jtag_debug_module_address;         // mm_interconnect_0:nios2_jtag_debug_module_address -> nios2:jtag_debug_module_address
-	wire         mm_interconnect_0_nios2_jtag_debug_module_read;            // mm_interconnect_0:nios2_jtag_debug_module_read -> nios2:jtag_debug_module_read
-	wire   [3:0] mm_interconnect_0_nios2_jtag_debug_module_byteenable;      // mm_interconnect_0:nios2_jtag_debug_module_byteenable -> nios2:jtag_debug_module_byteenable
-	wire         mm_interconnect_0_nios2_jtag_debug_module_write;           // mm_interconnect_0:nios2_jtag_debug_module_write -> nios2:jtag_debug_module_write
-	wire  [31:0] mm_interconnect_0_nios2_jtag_debug_module_writedata;       // mm_interconnect_0:nios2_jtag_debug_module_writedata -> nios2:jtag_debug_module_writedata
+	wire  [31:0] mm_interconnect_0_nios2_debug_mem_slave_readdata;          // nios2:debug_mem_slave_readdata -> mm_interconnect_0:nios2_debug_mem_slave_readdata
+	wire         mm_interconnect_0_nios2_debug_mem_slave_waitrequest;       // nios2:debug_mem_slave_waitrequest -> mm_interconnect_0:nios2_debug_mem_slave_waitrequest
+	wire         mm_interconnect_0_nios2_debug_mem_slave_debugaccess;       // mm_interconnect_0:nios2_debug_mem_slave_debugaccess -> nios2:debug_mem_slave_debugaccess
+	wire   [8:0] mm_interconnect_0_nios2_debug_mem_slave_address;           // mm_interconnect_0:nios2_debug_mem_slave_address -> nios2:debug_mem_slave_address
+	wire         mm_interconnect_0_nios2_debug_mem_slave_read;              // mm_interconnect_0:nios2_debug_mem_slave_read -> nios2:debug_mem_slave_read
+	wire   [3:0] mm_interconnect_0_nios2_debug_mem_slave_byteenable;        // mm_interconnect_0:nios2_debug_mem_slave_byteenable -> nios2:debug_mem_slave_byteenable
+	wire         mm_interconnect_0_nios2_debug_mem_slave_write;             // mm_interconnect_0:nios2_debug_mem_slave_write -> nios2:debug_mem_slave_write
+	wire  [31:0] mm_interconnect_0_nios2_debug_mem_slave_writedata;         // mm_interconnect_0:nios2_debug_mem_slave_writedata -> nios2:debug_mem_slave_writedata
 	wire         mm_interconnect_0_onchip_memory_s1_chipselect;             // mm_interconnect_0:onchip_memory_s1_chipselect -> onchip_memory:chipselect
 	wire  [31:0] mm_interconnect_0_onchip_memory_s1_readdata;               // onchip_memory:readdata -> mm_interconnect_0:onchip_memory_s1_readdata
 	wire  [16:0] mm_interconnect_0_onchip_memory_s1_address;                // mm_interconnect_0:onchip_memory_s1_address -> onchip_memory:address
@@ -131,10 +131,12 @@ module barcodescanner_nios (
 	wire         mm_interconnect_0_videoram_s1_write;                       // mm_interconnect_0:VideoRAM_s1_write -> VideoRAM:write
 	wire  [31:0] mm_interconnect_0_videoram_s1_writedata;                   // mm_interconnect_0:VideoRAM_s1_writedata -> VideoRAM:writedata
 	wire         mm_interconnect_0_videoram_s1_clken;                       // mm_interconnect_0:VideoRAM_s1_clken -> VideoRAM:clken
+	wire  [31:0] mm_interconnect_0_pio_0_s1_readdata;                       // pio_0:readdata -> mm_interconnect_0:pio_0_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_0_s1_address;                        // mm_interconnect_0:pio_0_s1_address -> pio_0:address
 	wire         irq_mapper_receiver0_irq;                                  // sgdma_rx:csr_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                  // sgdma_tx:csr_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                  // jtag_uart:av_irq -> irq_mapper:receiver2_irq
-	wire  [31:0] nios2_d_irq_irq;                                           // irq_mapper:sender_irq -> nios2:d_irq
+	wire  [31:0] nios2_irq_irq;                                             // irq_mapper:sender_irq -> nios2:irq
 	wire         eth_tse_receive_valid;                                     // eth_tse:ff_rx_dval -> avalon_st_adapter:in_0_valid
 	wire  [31:0] eth_tse_receive_data;                                      // eth_tse:ff_rx_data -> avalon_st_adapter:in_0_data
 	wire         eth_tse_receive_ready;                                     // avalon_st_adapter:in_0_ready -> eth_tse:ff_rx_rdy
@@ -149,9 +151,9 @@ module barcodescanner_nios (
 	wire         avalon_st_adapter_out_0_endofpacket;                       // avalon_st_adapter:out_0_endofpacket -> sgdma_rx:in_endofpacket
 	wire   [5:0] avalon_st_adapter_out_0_error;                             // avalon_st_adapter:out_0_error -> sgdma_rx:in_error
 	wire   [1:0] avalon_st_adapter_out_0_empty;                             // avalon_st_adapter:out_0_empty -> sgdma_rx:in_empty
-	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [VideoRAM:reset, avalon_st_adapter:in_rst_0_reset, descriptor_memory:reset, eth_tse:reset, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:nios2_reset_n_reset_bridge_in_reset_reset, nios2:reset_n, onchip_memory:reset, rst_translator:in_reset, sgdma_rx:system_reset_n, sgdma_tx:system_reset_n]
+	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [VideoRAM:reset, avalon_st_adapter:in_rst_0_reset, descriptor_memory:reset, eth_tse:reset, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, nios2:reset_n, onchip_memory:reset, pio_0:reset_n, rst_translator:in_reset, sgdma_rx:system_reset_n, sgdma_tx:system_reset_n]
 	wire         rst_controller_reset_out_reset_req;                        // rst_controller:reset_req -> [VideoRAM:reset_req, descriptor_memory:reset_req, nios2:reset_req, onchip_memory:reset_req, rst_translator:reset_req_in]
-	wire         nios2_jtag_debug_module_reset_reset;                       // nios2:jtag_debug_module_resetrequest -> rst_controller:reset_in1
+	wire         nios2_debug_reset_request_reset;                           // nios2:debug_reset_request -> rst_controller:reset_in1
 
 	barcodescanner_nios_VideoRAM videoram (
 		.address     (mm_interconnect_0_videoram_s1_address),    //     s1.address
@@ -255,33 +257,32 @@ module barcodescanner_nios (
 	);
 
 	barcodescanner_nios_nios2 nios2 (
-		.clk                                   (clk_clk),                                               //                       clk.clk
-		.reset_n                               (~rst_controller_reset_out_reset),                       //                   reset_n.reset_n
-		.reset_req                             (rst_controller_reset_out_reset_req),                    //                          .reset_req
-		.d_address                             (nios2_data_master_address),                             //               data_master.address
-		.d_byteenable                          (nios2_data_master_byteenable),                          //                          .byteenable
-		.d_read                                (nios2_data_master_read),                                //                          .read
-		.d_readdata                            (nios2_data_master_readdata),                            //                          .readdata
-		.d_waitrequest                         (nios2_data_master_waitrequest),                         //                          .waitrequest
-		.d_write                               (nios2_data_master_write),                               //                          .write
-		.d_writedata                           (nios2_data_master_writedata),                           //                          .writedata
-		.jtag_debug_module_debugaccess_to_roms (nios2_data_master_debugaccess),                         //                          .debugaccess
-		.i_address                             (nios2_instruction_master_address),                      //        instruction_master.address
-		.i_read                                (nios2_instruction_master_read),                         //                          .read
-		.i_readdata                            (nios2_instruction_master_readdata),                     //                          .readdata
-		.i_waitrequest                         (nios2_instruction_master_waitrequest),                  //                          .waitrequest
-		.i_readdatavalid                       (nios2_instruction_master_readdatavalid),                //                          .readdatavalid
-		.d_irq                                 (nios2_d_irq_irq),                                       //                     d_irq.irq
-		.jtag_debug_module_resetrequest        (nios2_jtag_debug_module_reset_reset),                   //   jtag_debug_module_reset.reset
-		.jtag_debug_module_address             (mm_interconnect_0_nios2_jtag_debug_module_address),     //         jtag_debug_module.address
-		.jtag_debug_module_byteenable          (mm_interconnect_0_nios2_jtag_debug_module_byteenable),  //                          .byteenable
-		.jtag_debug_module_debugaccess         (mm_interconnect_0_nios2_jtag_debug_module_debugaccess), //                          .debugaccess
-		.jtag_debug_module_read                (mm_interconnect_0_nios2_jtag_debug_module_read),        //                          .read
-		.jtag_debug_module_readdata            (mm_interconnect_0_nios2_jtag_debug_module_readdata),    //                          .readdata
-		.jtag_debug_module_waitrequest         (mm_interconnect_0_nios2_jtag_debug_module_waitrequest), //                          .waitrequest
-		.jtag_debug_module_write               (mm_interconnect_0_nios2_jtag_debug_module_write),       //                          .write
-		.jtag_debug_module_writedata           (mm_interconnect_0_nios2_jtag_debug_module_writedata),   //                          .writedata
-		.no_ci_readra                          ()                                                       // custom_instruction_master.readra
+		.clk                                 (clk_clk),                                             //                       clk.clk
+		.reset_n                             (~rst_controller_reset_out_reset),                     //                     reset.reset_n
+		.reset_req                           (rst_controller_reset_out_reset_req),                  //                          .reset_req
+		.d_address                           (nios2_data_master_address),                           //               data_master.address
+		.d_byteenable                        (nios2_data_master_byteenable),                        //                          .byteenable
+		.d_read                              (nios2_data_master_read),                              //                          .read
+		.d_readdata                          (nios2_data_master_readdata),                          //                          .readdata
+		.d_waitrequest                       (nios2_data_master_waitrequest),                       //                          .waitrequest
+		.d_write                             (nios2_data_master_write),                             //                          .write
+		.d_writedata                         (nios2_data_master_writedata),                         //                          .writedata
+		.debug_mem_slave_debugaccess_to_roms (nios2_data_master_debugaccess),                       //                          .debugaccess
+		.i_address                           (nios2_instruction_master_address),                    //        instruction_master.address
+		.i_read                              (nios2_instruction_master_read),                       //                          .read
+		.i_readdata                          (nios2_instruction_master_readdata),                   //                          .readdata
+		.i_waitrequest                       (nios2_instruction_master_waitrequest),                //                          .waitrequest
+		.irq                                 (nios2_irq_irq),                                       //                       irq.irq
+		.debug_reset_request                 (nios2_debug_reset_request_reset),                     //       debug_reset_request.reset
+		.debug_mem_slave_address             (mm_interconnect_0_nios2_debug_mem_slave_address),     //           debug_mem_slave.address
+		.debug_mem_slave_byteenable          (mm_interconnect_0_nios2_debug_mem_slave_byteenable),  //                          .byteenable
+		.debug_mem_slave_debugaccess         (mm_interconnect_0_nios2_debug_mem_slave_debugaccess), //                          .debugaccess
+		.debug_mem_slave_read                (mm_interconnect_0_nios2_debug_mem_slave_read),        //                          .read
+		.debug_mem_slave_readdata            (mm_interconnect_0_nios2_debug_mem_slave_readdata),    //                          .readdata
+		.debug_mem_slave_waitrequest         (mm_interconnect_0_nios2_debug_mem_slave_waitrequest), //                          .waitrequest
+		.debug_mem_slave_write               (mm_interconnect_0_nios2_debug_mem_slave_write),       //                          .write
+		.debug_mem_slave_writedata           (mm_interconnect_0_nios2_debug_mem_slave_writedata),   //                          .writedata
+		.dummy_ci_port                       ()                                                     // custom_instruction_master.readra
 	);
 
 	barcodescanner_nios_onchip_memory onchip_memory (
@@ -296,6 +297,14 @@ module barcodescanner_nios (
 		.reset      (rst_controller_reset_out_reset),                // reset1.reset
 		.reset_req  (rst_controller_reset_out_reset_req),            //       .reset_req
 		.freeze     (1'b0)                                           // (terminated)
+	);
+
+	barcodescanner_nios_pio_0 pio_0 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_pio_0_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pio_0_s1_readdata), //                    .readdata
+		.in_port  (switches_export)                      // external_connection.export
 	);
 
 	barcodescanner_nios_sgdma_rx sgdma_rx (
@@ -365,103 +374,104 @@ module barcodescanner_nios (
 	);
 
 	barcodescanner_nios_mm_interconnect_0 mm_interconnect_0 (
-		.sys_clk_clk_clk                           (clk_clk),                                                   //                         sys_clk_clk.clk
-		.nios2_reset_n_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                            // nios2_reset_n_reset_bridge_in_reset.reset
-		.nios2_data_master_address                 (nios2_data_master_address),                                 //                   nios2_data_master.address
-		.nios2_data_master_waitrequest             (nios2_data_master_waitrequest),                             //                                    .waitrequest
-		.nios2_data_master_byteenable              (nios2_data_master_byteenable),                              //                                    .byteenable
-		.nios2_data_master_read                    (nios2_data_master_read),                                    //                                    .read
-		.nios2_data_master_readdata                (nios2_data_master_readdata),                                //                                    .readdata
-		.nios2_data_master_write                   (nios2_data_master_write),                                   //                                    .write
-		.nios2_data_master_writedata               (nios2_data_master_writedata),                               //                                    .writedata
-		.nios2_data_master_debugaccess             (nios2_data_master_debugaccess),                             //                                    .debugaccess
-		.nios2_instruction_master_address          (nios2_instruction_master_address),                          //            nios2_instruction_master.address
-		.nios2_instruction_master_waitrequest      (nios2_instruction_master_waitrequest),                      //                                    .waitrequest
-		.nios2_instruction_master_read             (nios2_instruction_master_read),                             //                                    .read
-		.nios2_instruction_master_readdata         (nios2_instruction_master_readdata),                         //                                    .readdata
-		.nios2_instruction_master_readdatavalid    (nios2_instruction_master_readdatavalid),                    //                                    .readdatavalid
-		.sgdma_rx_descriptor_read_address          (sgdma_rx_descriptor_read_address),                          //            sgdma_rx_descriptor_read.address
-		.sgdma_rx_descriptor_read_waitrequest      (sgdma_rx_descriptor_read_waitrequest),                      //                                    .waitrequest
-		.sgdma_rx_descriptor_read_read             (sgdma_rx_descriptor_read_read),                             //                                    .read
-		.sgdma_rx_descriptor_read_readdata         (sgdma_rx_descriptor_read_readdata),                         //                                    .readdata
-		.sgdma_rx_descriptor_read_readdatavalid    (sgdma_rx_descriptor_read_readdatavalid),                    //                                    .readdatavalid
-		.sgdma_rx_descriptor_write_address         (sgdma_rx_descriptor_write_address),                         //           sgdma_rx_descriptor_write.address
-		.sgdma_rx_descriptor_write_waitrequest     (sgdma_rx_descriptor_write_waitrequest),                     //                                    .waitrequest
-		.sgdma_rx_descriptor_write_write           (sgdma_rx_descriptor_write_write),                           //                                    .write
-		.sgdma_rx_descriptor_write_writedata       (sgdma_rx_descriptor_write_writedata),                       //                                    .writedata
-		.sgdma_rx_m_write_address                  (sgdma_rx_m_write_address),                                  //                    sgdma_rx_m_write.address
-		.sgdma_rx_m_write_waitrequest              (sgdma_rx_m_write_waitrequest),                              //                                    .waitrequest
-		.sgdma_rx_m_write_byteenable               (sgdma_rx_m_write_byteenable),                               //                                    .byteenable
-		.sgdma_rx_m_write_write                    (sgdma_rx_m_write_write),                                    //                                    .write
-		.sgdma_rx_m_write_writedata                (sgdma_rx_m_write_writedata),                                //                                    .writedata
-		.sgdma_tx_descriptor_read_address          (sgdma_tx_descriptor_read_address),                          //            sgdma_tx_descriptor_read.address
-		.sgdma_tx_descriptor_read_waitrequest      (sgdma_tx_descriptor_read_waitrequest),                      //                                    .waitrequest
-		.sgdma_tx_descriptor_read_read             (sgdma_tx_descriptor_read_read),                             //                                    .read
-		.sgdma_tx_descriptor_read_readdata         (sgdma_tx_descriptor_read_readdata),                         //                                    .readdata
-		.sgdma_tx_descriptor_read_readdatavalid    (sgdma_tx_descriptor_read_readdatavalid),                    //                                    .readdatavalid
-		.sgdma_tx_descriptor_write_address         (sgdma_tx_descriptor_write_address),                         //           sgdma_tx_descriptor_write.address
-		.sgdma_tx_descriptor_write_waitrequest     (sgdma_tx_descriptor_write_waitrequest),                     //                                    .waitrequest
-		.sgdma_tx_descriptor_write_write           (sgdma_tx_descriptor_write_write),                           //                                    .write
-		.sgdma_tx_descriptor_write_writedata       (sgdma_tx_descriptor_write_writedata),                       //                                    .writedata
-		.sgdma_tx_m_read_address                   (sgdma_tx_m_read_address),                                   //                     sgdma_tx_m_read.address
-		.sgdma_tx_m_read_waitrequest               (sgdma_tx_m_read_waitrequest),                               //                                    .waitrequest
-		.sgdma_tx_m_read_read                      (sgdma_tx_m_read_read),                                      //                                    .read
-		.sgdma_tx_m_read_readdata                  (sgdma_tx_m_read_readdata),                                  //                                    .readdata
-		.sgdma_tx_m_read_readdatavalid             (sgdma_tx_m_read_readdatavalid),                             //                                    .readdatavalid
-		.descriptor_memory_s1_address              (mm_interconnect_0_descriptor_memory_s1_address),            //                descriptor_memory_s1.address
-		.descriptor_memory_s1_write                (mm_interconnect_0_descriptor_memory_s1_write),              //                                    .write
-		.descriptor_memory_s1_readdata             (mm_interconnect_0_descriptor_memory_s1_readdata),           //                                    .readdata
-		.descriptor_memory_s1_writedata            (mm_interconnect_0_descriptor_memory_s1_writedata),          //                                    .writedata
-		.descriptor_memory_s1_byteenable           (mm_interconnect_0_descriptor_memory_s1_byteenable),         //                                    .byteenable
-		.descriptor_memory_s1_chipselect           (mm_interconnect_0_descriptor_memory_s1_chipselect),         //                                    .chipselect
-		.descriptor_memory_s1_clken                (mm_interconnect_0_descriptor_memory_s1_clken),              //                                    .clken
-		.eth_tse_control_port_address              (mm_interconnect_0_eth_tse_control_port_address),            //                eth_tse_control_port.address
-		.eth_tse_control_port_write                (mm_interconnect_0_eth_tse_control_port_write),              //                                    .write
-		.eth_tse_control_port_read                 (mm_interconnect_0_eth_tse_control_port_read),               //                                    .read
-		.eth_tse_control_port_readdata             (mm_interconnect_0_eth_tse_control_port_readdata),           //                                    .readdata
-		.eth_tse_control_port_writedata            (mm_interconnect_0_eth_tse_control_port_writedata),          //                                    .writedata
-		.eth_tse_control_port_waitrequest          (mm_interconnect_0_eth_tse_control_port_waitrequest),        //                                    .waitrequest
-		.jtag_uart_avalon_jtag_slave_address       (mm_interconnect_0_jtag_uart_avalon_jtag_slave_address),     //         jtag_uart_avalon_jtag_slave.address
-		.jtag_uart_avalon_jtag_slave_write         (mm_interconnect_0_jtag_uart_avalon_jtag_slave_write),       //                                    .write
-		.jtag_uart_avalon_jtag_slave_read          (mm_interconnect_0_jtag_uart_avalon_jtag_slave_read),        //                                    .read
-		.jtag_uart_avalon_jtag_slave_readdata      (mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata),    //                                    .readdata
-		.jtag_uart_avalon_jtag_slave_writedata     (mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata),   //                                    .writedata
-		.jtag_uart_avalon_jtag_slave_waitrequest   (mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest), //                                    .waitrequest
-		.jtag_uart_avalon_jtag_slave_chipselect    (mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect),  //                                    .chipselect
-		.nios2_jtag_debug_module_address           (mm_interconnect_0_nios2_jtag_debug_module_address),         //             nios2_jtag_debug_module.address
-		.nios2_jtag_debug_module_write             (mm_interconnect_0_nios2_jtag_debug_module_write),           //                                    .write
-		.nios2_jtag_debug_module_read              (mm_interconnect_0_nios2_jtag_debug_module_read),            //                                    .read
-		.nios2_jtag_debug_module_readdata          (mm_interconnect_0_nios2_jtag_debug_module_readdata),        //                                    .readdata
-		.nios2_jtag_debug_module_writedata         (mm_interconnect_0_nios2_jtag_debug_module_writedata),       //                                    .writedata
-		.nios2_jtag_debug_module_byteenable        (mm_interconnect_0_nios2_jtag_debug_module_byteenable),      //                                    .byteenable
-		.nios2_jtag_debug_module_waitrequest       (mm_interconnect_0_nios2_jtag_debug_module_waitrequest),     //                                    .waitrequest
-		.nios2_jtag_debug_module_debugaccess       (mm_interconnect_0_nios2_jtag_debug_module_debugaccess),     //                                    .debugaccess
-		.onchip_memory_s1_address                  (mm_interconnect_0_onchip_memory_s1_address),                //                    onchip_memory_s1.address
-		.onchip_memory_s1_write                    (mm_interconnect_0_onchip_memory_s1_write),                  //                                    .write
-		.onchip_memory_s1_readdata                 (mm_interconnect_0_onchip_memory_s1_readdata),               //                                    .readdata
-		.onchip_memory_s1_writedata                (mm_interconnect_0_onchip_memory_s1_writedata),              //                                    .writedata
-		.onchip_memory_s1_byteenable               (mm_interconnect_0_onchip_memory_s1_byteenable),             //                                    .byteenable
-		.onchip_memory_s1_chipselect               (mm_interconnect_0_onchip_memory_s1_chipselect),             //                                    .chipselect
-		.onchip_memory_s1_clken                    (mm_interconnect_0_onchip_memory_s1_clken),                  //                                    .clken
-		.sgdma_rx_csr_address                      (mm_interconnect_0_sgdma_rx_csr_address),                    //                        sgdma_rx_csr.address
-		.sgdma_rx_csr_write                        (mm_interconnect_0_sgdma_rx_csr_write),                      //                                    .write
-		.sgdma_rx_csr_read                         (mm_interconnect_0_sgdma_rx_csr_read),                       //                                    .read
-		.sgdma_rx_csr_readdata                     (mm_interconnect_0_sgdma_rx_csr_readdata),                   //                                    .readdata
-		.sgdma_rx_csr_writedata                    (mm_interconnect_0_sgdma_rx_csr_writedata),                  //                                    .writedata
-		.sgdma_rx_csr_chipselect                   (mm_interconnect_0_sgdma_rx_csr_chipselect),                 //                                    .chipselect
-		.sgdma_tx_csr_address                      (mm_interconnect_0_sgdma_tx_csr_address),                    //                        sgdma_tx_csr.address
-		.sgdma_tx_csr_write                        (mm_interconnect_0_sgdma_tx_csr_write),                      //                                    .write
-		.sgdma_tx_csr_read                         (mm_interconnect_0_sgdma_tx_csr_read),                       //                                    .read
-		.sgdma_tx_csr_readdata                     (mm_interconnect_0_sgdma_tx_csr_readdata),                   //                                    .readdata
-		.sgdma_tx_csr_writedata                    (mm_interconnect_0_sgdma_tx_csr_writedata),                  //                                    .writedata
-		.sgdma_tx_csr_chipselect                   (mm_interconnect_0_sgdma_tx_csr_chipselect),                 //                                    .chipselect
-		.VideoRAM_s1_address                       (mm_interconnect_0_videoram_s1_address),                     //                         VideoRAM_s1.address
-		.VideoRAM_s1_write                         (mm_interconnect_0_videoram_s1_write),                       //                                    .write
-		.VideoRAM_s1_readdata                      (mm_interconnect_0_videoram_s1_readdata),                    //                                    .readdata
-		.VideoRAM_s1_writedata                     (mm_interconnect_0_videoram_s1_writedata),                   //                                    .writedata
-		.VideoRAM_s1_byteenable                    (mm_interconnect_0_videoram_s1_byteenable),                  //                                    .byteenable
-		.VideoRAM_s1_chipselect                    (mm_interconnect_0_videoram_s1_chipselect),                  //                                    .chipselect
-		.VideoRAM_s1_clken                         (mm_interconnect_0_videoram_s1_clken)                        //                                    .clken
+		.sys_clk_clk_clk                         (clk_clk),                                                   //                       sys_clk_clk.clk
+		.nios2_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                            // nios2_reset_reset_bridge_in_reset.reset
+		.nios2_data_master_address               (nios2_data_master_address),                                 //                 nios2_data_master.address
+		.nios2_data_master_waitrequest           (nios2_data_master_waitrequest),                             //                                  .waitrequest
+		.nios2_data_master_byteenable            (nios2_data_master_byteenable),                              //                                  .byteenable
+		.nios2_data_master_read                  (nios2_data_master_read),                                    //                                  .read
+		.nios2_data_master_readdata              (nios2_data_master_readdata),                                //                                  .readdata
+		.nios2_data_master_write                 (nios2_data_master_write),                                   //                                  .write
+		.nios2_data_master_writedata             (nios2_data_master_writedata),                               //                                  .writedata
+		.nios2_data_master_debugaccess           (nios2_data_master_debugaccess),                             //                                  .debugaccess
+		.nios2_instruction_master_address        (nios2_instruction_master_address),                          //          nios2_instruction_master.address
+		.nios2_instruction_master_waitrequest    (nios2_instruction_master_waitrequest),                      //                                  .waitrequest
+		.nios2_instruction_master_read           (nios2_instruction_master_read),                             //                                  .read
+		.nios2_instruction_master_readdata       (nios2_instruction_master_readdata),                         //                                  .readdata
+		.sgdma_rx_descriptor_read_address        (sgdma_rx_descriptor_read_address),                          //          sgdma_rx_descriptor_read.address
+		.sgdma_rx_descriptor_read_waitrequest    (sgdma_rx_descriptor_read_waitrequest),                      //                                  .waitrequest
+		.sgdma_rx_descriptor_read_read           (sgdma_rx_descriptor_read_read),                             //                                  .read
+		.sgdma_rx_descriptor_read_readdata       (sgdma_rx_descriptor_read_readdata),                         //                                  .readdata
+		.sgdma_rx_descriptor_read_readdatavalid  (sgdma_rx_descriptor_read_readdatavalid),                    //                                  .readdatavalid
+		.sgdma_rx_descriptor_write_address       (sgdma_rx_descriptor_write_address),                         //         sgdma_rx_descriptor_write.address
+		.sgdma_rx_descriptor_write_waitrequest   (sgdma_rx_descriptor_write_waitrequest),                     //                                  .waitrequest
+		.sgdma_rx_descriptor_write_write         (sgdma_rx_descriptor_write_write),                           //                                  .write
+		.sgdma_rx_descriptor_write_writedata     (sgdma_rx_descriptor_write_writedata),                       //                                  .writedata
+		.sgdma_rx_m_write_address                (sgdma_rx_m_write_address),                                  //                  sgdma_rx_m_write.address
+		.sgdma_rx_m_write_waitrequest            (sgdma_rx_m_write_waitrequest),                              //                                  .waitrequest
+		.sgdma_rx_m_write_byteenable             (sgdma_rx_m_write_byteenable),                               //                                  .byteenable
+		.sgdma_rx_m_write_write                  (sgdma_rx_m_write_write),                                    //                                  .write
+		.sgdma_rx_m_write_writedata              (sgdma_rx_m_write_writedata),                                //                                  .writedata
+		.sgdma_tx_descriptor_read_address        (sgdma_tx_descriptor_read_address),                          //          sgdma_tx_descriptor_read.address
+		.sgdma_tx_descriptor_read_waitrequest    (sgdma_tx_descriptor_read_waitrequest),                      //                                  .waitrequest
+		.sgdma_tx_descriptor_read_read           (sgdma_tx_descriptor_read_read),                             //                                  .read
+		.sgdma_tx_descriptor_read_readdata       (sgdma_tx_descriptor_read_readdata),                         //                                  .readdata
+		.sgdma_tx_descriptor_read_readdatavalid  (sgdma_tx_descriptor_read_readdatavalid),                    //                                  .readdatavalid
+		.sgdma_tx_descriptor_write_address       (sgdma_tx_descriptor_write_address),                         //         sgdma_tx_descriptor_write.address
+		.sgdma_tx_descriptor_write_waitrequest   (sgdma_tx_descriptor_write_waitrequest),                     //                                  .waitrequest
+		.sgdma_tx_descriptor_write_write         (sgdma_tx_descriptor_write_write),                           //                                  .write
+		.sgdma_tx_descriptor_write_writedata     (sgdma_tx_descriptor_write_writedata),                       //                                  .writedata
+		.sgdma_tx_m_read_address                 (sgdma_tx_m_read_address),                                   //                   sgdma_tx_m_read.address
+		.sgdma_tx_m_read_waitrequest             (sgdma_tx_m_read_waitrequest),                               //                                  .waitrequest
+		.sgdma_tx_m_read_read                    (sgdma_tx_m_read_read),                                      //                                  .read
+		.sgdma_tx_m_read_readdata                (sgdma_tx_m_read_readdata),                                  //                                  .readdata
+		.sgdma_tx_m_read_readdatavalid           (sgdma_tx_m_read_readdatavalid),                             //                                  .readdatavalid
+		.descriptor_memory_s1_address            (mm_interconnect_0_descriptor_memory_s1_address),            //              descriptor_memory_s1.address
+		.descriptor_memory_s1_write              (mm_interconnect_0_descriptor_memory_s1_write),              //                                  .write
+		.descriptor_memory_s1_readdata           (mm_interconnect_0_descriptor_memory_s1_readdata),           //                                  .readdata
+		.descriptor_memory_s1_writedata          (mm_interconnect_0_descriptor_memory_s1_writedata),          //                                  .writedata
+		.descriptor_memory_s1_byteenable         (mm_interconnect_0_descriptor_memory_s1_byteenable),         //                                  .byteenable
+		.descriptor_memory_s1_chipselect         (mm_interconnect_0_descriptor_memory_s1_chipselect),         //                                  .chipselect
+		.descriptor_memory_s1_clken              (mm_interconnect_0_descriptor_memory_s1_clken),              //                                  .clken
+		.eth_tse_control_port_address            (mm_interconnect_0_eth_tse_control_port_address),            //              eth_tse_control_port.address
+		.eth_tse_control_port_write              (mm_interconnect_0_eth_tse_control_port_write),              //                                  .write
+		.eth_tse_control_port_read               (mm_interconnect_0_eth_tse_control_port_read),               //                                  .read
+		.eth_tse_control_port_readdata           (mm_interconnect_0_eth_tse_control_port_readdata),           //                                  .readdata
+		.eth_tse_control_port_writedata          (mm_interconnect_0_eth_tse_control_port_writedata),          //                                  .writedata
+		.eth_tse_control_port_waitrequest        (mm_interconnect_0_eth_tse_control_port_waitrequest),        //                                  .waitrequest
+		.jtag_uart_avalon_jtag_slave_address     (mm_interconnect_0_jtag_uart_avalon_jtag_slave_address),     //       jtag_uart_avalon_jtag_slave.address
+		.jtag_uart_avalon_jtag_slave_write       (mm_interconnect_0_jtag_uart_avalon_jtag_slave_write),       //                                  .write
+		.jtag_uart_avalon_jtag_slave_read        (mm_interconnect_0_jtag_uart_avalon_jtag_slave_read),        //                                  .read
+		.jtag_uart_avalon_jtag_slave_readdata    (mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata),    //                                  .readdata
+		.jtag_uart_avalon_jtag_slave_writedata   (mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata),   //                                  .writedata
+		.jtag_uart_avalon_jtag_slave_waitrequest (mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest), //                                  .waitrequest
+		.jtag_uart_avalon_jtag_slave_chipselect  (mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect),  //                                  .chipselect
+		.nios2_debug_mem_slave_address           (mm_interconnect_0_nios2_debug_mem_slave_address),           //             nios2_debug_mem_slave.address
+		.nios2_debug_mem_slave_write             (mm_interconnect_0_nios2_debug_mem_slave_write),             //                                  .write
+		.nios2_debug_mem_slave_read              (mm_interconnect_0_nios2_debug_mem_slave_read),              //                                  .read
+		.nios2_debug_mem_slave_readdata          (mm_interconnect_0_nios2_debug_mem_slave_readdata),          //                                  .readdata
+		.nios2_debug_mem_slave_writedata         (mm_interconnect_0_nios2_debug_mem_slave_writedata),         //                                  .writedata
+		.nios2_debug_mem_slave_byteenable        (mm_interconnect_0_nios2_debug_mem_slave_byteenable),        //                                  .byteenable
+		.nios2_debug_mem_slave_waitrequest       (mm_interconnect_0_nios2_debug_mem_slave_waitrequest),       //                                  .waitrequest
+		.nios2_debug_mem_slave_debugaccess       (mm_interconnect_0_nios2_debug_mem_slave_debugaccess),       //                                  .debugaccess
+		.onchip_memory_s1_address                (mm_interconnect_0_onchip_memory_s1_address),                //                  onchip_memory_s1.address
+		.onchip_memory_s1_write                  (mm_interconnect_0_onchip_memory_s1_write),                  //                                  .write
+		.onchip_memory_s1_readdata               (mm_interconnect_0_onchip_memory_s1_readdata),               //                                  .readdata
+		.onchip_memory_s1_writedata              (mm_interconnect_0_onchip_memory_s1_writedata),              //                                  .writedata
+		.onchip_memory_s1_byteenable             (mm_interconnect_0_onchip_memory_s1_byteenable),             //                                  .byteenable
+		.onchip_memory_s1_chipselect             (mm_interconnect_0_onchip_memory_s1_chipselect),             //                                  .chipselect
+		.onchip_memory_s1_clken                  (mm_interconnect_0_onchip_memory_s1_clken),                  //                                  .clken
+		.pio_0_s1_address                        (mm_interconnect_0_pio_0_s1_address),                        //                          pio_0_s1.address
+		.pio_0_s1_readdata                       (mm_interconnect_0_pio_0_s1_readdata),                       //                                  .readdata
+		.sgdma_rx_csr_address                    (mm_interconnect_0_sgdma_rx_csr_address),                    //                      sgdma_rx_csr.address
+		.sgdma_rx_csr_write                      (mm_interconnect_0_sgdma_rx_csr_write),                      //                                  .write
+		.sgdma_rx_csr_read                       (mm_interconnect_0_sgdma_rx_csr_read),                       //                                  .read
+		.sgdma_rx_csr_readdata                   (mm_interconnect_0_sgdma_rx_csr_readdata),                   //                                  .readdata
+		.sgdma_rx_csr_writedata                  (mm_interconnect_0_sgdma_rx_csr_writedata),                  //                                  .writedata
+		.sgdma_rx_csr_chipselect                 (mm_interconnect_0_sgdma_rx_csr_chipselect),                 //                                  .chipselect
+		.sgdma_tx_csr_address                    (mm_interconnect_0_sgdma_tx_csr_address),                    //                      sgdma_tx_csr.address
+		.sgdma_tx_csr_write                      (mm_interconnect_0_sgdma_tx_csr_write),                      //                                  .write
+		.sgdma_tx_csr_read                       (mm_interconnect_0_sgdma_tx_csr_read),                       //                                  .read
+		.sgdma_tx_csr_readdata                   (mm_interconnect_0_sgdma_tx_csr_readdata),                   //                                  .readdata
+		.sgdma_tx_csr_writedata                  (mm_interconnect_0_sgdma_tx_csr_writedata),                  //                                  .writedata
+		.sgdma_tx_csr_chipselect                 (mm_interconnect_0_sgdma_tx_csr_chipselect),                 //                                  .chipselect
+		.VideoRAM_s1_address                     (mm_interconnect_0_videoram_s1_address),                     //                       VideoRAM_s1.address
+		.VideoRAM_s1_write                       (mm_interconnect_0_videoram_s1_write),                       //                                  .write
+		.VideoRAM_s1_readdata                    (mm_interconnect_0_videoram_s1_readdata),                    //                                  .readdata
+		.VideoRAM_s1_writedata                   (mm_interconnect_0_videoram_s1_writedata),                   //                                  .writedata
+		.VideoRAM_s1_byteenable                  (mm_interconnect_0_videoram_s1_byteenable),                  //                                  .byteenable
+		.VideoRAM_s1_chipselect                  (mm_interconnect_0_videoram_s1_chipselect),                  //                                  .chipselect
+		.VideoRAM_s1_clken                       (mm_interconnect_0_videoram_s1_clken)                        //                                  .clken
 	);
 
 	barcodescanner_nios_irq_mapper irq_mapper (
@@ -470,7 +480,7 @@ module barcodescanner_nios (
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
 		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
 		.receiver2_irq (irq_mapper_receiver2_irq),       // receiver2.irq
-		.sender_irq    (nios2_d_irq_irq)                 //    sender.irq
+		.sender_irq    (nios2_irq_irq)                   //    sender.irq
 	);
 
 	barcodescanner_nios_avalon_st_adapter #(
@@ -535,41 +545,41 @@ module barcodescanner_nios (
 		.USE_RESET_REQUEST_IN15    (0),
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller (
-		.reset_in0      (~reset_reset_n),                      // reset_in0.reset
-		.reset_in1      (nios2_jtag_debug_module_reset_reset), // reset_in1.reset
-		.clk            (clk_clk),                             //       clk.clk
-		.reset_out      (rst_controller_reset_out_reset),      // reset_out.reset
-		.reset_req      (rst_controller_reset_out_reset_req),  //          .reset_req
-		.reset_req_in0  (1'b0),                                // (terminated)
-		.reset_req_in1  (1'b0),                                // (terminated)
-		.reset_in2      (1'b0),                                // (terminated)
-		.reset_req_in2  (1'b0),                                // (terminated)
-		.reset_in3      (1'b0),                                // (terminated)
-		.reset_req_in3  (1'b0),                                // (terminated)
-		.reset_in4      (1'b0),                                // (terminated)
-		.reset_req_in4  (1'b0),                                // (terminated)
-		.reset_in5      (1'b0),                                // (terminated)
-		.reset_req_in5  (1'b0),                                // (terminated)
-		.reset_in6      (1'b0),                                // (terminated)
-		.reset_req_in6  (1'b0),                                // (terminated)
-		.reset_in7      (1'b0),                                // (terminated)
-		.reset_req_in7  (1'b0),                                // (terminated)
-		.reset_in8      (1'b0),                                // (terminated)
-		.reset_req_in8  (1'b0),                                // (terminated)
-		.reset_in9      (1'b0),                                // (terminated)
-		.reset_req_in9  (1'b0),                                // (terminated)
-		.reset_in10     (1'b0),                                // (terminated)
-		.reset_req_in10 (1'b0),                                // (terminated)
-		.reset_in11     (1'b0),                                // (terminated)
-		.reset_req_in11 (1'b0),                                // (terminated)
-		.reset_in12     (1'b0),                                // (terminated)
-		.reset_req_in12 (1'b0),                                // (terminated)
-		.reset_in13     (1'b0),                                // (terminated)
-		.reset_req_in13 (1'b0),                                // (terminated)
-		.reset_in14     (1'b0),                                // (terminated)
-		.reset_req_in14 (1'b0),                                // (terminated)
-		.reset_in15     (1'b0),                                // (terminated)
-		.reset_req_in15 (1'b0)                                 // (terminated)
+		.reset_in0      (~reset_reset_n),                     // reset_in0.reset
+		.reset_in1      (nios2_debug_reset_request_reset),    // reset_in1.reset
+		.clk            (clk_clk),                            //       clk.clk
+		.reset_out      (rst_controller_reset_out_reset),     // reset_out.reset
+		.reset_req      (rst_controller_reset_out_reset_req), //          .reset_req
+		.reset_req_in0  (1'b0),                               // (terminated)
+		.reset_req_in1  (1'b0),                               // (terminated)
+		.reset_in2      (1'b0),                               // (terminated)
+		.reset_req_in2  (1'b0),                               // (terminated)
+		.reset_in3      (1'b0),                               // (terminated)
+		.reset_req_in3  (1'b0),                               // (terminated)
+		.reset_in4      (1'b0),                               // (terminated)
+		.reset_req_in4  (1'b0),                               // (terminated)
+		.reset_in5      (1'b0),                               // (terminated)
+		.reset_req_in5  (1'b0),                               // (terminated)
+		.reset_in6      (1'b0),                               // (terminated)
+		.reset_req_in6  (1'b0),                               // (terminated)
+		.reset_in7      (1'b0),                               // (terminated)
+		.reset_req_in7  (1'b0),                               // (terminated)
+		.reset_in8      (1'b0),                               // (terminated)
+		.reset_req_in8  (1'b0),                               // (terminated)
+		.reset_in9      (1'b0),                               // (terminated)
+		.reset_req_in9  (1'b0),                               // (terminated)
+		.reset_in10     (1'b0),                               // (terminated)
+		.reset_req_in10 (1'b0),                               // (terminated)
+		.reset_in11     (1'b0),                               // (terminated)
+		.reset_req_in11 (1'b0),                               // (terminated)
+		.reset_in12     (1'b0),                               // (terminated)
+		.reset_req_in12 (1'b0),                               // (terminated)
+		.reset_in13     (1'b0),                               // (terminated)
+		.reset_req_in13 (1'b0),                               // (terminated)
+		.reset_in14     (1'b0),                               // (terminated)
+		.reset_req_in14 (1'b0),                               // (terminated)
+		.reset_in15     (1'b0),                               // (terminated)
+		.reset_req_in15 (1'b0)                                // (terminated)
 	);
 
 endmodule

@@ -28,10 +28,10 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         barcodescanner_nios_mm_interconnect_0_cmd_demux_005
-//   ST_DATA_W:           108
-//   ST_CHANNEL_W:        8
+//   ST_DATA_W:           110
+//   ST_CHANNEL_W:        9
 //   NUM_OUTPUTS:         2
-//   VALID_WIDTH:         8
+//   VALID_WIDTH:         1
 // ------------------------------------------
 
 //------------------------------------------
@@ -45,9 +45,9 @@ module barcodescanner_nios_mm_interconnect_0_cmd_demux_005
     // -------------------
     // Sink
     // -------------------
-    input  [8-1      : 0]   sink_valid,
-    input  [108-1    : 0]   sink_data, // ST_DATA_W=108
-    input  [8-1 : 0]   sink_channel, // ST_CHANNEL_W=8
+    input  [1-1      : 0]   sink_valid,
+    input  [110-1    : 0]   sink_data, // ST_DATA_W=110
+    input  [9-1 : 0]   sink_channel, // ST_CHANNEL_W=9
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,15 +56,15 @@ module barcodescanner_nios_mm_interconnect_0_cmd_demux_005
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [108-1    : 0] src0_data, // ST_DATA_W=108
-    output reg [8-1 : 0] src0_channel, // ST_CHANNEL_W=8
+    output reg [110-1    : 0] src0_data, // ST_DATA_W=110
+    output reg [9-1 : 0] src0_channel, // ST_CHANNEL_W=9
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
 
     output reg                      src1_valid,
-    output reg [108-1    : 0] src1_data, // ST_DATA_W=108
-    output reg [8-1 : 0] src1_channel, // ST_CHANNEL_W=8
+    output reg [110-1    : 0] src1_data, // ST_DATA_W=110
+    output reg [9-1 : 0] src1_channel, // ST_CHANNEL_W=9
     output reg                      src1_startofpacket,
     output reg                      src1_endofpacket,
     input                           src1_ready,
@@ -92,14 +92,14 @@ module barcodescanner_nios_mm_interconnect_0_cmd_demux_005
         src0_endofpacket   = sink_endofpacket;
         src0_channel       = sink_channel >> NUM_OUTPUTS;
 
-        src0_valid         = sink_channel[0] && sink_valid[0];
+        src0_valid         = sink_channel[0] && sink_valid;
 
         src1_data          = sink_data;
         src1_startofpacket = sink_startofpacket;
         src1_endofpacket   = sink_endofpacket;
         src1_channel       = sink_channel >> NUM_OUTPUTS;
 
-        src1_valid         = sink_channel[1] && sink_valid[1];
+        src1_valid         = sink_channel[1] && sink_valid;
 
     end
 
@@ -109,7 +109,7 @@ module barcodescanner_nios_mm_interconnect_0_cmd_demux_005
     assign ready_vector[0] = src0_ready;
     assign ready_vector[1] = src1_ready;
 
-    assign sink_ready = |(sink_channel & {{6{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & {{7{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

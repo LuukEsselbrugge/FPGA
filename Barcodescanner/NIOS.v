@@ -22,7 +22,8 @@ module NIOS(
 	output        ENET1_TX_EN,
 	
 	input [11:0] videoram_adrr,
-	output [31:0] videoram_data
+	output [31:0] videoram_data,
+	input [7:0] SW
 );
 
 	wire sys_clk, clk_125, clk_25, clk_2p5, tx_clk;
@@ -82,7 +83,9 @@ module NIOS(
 		  .videoram_readdata	(videoram_data),
 		  .videoram_chipselect(1'b1),
 		  .videoram_clken(1'b1),
-		  .videoram_write(1'b0)
+		  .videoram_write(1'b0),
+		  
+		  .switches_export(SW)
     );	
 
 endmodule 

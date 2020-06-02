@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.05.25.13:04:56 -->
+ <!-- 2020.06.01.13:10:53 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>418320b2953ec0860875</value>
+   <value>40176233dd432beca48e</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_jtag_uart:jtag_uart|alt_jtag_atlantic:barcodescanner_nios_jtag_uart_alt_jtag_atlantic} } {hpath {NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_nios2:nios2|barcodescanner_nios_nios2_nios2_oci:the_barcodescanner_nios_nios2_nios2_oci|barcodescanner_nios_nios2_jtag_debug_module_wrapper:the_barcodescanner_nios_nios2_jtag_debug_module_wrapper|sld_virtual_jtag_basic:barcodescanner_nios_nios2_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {pzdyqx:nabboc} } </value>
+   <value>{hpath {NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_jtag_uart:jtag_uart|alt_jtag_atlantic:barcodescanner_nios_jtag_uart_alt_jtag_atlantic} } {hpath {NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_nios2:nios2|barcodescanner_nios_nios2_cpu:cpu|barcodescanner_nios_nios2_cpu_nios2_oci:the_barcodescanner_nios_nios2_cpu_nios2_oci|barcodescanner_nios_nios2_cpu_debug_slave_wrapper:the_barcodescanner_nios_nios2_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:barcodescanner_nios_nios2_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {pzdyqx:nabboc} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2735,7 +2735,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>418320b2953ec0860875</value>
+   <value>40176233dd432beca48e</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

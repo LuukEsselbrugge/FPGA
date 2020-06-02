@@ -34,7 +34,7 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 776 408 832 424))
+	(annotation_block (location)(rect 688 360 744 376))
 )
 (pin
 	(input)
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 154 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 768 424 824 440))
+	(annotation_block (location)(rect 672 408 728 424))
 )
 (pin
 	(input)
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 		(line (pt 141 12)(pt 145 8))
 	)
 	(text "VCC" (rect 160 7 178 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 744 440 800 456))
+	(annotation_block (location)(rect 688 440 744 456))
 )
 (pin
 	(input)
@@ -85,13 +85,13 @@ refer to the applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 154 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 768 456 824 472))
+	(annotation_block (location)(rect 656 464 712 480))
 )
 (pin
 	(input)
 	(rect 712 136 880 152)
 	(text "INPUT" (rect 125 0 152 9)(font "Arial" (font_size 6)))
-	(text "CLOCK_50" (rect 5 0 56 10)(font "Arial" ))
+	(text "CLOCK_50" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,6 +103,23 @@ refer to the applicable agreement for further details.
 	)
 	(text "VCC" (rect 128 7 146 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 648 136 696 152))
+)
+(pin
+	(input)
+	(rect 832 472 1000 488)
+	(text "INPUT" (rect 125 0 152 9)(font "Arial" (font_size 6)))
+	(text "SW[7..0]" (rect 5 0 43 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 16)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 768 488 832 560))
 )
 (pin
 	(output)
@@ -465,6 +482,13 @@ refer to the applicable agreement for further details.
 		(text "videoram_adrr[11..0]" (rect 0 0 90 10)(font "Arial" ))
 		(text "videoram_adrr[11..0]" (rect 21 107 111 117)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "SW[7..0]" (rect 0 0 37 10)(font "Arial" ))
+		(text "SW[7..0]" (rect 21 123 58 133)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
 		(pt 312 32)

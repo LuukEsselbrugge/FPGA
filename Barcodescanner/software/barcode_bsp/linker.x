@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
  * SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
  *
- * Generated: Mon May 25 13:01:27 CEST 2020
+ * Generated: Mon Jun 01 13:14:03 CEST 2020
  */
 
 /*
@@ -51,15 +51,15 @@
 MEMORY
 {
     VideoRAM : ORIGIN = 0x0, LENGTH = 10000
-    reset : ORIGIN = 0x80000, LENGTH = 32
-    onchip_memory : ORIGIN = 0x80020, LENGTH = 307168
-    descriptor_memory : ORIGIN = 0x100000, LENGTH = 4096
+    descriptor_memory : ORIGIN = 0x8000, LENGTH = 4096
+    reset : ORIGIN = 0x180000, LENGTH = 32
+    onchip_memory : ORIGIN = 0x180020, LENGTH = 307168
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_VideoRAM = 0x0;
-__alt_mem_onchip_memory = 0x80000;
-__alt_mem_descriptor_memory = 0x100000;
+__alt_mem_descriptor_memory = 0x8000;
+__alt_mem_onchip_memory = 0x180000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -328,7 +328,24 @@ SECTIONS
      *
      */
 
-    .onchip_memory LOADADDR (.VideoRAM) + SIZEOF (.VideoRAM) : AT ( LOADADDR (.VideoRAM) + SIZEOF (.VideoRAM) )
+    .descriptor_memory : AT ( LOADADDR (.VideoRAM) + SIZEOF (.VideoRAM) )
+    {
+        PROVIDE (_alt_partition_descriptor_memory_start = ABSOLUTE(.));
+        *(.descriptor_memory .descriptor_memory. descriptor_memory.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_descriptor_memory_end = ABSOLUTE(.));
+    } > descriptor_memory
+
+    PROVIDE (_alt_partition_descriptor_memory_load_addr = LOADADDR(.descriptor_memory));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .onchip_memory LOADADDR (.descriptor_memory) + SIZEOF (.descriptor_memory) : AT ( LOADADDR (.descriptor_memory) + SIZEOF (.descriptor_memory) )
     {
         PROVIDE (_alt_partition_onchip_memory_start = ABSOLUTE(.));
         *(.onchip_memory .onchip_memory. onchip_memory.*)
@@ -340,23 +357,6 @@ SECTIONS
     } > onchip_memory
 
     PROVIDE (_alt_partition_onchip_memory_load_addr = LOADADDR(.onchip_memory));
-
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .descriptor_memory : AT ( LOADADDR (.onchip_memory) + SIZEOF (.onchip_memory) )
-    {
-        PROVIDE (_alt_partition_descriptor_memory_start = ABSOLUTE(.));
-        *(.descriptor_memory .descriptor_memory. descriptor_memory.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_descriptor_memory_end = ABSOLUTE(.));
-    } > descriptor_memory
-
-    PROVIDE (_alt_partition_descriptor_memory_load_addr = LOADADDR(.descriptor_memory));
 
     /*
      * Stabs debugging sections.
@@ -405,7 +405,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0xcb000;
+__alt_data_end = 0x1cb000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -421,4 +421,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0xcb000 );
+PROVIDE( __alt_heap_limit    = 0x1cb000 );

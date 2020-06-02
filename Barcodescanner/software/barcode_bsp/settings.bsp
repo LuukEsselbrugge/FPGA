@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 25, 2020 1:08:42 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1590404922491</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 1, 2020 1:14:02 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1591010042457</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp</BspGeneratedLocation>
         <BspSettingsFile>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp/settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../barcodescanner_nios.sopcinfo</SopcDesignFile>
@@ -875,6 +875,30 @@
                 <Group>none</Group>
         </Setting>
         <Setting>
+                <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
+                <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
+                <Type>BooleanDefineOnly</Type>
+                <Value>false</Value>
+                <DefaultValue>false</DefaultValue>
+                <DestinationFile>public_mk_define</DestinationFile>
+                <Description>Small-footprint (polled mode) driver</Description>
+                <Restrictions>none</Restrictions>
+                <Enabled>false</Enabled>
+                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </Setting>
+        <Setting>
+                <SettingName>altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error</SettingName>
+                <Identifier>ALTERA_AVALON_JTAG_UART_IGNORE_FIFO_FULL_ERROR</Identifier>
+                <Type>BooleanDefineOnly</Type>
+                <Value>false</Value>
+                <DefaultValue>false</DefaultValue>
+                <DestinationFile>public_mk_define</DestinationFile>
+                <Description>Enable JTAG UART driver to recover when host is inactive causing buffer to full without returning error. Printf will not fail with this recovery.</Description>
+                <Restrictions>none</Restrictions>
+                <Enabled>false</Enabled>
+                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </Setting>
+        <Setting>
                 <SettingName>altera_eth_tse_driver_hal.autoneg_timeout</SettingName>
                 <Identifier>ALTERA_AUTONEG_TIMEOUT_THRESHOLD</Identifier>
                 <Type>DecimalNumber</Type>
@@ -910,30 +934,6 @@
                 <Enabled>false</Enabled>
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
-        <Setting>
-                <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
-                <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Small-footprint (polled mode) driver</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
-        <Setting>
-                <SettingName>altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error</SettingName>
-                <Identifier>ALTERA_AVALON_JTAG_UART_IGNORE_FIFO_FULL_ERROR</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Enable JTAG UART driver to recover when host is inactive causing buffer to full without returning error. Printf will not fail with this recovery.</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
         <MemoryMap>
                 <slaveDescriptor>VideoRAM</slaveDescriptor>
                 <addressRange>0x00000000 - 0x0000270F</addressRange>
@@ -941,16 +941,34 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>onchip_memory</slaveDescriptor>
-                <addressRange>0x00080000 - 0x000CAFFF</addressRange>
-                <addressSpan>307200</addressSpan>
+                <slaveDescriptor>descriptor_memory</slaveDescriptor>
+                <addressRange>0x00008000 - 0x00008FFF</addressRange>
+                <addressSpan>4096</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>descriptor_memory</slaveDescriptor>
-                <addressRange>0x00100000 - 0x00100FFF</addressRange>
-                <addressSpan>4096</addressSpan>
-                <attributes>memory</attributes>
+                <slaveDescriptor>sgdma_tx</slaveDescriptor>
+                <addressRange>0x0000A000 - 0x0000A03F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sgdma_rx</slaveDescriptor>
+                <addressRange>0x0000A040 - 0x0000A07F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_0</slaveDescriptor>
+                <addressRange>0x0000A080 - 0x0000A08F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>jtag_uart</slaveDescriptor>
+                <addressRange>0x0000A090 - 0x0000A097</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>eth_tse</slaveDescriptor>
@@ -959,22 +977,10 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sgdma_tx</slaveDescriptor>
-                <addressRange>0x00102400 - 0x0010243F</addressRange>
-                <addressSpan>64</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>sgdma_rx</slaveDescriptor>
-                <addressRange>0x00102440 - 0x0010247F</addressRange>
-                <addressSpan>64</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00102480 - 0x00102487</addressRange>
-                <addressSpan>8</addressSpan>
-                <attributes>printable</attributes>
+                <slaveDescriptor>onchip_memory</slaveDescriptor>
+                <addressRange>0x00180000 - 0x001CAFFF</addressRange>
+                <addressSpan>307200</addressSpan>
+                <attributes>memory</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

@@ -15,6 +15,7 @@
 		.eth_tse_pcs_mac_rx_clock_connection_clk (<connected-to-eth_tse_pcs_mac_rx_clock_connection_clk>), // eth_tse_pcs_mac_rx_clock_connection.clk
 		.eth_tse_pcs_mac_tx_clock_connection_clk (<connected-to-eth_tse_pcs_mac_tx_clock_connection_clk>), // eth_tse_pcs_mac_tx_clock_connection.clk
 		.reset_reset_n                           (<connected-to-reset_reset_n>),                           //                               reset.reset_n
+		.switches_export                         (<connected-to-switches_export>),                         //                            switches.export
 		.videoram_address                        (<connected-to-videoram_address>),                        //                            videoram.address
 		.videoram_chipselect                     (<connected-to-videoram_chipselect>),                     //                                    .chipselect
 		.videoram_clken                          (<connected-to-videoram_clken>),                          //                                    .clken

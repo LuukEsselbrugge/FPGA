@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
 # SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
 #
-# Generated: Mon May 25 13:01:27 CEST 2020
+# Generated: Mon Jun 01 13:14:03 CEST 2020
 
 # DO NOT MODIFY THIS FILE
 #
@@ -49,8 +49,8 @@
 # VideoRAM
 memory 0x0 0x2710 cache
 
-# onchip_memory
-memory 0x80000 0xcb000 cache
-
 # descriptor_memory
-memory 0x100000 0x101000 cache
+memory 0x8000 0x9000 cache
+
+# onchip_memory
+memory 0x180000 0x1cb000 cache

@@ -144,7 +144,6 @@ ELF := barcode.elf
 # Paths to C, C++, and assembly source files.
 C_SRCS += main.c
 C_SRCS += network.c
-C_SRCS += video.c
 CXX_SRCS :=
 ASM_SRCS :=
 

@@ -1,11 +1,9 @@
 Archive member included to satisfy reference by file (symbol)
 
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
-                              obj/default/video.o (rand)
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+                              obj/default/main.o (memcpy)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
                               obj/default/network.o (strlen)
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
-                              /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o) (__muldi3)
 ../barcode_bsp//libhal_bsp.a(alt_load.o)
                               ../barcode_bsp//obj/HAL/src/crt0.o (alt_load)
 ../barcode_bsp//libhal_bsp.a(alt_main.o)
@@ -46,24 +44,24 @@ Archive member included to satisfy reference by file (symbol)
                               ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_handler)
 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
                               ../barcode_bsp//libhal_bsp.a(alt_iic.o) (alt_irq_active)
-../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
-                              ../barcode_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../barcode_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
                               ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o) (alt_exception)
-../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
-                              ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o) (alt_icache_flush)
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
                               ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o) (errno)
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
                               ../barcode_bsp//libhal_bsp.a(alt_find_dev.o) (memcmp)
-/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
                               ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o) (__udivsi3)
+/home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+                              ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o) (__mulsi3)
 
 Allocating common symbols
 Common symbol       size              file
 
 alt_irq             0x100             ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
-errno               0x4               /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
+errno               0x4               /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
 sgdma_tx_dev        0x4               obj/default/network.o
 text_length         0x4               obj/default/network.o
 sgdma_rx_dev        0x4               obj/default/network.o
@@ -72,9 +70,9 @@ Memory Configuration
 
 Name             Origin             Length             Attributes
 VideoRAM         0x0000000000000000 0x0000000000002710
-reset            0x0000000000080000 0x0000000000000020
-onchip_memory    0x0000000000080020 0x000000000004afe0
-descriptor_memory 0x0000000000100000 0x0000000000001000
+descriptor_memory 0x0000000000008000 0x0000000000001000
+reset            0x0000000000180000 0x0000000000000020
+onchip_memory    0x0000000000180020 0x000000000004afe0
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -82,84 +80,83 @@ Linker script and memory map
 LOAD ../barcode_bsp//obj/HAL/src/crt0.o
 LOAD obj/default/main.o
 LOAD obj/default/network.o
-LOAD obj/default/video.o
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libstdc++.a
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
 START GROUP
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
 LOAD ../barcode_bsp//libhal_bsp.a
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
 END GROUP
-LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
                 0x0000000000000000                __alt_mem_VideoRAM = 0x0
-                0x0000000000080000                __alt_mem_onchip_memory = 0x80000
-                0x0000000000100000                __alt_mem_descriptor_memory = 0x100000
+                0x0000000000008000                __alt_mem_descriptor_memory = 0x8000
+                0x0000000000180000                __alt_mem_onchip_memory = 0x180000
 
-.entry          0x0000000000080000       0x20
+.entry          0x0000000000180000       0x20
  *(.entry)
- .entry         0x0000000000080000       0x20 ../barcode_bsp//obj/HAL/src/crt0.o
-                0x0000000000080000                __reset
-                0x000000000008001c                _exit
+ .entry         0x0000000000180000       0x20 ../barcode_bsp//obj/HAL/src/crt0.o
+                0x0000000000180000                __reset
+                0x000000000018000c                _exit
 
-.exceptions     0x0000000000080020      0x12c
-                0x0000000000080020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
-                0x0000000000080020                . = ALIGN (0x20)
+.exceptions     0x0000000000180020      0x12c
+                0x0000000000180020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000000180020                . = ALIGN (0x20)
  *(.irq)
  *(.exceptions.entry.label)
  .exceptions.entry.label
-                0x0000000000080020        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
-                0x0000000000080020                alt_irq_entry
+                0x0000000000180020        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000180020                alt_irq_entry
  .exceptions.entry.label
-                0x0000000000080020        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
-                0x0000000000080020                alt_exception
+                0x0000000000180020        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000180020                alt_exception
  *(.exceptions.entry.user)
  *(.exceptions.entry.ecc_fatal)
  *(.exceptions.entry)
  .exceptions.entry
-                0x0000000000080020       0x54 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000180020       0x54 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.irqtest.user)
  *(.exceptions.irqtest)
  .exceptions.irqtest
-                0x0000000000080074       0x10 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000180074       0x10 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.irqhandler.user)
  *(.exceptions.irqhandler)
  .exceptions.irqhandler
-                0x0000000000080084        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000180084        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.irqreturn.user)
  *(.exceptions.irqreturn)
  .exceptions.irqreturn
-                0x0000000000080088        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000180088        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.notirq.label)
  .exceptions.notirq.label
-                0x000000000008008c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x000000000018008c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  *(.exceptions.notirq.user)
  *(.exceptions.notirq)
  .exceptions.notirq
-                0x000000000008008c        0x8 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x000000000018008c        0x8 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.soft.user)
  *(.exceptions.soft)
  *(.exceptions.unknown.user)
  *(.exceptions.unknown)
  .exceptions.unknown
-                0x0000000000080094        0x4 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000180094        0x4 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.exit.label)
  .exceptions.exit.label
-                0x0000000000080098        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000180098        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  .exceptions.exit.label
-                0x0000000000080098        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000180098        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions.exit.user)
  *(.exceptions.exit)
  .exceptions.exit
-                0x0000000000080098       0x54 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000180098       0x54 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  *(.exceptions)
- .exceptions    0x00000000000800ec       0x60 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x00000000000800ec                alt_irq_handler
-                0x000000000008014c                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
-                0x0000000000080020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+ .exceptions    0x00000000001800ec       0x60 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x00000000001800ec                alt_irq_handler
+                0x000000000018014c                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000000180020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x000000000008014c     0x12d4
+.text           0x000000000018014c     0x152c
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -204,108 +201,104 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  *(.init)
  *(.plt)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x000000000008014c       0x3c ../barcode_bsp//obj/HAL/src/crt0.o
-                0x000000000008014c                _start
- .text          0x0000000000080188       0x10 obj/default/main.o
-                0x0000000000080188                callback
- .text.startup  0x0000000000080198       0x28 obj/default/main.o
-                0x0000000000080198                main
- .text          0x00000000000801c0      0x310 obj/default/network.o
-                0x00000000000801c0                rx_ethernet_isr
-                0x00000000000802b0                setup
-                0x0000000000080418                refresh_ethernet
-                0x000000000008041c                tx_ethernet_isr
- .text          0x00000000000804d0       0xc4 obj/default/video.o
-                0x00000000000804d0                drawColor
-                0x0000000000080500                video
- .text          0x0000000000080594        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .text.srand    0x0000000000080594       0x14 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
-                0x0000000000080594                srand
- .text.rand     0x00000000000805a8       0x60 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
-                0x00000000000805a8                rand
- .text          0x0000000000080608        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x0000000000080608       0x1c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
-                0x0000000000080608                strlen
- .text          0x0000000000080624       0x60 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
-                0x0000000000080624                __muldi3
- .text          0x0000000000080684       0xe0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
-                0x0000000000080684                alt_load
- .text          0x0000000000080764       0x2c ../barcode_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000080764                alt_main
- .text          0x0000000000080790      0x170 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
-                0x0000000000080790                alt_printf
- .text          0x0000000000080900       0x48 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
-                0x0000000000080900                alt_putchar
- .text          0x0000000000080948        0x4 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
-                0x0000000000080948                usleep
- .text          0x000000000008094c       0x58 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x000000000008094c                alt_irq_init
-                0x000000000008096c                alt_sys_init
- .text          0x00000000000809a4       0x34 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x00000000000809a4                altera_avalon_jtag_uart_write
- .text          0x00000000000809d8      0x5c4 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
-                0x0000000000080a34                alt_avalon_sgdma_do_async_transfer
-                0x0000000000080ab0                alt_avalon_sgdma_do_sync_transfer
-                0x0000000000080b30                alt_avalon_sgdma_register_callback
-                0x0000000000080b40                alt_avalon_sgdma_start
-                0x0000000000080b58                alt_avalon_sgdma_stop
-                0x0000000000080b74                alt_avalon_sgdma_check_descriptor_status
-                0x0000000000080ba0                alt_avalon_sgdma_open
-                0x0000000000080bec                alt_avalon_sgdma_enable_desc_poll
-                0x0000000000080c1c                alt_avalon_sgdma_disable_desc_poll
-                0x0000000000080c3c                alt_avalon_sgdma_construct_descriptor_burst
-                0x0000000000080d50                alt_avalon_sgdma_construct_mem_to_mem_desc_burst
-                0x0000000000080d98                alt_avalon_sgdma_construct_mem_to_mem_desc
-                0x0000000000080dd0                alt_avalon_sgdma_construct_stream_to_mem_desc_burst
-                0x0000000000080e18                alt_avalon_sgdma_construct_stream_to_mem_desc
-                0x0000000000080e40                alt_avalon_sgdma_construct_mem_to_stream_desc_burst
-                0x0000000000080e90                alt_avalon_sgdma_construct_mem_to_stream_desc
-                0x0000000000080ed0                alt_avalon_sgdma_construct_descriptor
-                0x0000000000080f18                alt_avalon_sgdma_init
- .text          0x0000000000080f9c       0x78 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
-                0x0000000000080f9c                alt_busy_sleep
- .text          0x0000000000081014        0x4 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
-                0x0000000000081014                alt_dcache_flush
- .text          0x0000000000081018        0x4 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000081018                alt_dcache_flush_all
- .text          0x000000000008101c       0x6c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
-                0x000000000008101c                alt_dev_llist_insert
- .text          0x0000000000081088        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .text          0x0000000000081088       0x74 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
-                0x0000000000081088                alt_find_dev
- .text          0x00000000000810fc        0xc ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x00000000000810fc                alt_icache_flush_all
- .text          0x0000000000081108       0x8c ../barcode_bsp//libhal_bsp.a(alt_iic.o)
-                0x0000000000081108                alt_ic_isr_register
-                0x000000000008110c                alt_ic_irq_enable
-                0x0000000000081144                alt_ic_irq_disable
-                0x000000000008117c                alt_ic_irq_enabled
- .text          0x0000000000081194       0x68 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
-                0x0000000000081194                alt_iic_isr_register
- .text          0x00000000000811fc        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .text          0x00000000000811fc        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .text          0x00000000000811fc        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .text          0x00000000000811fc        0x8 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
-                0x00000000000811fc                altera_nios2_qsys_irq_init
- .text          0x0000000000081204        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000000081204       0x38 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
-                0x0000000000081204                alt_icache_flush
- .text          0x000000000008123c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .text          0x000000000008123c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .text.memcmp   0x000000000008123c       0x30 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
-                0x000000000008123c                memcmp
- .text          0x000000000008126c      0x1b4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
-                0x000000000008126c                __divsi3
-                0x00000000000812f0                __modsi3
-                0x0000000000081364                __udivsi3
-                0x00000000000813c8                __umodsi3
+ .text          0x000000000018014c       0x3c ../barcode_bsp//obj/HAL/src/crt0.o
+                0x000000000018014c                _start
+ .text          0x0000000000180188      0x3b8 obj/default/main.o
+                0x0000000000180188                clearText
+                0x00000000001801a0                drawChars
+                0x0000000000180240                showText
+                0x000000000018050c                callback
+ .text.startup  0x0000000000180540       0x44 obj/default/main.o
+                0x0000000000180540                main
+ .text          0x0000000000180584      0x31c obj/default/network.o
+                0x0000000000180584                rx_ethernet_isr
+                0x0000000000180674                setup
+                0x00000000001807e8                refresh_ethernet
+                0x00000000001807ec                tx_ethernet_isr
+ .text          0x00000000001808a0        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .text.memcpy   0x00000000001808a0       0x28 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+                0x00000000001808a0                memcpy
+ .text          0x00000000001808c8        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000001808c8       0x1c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+                0x00000000001808c8                strlen
+ .text          0x00000000001808e4       0xe0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+                0x00000000001808e4                alt_load
+ .text          0x00000000001809c4       0x2c ../barcode_bsp//libhal_bsp.a(alt_main.o)
+                0x00000000001809c4                alt_main
+ .text          0x00000000001809f0      0x170 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+                0x00000000001809f0                alt_printf
+ .text          0x0000000000180b60       0x48 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+                0x0000000000180b60                alt_putchar
+ .text          0x0000000000180ba8        0x4 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+                0x0000000000180ba8                usleep
+ .text          0x0000000000180bac       0x58 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000180bac                alt_irq_init
+                0x0000000000180bcc                alt_sys_init
+ .text          0x0000000000180c04       0x34 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000180c04                altera_avalon_jtag_uart_write
+ .text          0x0000000000180c38      0x5c4 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+                0x0000000000180c94                alt_avalon_sgdma_do_async_transfer
+                0x0000000000180d10                alt_avalon_sgdma_do_sync_transfer
+                0x0000000000180d90                alt_avalon_sgdma_register_callback
+                0x0000000000180da0                alt_avalon_sgdma_start
+                0x0000000000180db8                alt_avalon_sgdma_stop
+                0x0000000000180dd4                alt_avalon_sgdma_check_descriptor_status
+                0x0000000000180e00                alt_avalon_sgdma_open
+                0x0000000000180e4c                alt_avalon_sgdma_enable_desc_poll
+                0x0000000000180e7c                alt_avalon_sgdma_disable_desc_poll
+                0x0000000000180e9c                alt_avalon_sgdma_construct_descriptor_burst
+                0x0000000000180fb0                alt_avalon_sgdma_construct_mem_to_mem_desc_burst
+                0x0000000000180ff8                alt_avalon_sgdma_construct_mem_to_mem_desc
+                0x0000000000181030                alt_avalon_sgdma_construct_stream_to_mem_desc_burst
+                0x0000000000181078                alt_avalon_sgdma_construct_stream_to_mem_desc
+                0x00000000001810a0                alt_avalon_sgdma_construct_mem_to_stream_desc_burst
+                0x00000000001810f0                alt_avalon_sgdma_construct_mem_to_stream_desc
+                0x0000000000181130                alt_avalon_sgdma_construct_descriptor
+                0x0000000000181178                alt_avalon_sgdma_init
+ .text          0x00000000001811fc       0x88 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x00000000001811fc                alt_busy_sleep
+ .text          0x0000000000181284        0x4 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+                0x0000000000181284                alt_dcache_flush
+ .text          0x0000000000181288        0x4 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000181288                alt_dcache_flush_all
+ .text          0x000000000018128c       0x6c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                0x000000000018128c                alt_dev_llist_insert
+ .text          0x00000000001812f8        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .text          0x00000000001812f8       0x74 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+                0x00000000001812f8                alt_find_dev
+ .text          0x000000000018136c        0x4 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x000000000018136c                alt_icache_flush_all
+ .text          0x0000000000181370       0x8c ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+                0x0000000000181370                alt_ic_isr_register
+                0x0000000000181374                alt_ic_irq_enable
+                0x00000000001813ac                alt_ic_irq_disable
+                0x00000000001813e4                alt_ic_irq_enabled
+ .text          0x00000000001813fc       0x68 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000001813fc                alt_iic_isr_register
+ .text          0x0000000000181464        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000181464        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000181464        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000181464        0x8 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000181464                altera_nios2_gen2_irq_init
+ .text          0x000000000018146c        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x000000000018146c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .text          0x000000000018146c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .text.memcmp   0x000000000018146c       0x30 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+                0x000000000018146c                memcmp
+ .text          0x000000000018149c      0x1b4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x000000000018149c                __divsi3
+                0x0000000000181520                __modsi3
+                0x0000000000181594                __udivsi3
+                0x00000000001815f8                __umodsi3
+ .text          0x0000000000181650       0x28 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x0000000000181650                __mulsi3
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000081420                . = ALIGN (0x4)
+                0x0000000000181678                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -327,181 +320,176 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000081420                . = ALIGN (0x4)
+                0x0000000000181678                . = ALIGN (0x4)
 
-.rodata         0x0000000000081420      0x10c
-                0x0000000000081420                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000081420                . = ALIGN (0x4)
+.rodata         0x0000000000181678      0x134
+                0x0000000000181678                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000181678                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000081420       0x16 obj/default/main.o
- *fill*         0x0000000000081436        0x2 
+                0x0000000000181678       0x36 obj/default/main.o
+ *fill*         0x00000000001816ae        0x2 
  .rodata.str1.4
-                0x0000000000081438       0xf4 obj/default/network.o
-                                         0xf2 (size before relaxing)
+                0x00000000001816b0       0xfc obj/default/network.o
+                                         0xf9 (size before relaxing)
  .rodata.str1.4
-                0x000000000008152c       0x1e ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x00000000001817ac       0x1e ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
  *(.rodata1)
-                0x000000000008154c                . = ALIGN (0x4)
-                0x000000000008154c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000081420                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x00000000001817cc                . = ALIGN (0x4)
+                0x00000000001817cc                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000181678                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x000000000008152c      0x474 load address 0x00000000000819a0
-                0x000000000008152c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x000000000008152c                . = ALIGN (0x4)
+.rwdata         0x00000000001817ac      0x7d4 load address 0x0000000000181f80
+                0x00000000001817ac                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00000000001817ac                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x000000000008152c        0x0 ../barcode_bsp//obj/HAL/src/crt0.o
- .data          0x000000000008152c        0x0 obj/default/main.o
- .data          0x000000000008152c      0x400 obj/default/network.o
-                0x000000000008152c                tx_frame
- .data          0x000000000008192c        0x0 obj/default/video.o
- .data          0x000000000008192c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .data          0x000000000008192c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .data          0x000000000008192c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .data          0x000000000008192c        0x0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .data          0x000000000008192c        0x0 ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .data          0x000000000008192c        0x0 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .data          0x000000000008192c        0x0 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .data          0x000000000008192c        0x0 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .data          0x000000000008192c       0x60 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .data          0x000000000008198c        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .data          0x000000000008198c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .data          0x000000000008198c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .data          0x000000000008198c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
-                0x000000000008998c                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x00000000001817ac        0x0 ../barcode_bsp//obj/HAL/src/crt0.o
+ .data          0x00000000001817ac      0x360 obj/default/main.o
+                0x00000000001817ac                charTemplate
+ .data          0x0000000000181b0c      0x400 obj/default/network.o
+                0x0000000000181b0c                tx_frame
+ .data          0x0000000000181f0c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .data          0x0000000000181f0c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .data          0x0000000000181f0c        0x0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000181f0c        0x0 ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000181f0c        0x0 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .data          0x0000000000181f0c        0x0 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .data          0x0000000000181f0c        0x0 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .data          0x0000000000181f0c       0x60 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000181f6c        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000000181f6c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .data          0x0000000000181f6c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .data          0x0000000000181f6c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .data          0x0000000000181f6c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x0000000000189f6c                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x000000000008198c        0x4 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x000000000008198c                jtag_uart
- .sdata         0x0000000000081990        0x8 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
-                0x0000000000081990                alt_sgdma_list
- .sdata         0x0000000000081998        0x4 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
-                0x0000000000081998                alt_errno
- .sdata         0x000000000008199c        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x000000000008199c                alt_priority_mask
+ .sdata         0x0000000000181f6c        0x4 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000181f6c                jtag_uart
+ .sdata         0x0000000000181f70        0x8 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+                0x0000000000181f70                alt_sgdma_list
+ .sdata         0x0000000000181f78        0x4 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+                0x0000000000181f78                alt_errno
+ .sdata         0x0000000000181f7c        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000181f7c                alt_priority_mask
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x00000000000819a0                . = ALIGN (0x4)
-                0x00000000000819a0                _edata = ABSOLUTE (.)
+                0x0000000000181f80                . = ALIGN (0x4)
+                0x0000000000181f80                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x00000000000819a0                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x00000000000819a0                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000181f80                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000181f80                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000081e14      0x528
-                0x0000000000081e14                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000182754      0x520
+                0x0000000000182754                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000081e14        0xc obj/default/network.o
-                0x0000000000081e14                sgdma_tx_dev
-                0x0000000000081e18                text_length
-                0x0000000000081e1c                sgdma_rx_dev
- .sbss._randbits
-                0x0000000000081e20        0x8 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .sbss          0x0000000000081e28        0xc ../barcode_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000081e28                alt_envp
-                0x0000000000081e2c                alt_argv
-                0x0000000000081e30                alt_argc
- .sbss          0x0000000000081e34        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000081e34                alt_irq_active
- .sbss          0x0000000000081e38        0x4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
-                0x0000000000081e38                errno
+ .sbss          0x0000000000182754        0xc obj/default/network.o
+                0x0000000000182754                sgdma_tx_dev
+                0x0000000000182758                text_length
+                0x000000000018275c                sgdma_rx_dev
+ .sbss          0x0000000000182760        0xc ../barcode_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000182760                alt_envp
+                0x0000000000182764                alt_argv
+                0x0000000000182768                alt_argc
+ .sbss          0x000000000018276c        0x4 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x000000000018276c                alt_irq_active
+ .sbss          0x0000000000182770        0x4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+                0x0000000000182770                errno
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000081e3c        0x0 ../barcode_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000081e3c        0x0 obj/default/main.o
- .bss           0x0000000000081e3c      0x400 obj/default/network.o
-                0x0000000000081e3c                rx_frame
- .bss           0x000000000008223c        0x0 obj/default/video.o
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .bss           0x000000000008223c        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .bss           0x000000000008223c        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000182774        0x0 ../barcode_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000182774        0x0 obj/default/main.o
+ .bss           0x0000000000182774      0x400 obj/default/network.o
+                0x0000000000182774                rx_frame
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000182b74        0x0 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000182b74        0x0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
  *(COMMON)
- COMMON         0x000000000008223c      0x100 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x000000000008223c                alt_irq
-                0x000000000008233c                . = ALIGN (0x4)
-                0x000000000008233c                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000000182b74      0x100 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000182b74                alt_irq
+                0x0000000000182c74                . = ALIGN (0x4)
+                0x0000000000182c74                __bss_end = ABSOLUTE (.)
 
-.VideoRAM       0x0000000000000000        0x0 load address 0x000000000008233c
+.VideoRAM       0x0000000000000000        0x0 load address 0x0000000000182c74
                 [!provide]                        PROVIDE (_alt_partition_VideoRAM_start, ABSOLUTE (.))
  *(.VideoRAM .VideoRAM. VideoRAM.*)
                 0x0000000000000000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_VideoRAM_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_alt_partition_VideoRAM_load_addr, LOADADDR (.VideoRAM))
 
-.onchip_memory  0x000000000008233c        0x0
-                [!provide]                        PROVIDE (_alt_partition_onchip_memory_start, ABSOLUTE (.))
- *(.onchip_memory .onchip_memory. onchip_memory.*)
-                0x000000000008233c                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_alt_partition_onchip_memory_end, ABSOLUTE (.))
-                0x000000000008233c                _end = ABSOLUTE (.)
-                0x000000000008233c                end = ABSOLUTE (.)
-                0x000000000008233c                __alt_stack_base = ABSOLUTE (.)
-                [!provide]                        PROVIDE (_alt_partition_onchip_memory_load_addr, LOADADDR (.onchip_memory))
-
 .descriptor_memory
-                0x0000000000100000       0x80 load address 0x000000000008233c
+                0x0000000000008000       0x80 load address 0x0000000000182c74
                 [!provide]                        PROVIDE (_alt_partition_descriptor_memory_start, ABSOLUTE (.))
  *(.descriptor_memory .descriptor_memory. descriptor_memory.*)
  .descriptor_memory
-                0x0000000000100000       0x80 obj/default/network.o
-                0x0000000000100000                rx_descriptor_end
-                0x0000000000100020                rx_descriptor
-                0x0000000000100040                tx_descriptor_end
-                0x0000000000100060                tx_descriptor
-                0x0000000000100080                . = ALIGN (0x4)
+                0x0000000000008000       0x80 obj/default/network.o
+                0x0000000000008000                rx_descriptor_end
+                0x0000000000008020                rx_descriptor
+                0x0000000000008040                tx_descriptor_end
+                0x0000000000008060                tx_descriptor
+                0x0000000000008080                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_descriptor_memory_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_alt_partition_descriptor_memory_load_addr, LOADADDR (.descriptor_memory))
+
+.onchip_memory  0x0000000000182cf4        0x0
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_start, ABSOLUTE (.))
+ *(.onchip_memory .onchip_memory. onchip_memory.*)
+                0x0000000000182cf4                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_end, ABSOLUTE (.))
+                0x0000000000182cf4                _end = ABSOLUTE (.)
+                0x0000000000182cf4                end = ABSOLUTE (.)
+                0x0000000000182cf4                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_load_addr, LOADADDR (.onchip_memory))
 
 .stab
  *(.stab)
@@ -526,10 +514,8 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  .comment       0x0000000000000000       0x23 obj/default/main.o
                                          0x24 (size before relaxing)
  .comment       0x0000000000000023       0x24 obj/default/network.o
- .comment       0x0000000000000023       0x24 obj/default/video.o
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_load.o)
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_main.o)
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
@@ -549,11 +535,11 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
  .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .comment       0x0000000000000023       0x24 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .comment       0x0000000000000023       0x24 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
 .debug
  *(.debug)
@@ -567,7 +553,7 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x448
+.debug_aranges  0x0000000000000000      0x400
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 ../barcode_bsp//obj/HAL/src/crt0.o
@@ -576,292 +562,275 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  .debug_aranges
                 0x0000000000000050       0x20 obj/default/network.o
  .debug_aranges
-                0x0000000000000070       0x20 obj/default/video.o
+                0x0000000000000070       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
  .debug_aranges
-                0x0000000000000090       0x28 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
+                0x0000000000000090       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
  .debug_aranges
-                0x00000000000000b8       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
+                0x00000000000000b0       0x20 ../barcode_bsp//libhal_bsp.a(alt_load.o)
  .debug_aranges
-                0x00000000000000d8       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
+                0x00000000000000d0       0x20 ../barcode_bsp//libhal_bsp.a(alt_main.o)
  .debug_aranges
-                0x00000000000000f8       0x20 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+                0x00000000000000f0       0x20 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
  .debug_aranges
-                0x0000000000000118       0x20 ../barcode_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000110       0x20 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
  .debug_aranges
-                0x0000000000000138       0x20 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+                0x0000000000000130       0x20 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
  .debug_aranges
-                0x0000000000000158       0x20 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+                0x0000000000000150       0x20 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
  .debug_aranges
-                0x0000000000000178       0x20 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+                0x0000000000000170       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
  .debug_aranges
-                0x0000000000000198       0x20 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000190       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
  .debug_aranges
-                0x00000000000001b8       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x00000000000001b0       0x20 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
  .debug_aranges
-                0x00000000000001d8       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+                0x00000000000001d0       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
  .debug_aranges
-                0x00000000000001f8       0x20 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x00000000000001f0       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
  .debug_aranges
-                0x0000000000000218       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+                0x0000000000000210       0x20 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
  .debug_aranges
-                0x0000000000000238       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000000230       0x18 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
  .debug_aranges
-                0x0000000000000258       0x20 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000000000248       0x20 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
  .debug_aranges
-                0x0000000000000278       0x18 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+                0x0000000000000268       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
  .debug_aranges
-                0x0000000000000290       0x20 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+                0x0000000000000288       0x20 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
  .debug_aranges
-                0x00000000000002b0       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x00000000000002a8       0x20 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
  .debug_aranges
-                0x00000000000002d0       0x20 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+                0x00000000000002c8       0x30 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
  .debug_aranges
-                0x00000000000002f0       0x20 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000000002f8       0x20 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
  .debug_aranges
-                0x0000000000000310       0x30 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000000318       0x18 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
  .debug_aranges
-                0x0000000000000340       0x20 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000000330       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
  .debug_aranges
-                0x0000000000000360       0x18 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000000350       0x38 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
  .debug_aranges
-                0x0000000000000378       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x0000000000000388       0x18 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
  .debug_aranges
-                0x0000000000000398       0x38 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x00000000000003a0       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
  .debug_aranges
-                0x00000000000003d0       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
+                0x00000000000003c0       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
  .debug_aranges
-                0x00000000000003f0       0x18 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .debug_aranges
-                0x0000000000000408       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_aranges
-                0x0000000000000428       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+                0x00000000000003e0       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x423a
+.debug_info     0x0000000000000000     0x3c0d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x68 ../barcode_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000068      0x141 obj/default/main.o
- .debug_info    0x00000000000001a9      0x652 obj/default/network.o
- .debug_info    0x00000000000007fb      0x17b obj/default/video.o
- .debug_info    0x0000000000000976      0x5ec /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .debug_info    0x0000000000000f62       0xc9 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_info    0x000000000000102b      0x1eb /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_info    0x0000000000001216      0x1c9 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .debug_info    0x00000000000013df      0x169 ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000001548      0x14d ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_info    0x0000000000001695      0x12a ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .debug_info    0x00000000000017bf       0xd1 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .debug_info    0x0000000000001890      0x380 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000000000001c10      0x197 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_info    0x0000000000001da7      0xdcd ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .debug_info    0x0000000000002b74       0xd8 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .debug_info    0x0000000000002c4c       0xba ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .debug_info    0x0000000000002d06       0x92 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000002d98      0x1b3 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_info    0x0000000000002f4b       0xa6 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .debug_info    0x0000000000002ff1      0x32d ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_info    0x000000000000331e       0xb8 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x00000000000033d6      0x38a ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .debug_info    0x0000000000003760      0x232 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x0000000000003992       0x71 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x0000000000003a03      0x184 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x0000000000003b87       0x88 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000003c0f       0x92 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_info    0x0000000000003ca1       0x77 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x0000000000003d18       0xde ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_info    0x0000000000003df6       0x8a /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .debug_info    0x0000000000003e80       0xf4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_info    0x0000000000003f74      0x2c6 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000068      0x386 obj/default/main.o
+ .debug_info    0x00000000000003ee      0x669 obj/default/network.o
+ .debug_info    0x0000000000000a57      0x119 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000000b70       0xc9 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000000c39      0x1c9 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000e02      0x169 ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000f6b      0x14d ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_info    0x00000000000010b8      0x12a ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_info    0x00000000000011e2       0xd1 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x00000000000012b3      0x380 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000001633      0x197 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000000000017ca      0xdcd ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .debug_info    0x0000000000002597       0xd8 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x000000000000266f       0xba ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .debug_info    0x0000000000002729       0x92 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000027bb      0x1b3 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x000000000000296e       0xa6 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000002a14      0x32d ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000002d41       0x92 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000002dd3      0x38a ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_info    0x000000000000315d      0x232 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x000000000000338f       0x71 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000003400      0x184 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000003584       0x88 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x000000000000360c       0x92 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000369e       0x77 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000003715       0x8a /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x000000000000379f       0xf4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000003893      0x2c6 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000003b59       0xb4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
-.debug_abbrev   0x0000000000000000     0x1af9
+.debug_abbrev   0x0000000000000000     0x18ac
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../barcode_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012       0xc9 obj/default/main.o
- .debug_abbrev  0x00000000000000db      0x181 obj/default/network.o
- .debug_abbrev  0x000000000000025c       0xde obj/default/video.o
- .debug_abbrev  0x000000000000033a      0x1a0 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .debug_abbrev  0x00000000000004da       0x7f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_abbrev  0x0000000000000559       0xef /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_abbrev  0x0000000000000648       0xd8 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x0000000000000720       0xee ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x000000000000080e       0xd5 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_abbrev  0x00000000000008e3       0xd2 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .debug_abbrev  0x00000000000009b5       0x8d ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .debug_abbrev  0x0000000000000a42      0x150 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x0000000000000b92       0xd5 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_abbrev  0x0000000000000c67      0x2e4 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .debug_abbrev  0x0000000000000f4b       0x8d ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .debug_abbrev  0x0000000000000fd8       0x74 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .debug_abbrev  0x000000000000104c       0x42 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x000000000000108e      0x11c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_abbrev  0x00000000000011aa       0x5a ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .debug_abbrev  0x0000000000001204      0x125 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_abbrev  0x0000000000001329       0x6f ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000001398      0x1a0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .debug_abbrev  0x0000000000001538      0x19c ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_abbrev  0x00000000000016d4       0x12 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x00000000000016e6      0x120 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x0000000000001806       0x40 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x0000000000001846       0x42 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_abbrev  0x0000000000001888       0x12 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x000000000000189a       0x9b ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_abbrev  0x0000000000001935       0x37 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .debug_abbrev  0x000000000000196c       0x7f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_abbrev  0x00000000000019eb      0x10e /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x0000000000000012      0x1a6 obj/default/main.o
+ .debug_abbrev  0x00000000000001b8      0x181 obj/default/network.o
+ .debug_abbrev  0x0000000000000339       0x9c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x00000000000003d5       0x7f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000000454       0xd8 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000000000000052c       0xee ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000000000000061a       0xd5 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_abbrev  0x00000000000006ef       0xd2 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_abbrev  0x00000000000007c1       0x8d ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x000000000000084e      0x150 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000000000000099e       0xd5 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000000a73      0x2e4 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .debug_abbrev  0x0000000000000d57       0x8d ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x0000000000000de4       0x74 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .debug_abbrev  0x0000000000000e58       0x42 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000e9a      0x11c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x0000000000000fb6       0x5a ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000001010      0x125 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000001135       0x42 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000001177      0x1a0 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000001317      0x19c ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x00000000000014b3       0x12 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000000000014c5      0x120 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000000000015e5       0x40 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000001625       0x42 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000001667       0x12 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001679       0x37 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x00000000000016b0       0x7f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x000000000000172f      0x10e /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x000000000000183d       0x6f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
-.debug_line     0x0000000000000000     0x1b39
+.debug_line     0x0000000000000000     0x1a2a
  *(.debug_line)
- .debug_line    0x0000000000000000       0x6c ../barcode_bsp//obj/HAL/src/crt0.o
- .debug_line    0x000000000000006c       0xf1 obj/default/main.o
- .debug_line    0x000000000000015d      0x190 obj/default/network.o
- .debug_line    0x00000000000002ed       0xc2 obj/default/video.o
- .debug_line    0x00000000000003af      0x1e8 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .debug_line    0x0000000000000597      0x159 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_line    0x00000000000006f0       0x86 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_line    0x0000000000000776       0xa4 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .debug_line    0x000000000000081a       0xbd ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000008d7      0x11f ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_line    0x00000000000009f6       0x55 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .debug_line    0x0000000000000a4b       0xdc ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .debug_line    0x0000000000000b27      0x146 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x0000000000000c6d       0xf0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x0000000000000d5d      0x273 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .debug_line    0x0000000000000fd0       0xb3 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .debug_line    0x0000000000001083       0x63 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .debug_line    0x00000000000010e6       0x4e ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000001134       0xd8 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_line    0x000000000000120c       0x51 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
- .debug_line    0x000000000000125d      0x114 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_line    0x0000000000001371       0x6e ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x00000000000013df       0xf1 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .debug_line    0x00000000000014d0       0xd6 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x00000000000015a6       0x6b ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000001611       0xa5 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x00000000000016b6       0x50 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000001706       0x50 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_line    0x0000000000001756       0xab ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000001801       0x7d ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_line    0x000000000000187e       0x5c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
- .debug_line    0x00000000000018da      0x15d /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_line    0x0000000000001a37      0x102 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_line    0x0000000000000000       0x66 ../barcode_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066      0x1c6 obj/default/main.o
+ .debug_line    0x000000000000022c      0x191 obj/default/network.o
+ .debug_line    0x00000000000003bd      0x15e /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_line    0x000000000000051b      0x15c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000000677       0xa4 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x000000000000071b       0xbd ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000007d8      0x11f ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_line    0x00000000000008f7       0x55 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x000000000000094c       0xdc ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x0000000000000a28      0x146 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000000b6e       0xf0 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000000c5e      0x273 ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .debug_line    0x0000000000000ed1       0xb5 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x0000000000000f86       0x63 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .debug_line    0x0000000000000fe9       0x4e ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000001037       0xd8 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x000000000000110f       0x51 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000001160      0x114 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000001274       0x4e ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000000000012c2       0xf1 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00000000000013b3       0xd6 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000001489       0x6b ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x00000000000014f4       0xa5 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000001599       0x50 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x00000000000015e9       0x50 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000001639       0xad ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x00000000000016e6       0x5f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000001745      0x160 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_line    0x00000000000018a5      0x105 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000000000019aa       0x80 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
-.debug_frame    0x0000000000000000      0x728
+.debug_frame    0x0000000000000000      0x6fc
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x38 obj/default/main.o
- .debug_frame   0x0000000000000038       0x8c obj/default/network.o
- .debug_frame   0x00000000000000c4       0x54 obj/default/video.o
- .debug_frame   0x0000000000000118       0x40 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .debug_frame   0x0000000000000158       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_frame   0x0000000000000178       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_frame   0x0000000000000198       0x30 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .debug_frame   0x00000000000001c8       0x2c ../barcode_bsp//libhal_bsp.a(alt_main.o)
- .debug_frame   0x00000000000001f4       0x54 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_frame   0x0000000000000248       0x30 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .debug_frame   0x0000000000000278       0x20 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .debug_frame   0x0000000000000298       0x48 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x00000000000002e0       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_frame   0x0000000000000300      0x1cc ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .debug_frame   0x00000000000004cc       0x30 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .debug_frame   0x00000000000004fc       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
- .debug_frame   0x000000000000051c       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x000000000000053c       0x2c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_frame   0x0000000000000568       0x3c ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_frame   0x00000000000005a4       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x00000000000005c4       0x50 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .debug_frame   0x0000000000000614       0x30 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_frame   0x0000000000000644       0x34 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_frame   0x0000000000000678       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_frame   0x0000000000000698       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_frame   0x00000000000006b8       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_frame   0x00000000000006d8       0x50 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x0000000000000000       0xa0 obj/default/main.o
+ .debug_frame   0x00000000000000a0       0x8c obj/default/network.o
+ .debug_frame   0x000000000000012c       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_frame   0x000000000000014c       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x000000000000016c       0x30 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x000000000000019c       0x2c ../barcode_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000001c8       0x54 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_frame   0x000000000000021c       0x30 ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_frame   0x000000000000024c       0x20 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x000000000000026c       0x48 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000000000002b4       0x20 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000000000002d4      0x1cc ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .debug_frame   0x00000000000004a0       0x30 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x00000000000004d0       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+ .debug_frame   0x00000000000004f0       0x20 ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000510       0x2c ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x000000000000053c       0x3c ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000578       0x20 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000000598       0x50 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x00000000000005e8       0x30 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x0000000000000618       0x34 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x000000000000064c       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x000000000000066c       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_frame   0x000000000000068c       0x50 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x00000000000006dc       0x20 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
-.debug_str      0x0000000000000000     0x150c
+.debug_str      0x0000000000000000     0x11fa
  *(.debug_str)
- .debug_str     0x0000000000000000      0x108 obj/default/main.o
-                                        0x156 (size before relaxing)
- .debug_str     0x0000000000000108      0x300 obj/default/network.o
-                                        0x465 (size before relaxing)
- .debug_str     0x0000000000000408       0x25 obj/default/video.o
-                                        0x145 (size before relaxing)
- .debug_str     0x000000000000042d      0x3d7 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
-                                        0x4a6 (size before relaxing)
- .debug_str     0x0000000000000804       0xcc /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
-                                        0x1cc (size before relaxing)
- .debug_str     0x00000000000008d0      0x183 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
-                                        0x20c (size before relaxing)
- .debug_str     0x0000000000000a53      0x147 ../barcode_bsp//libhal_bsp.a(alt_load.o)
-                                        0x233 (size before relaxing)
- .debug_str     0x0000000000000b9a       0x5e ../barcode_bsp//libhal_bsp.a(alt_main.o)
-                                        0x1ac (size before relaxing)
- .debug_str     0x0000000000000bf8       0x54 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
-                                         0xfd (size before relaxing)
- .debug_str     0x0000000000000c4c       0x5e ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
-                                        0x182 (size before relaxing)
- .debug_str     0x0000000000000caa       0x2f ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
-                                        0x14e (size before relaxing)
- .debug_str     0x0000000000000cd9       0xa9 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
-                                        0x39c (size before relaxing)
- .debug_str     0x0000000000000d82       0x2c ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                                        0x20c (size before relaxing)
- .debug_str     0x0000000000000dae      0x30e ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
-                                        0x6ce (size before relaxing)
- .debug_str     0x00000000000010bc       0x33 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
-                                        0x162 (size before relaxing)
- .debug_str     0x00000000000010ef       0x1b ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
-                                        0x152 (size before relaxing)
- .debug_str     0x000000000000110a       0x1f ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                                        0x14c (size before relaxing)
- .debug_str     0x0000000000001129       0x36 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
-                                        0x1c3 (size before relaxing)
- .debug_str     0x000000000000115f       0x14 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
-                                        0x13c (size before relaxing)
- .debug_str     0x0000000000001173       0x72 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
-                                        0x1f1 (size before relaxing)
- .debug_str     0x00000000000011e5       0x30 ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                                        0x15d (size before relaxing)
- .debug_str     0x0000000000001215       0xb8 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
-                                        0x24a (size before relaxing)
- .debug_str     0x00000000000012cd       0x37 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
-                                        0x204 (size before relaxing)
- .debug_str     0x0000000000001304       0x3a ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
-                                        0x18e (size before relaxing)
- .debug_str     0x000000000000133e       0x17 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
-                                        0x131 (size before relaxing)
- .debug_str     0x0000000000001355       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
-                                        0x153 (size before relaxing)
- .debug_str     0x0000000000001375       0x1b ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
-                                        0x152 (size before relaxing)
- .debug_str     0x0000000000001390       0xc6 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-int_errno.o)
-                                        0x1bf (size before relaxing)
- .debug_str     0x0000000000001456       0x3a /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
+ .debug_str     0x0000000000000000      0x181 obj/default/main.o
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x0000000000000181      0x2f8 obj/default/network.o
+                                        0x468 (size before relaxing)
+ .debug_str     0x0000000000000479      0x14f /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+                                        0x1f4 (size before relaxing)
+ .debug_str     0x00000000000005c8       0x3d /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+                                        0x1e6 (size before relaxing)
+ .debug_str     0x0000000000000605      0x147 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+                                        0x236 (size before relaxing)
+ .debug_str     0x000000000000074c       0x5e ../barcode_bsp//libhal_bsp.a(alt_main.o)
+                                        0x1af (size before relaxing)
+ .debug_str     0x00000000000007aa       0x59 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+                                        0x100 (size before relaxing)
+ .debug_str     0x0000000000000803       0x5e ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+                                        0x185 (size before relaxing)
+ .debug_str     0x0000000000000861       0x2f ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+                                        0x151 (size before relaxing)
+ .debug_str     0x0000000000000890       0xa9 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x39f (size before relaxing)
+ .debug_str     0x0000000000000939       0x32 ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x20f (size before relaxing)
+ .debug_str     0x000000000000096b      0x30e ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+                                        0x6d1 (size before relaxing)
+ .debug_str     0x0000000000000c79       0x33 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                                        0x165 (size before relaxing)
+ .debug_str     0x0000000000000cac       0x1b ../barcode_bsp//libhal_bsp.a(alt_dcache_flush.o)
+                                        0x155 (size before relaxing)
+ .debug_str     0x0000000000000cc7       0x1f ../barcode_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x14f (size before relaxing)
+ .debug_str     0x0000000000000ce6       0x36 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
                                         0x1c6 (size before relaxing)
- .debug_str     0x0000000000001490       0x7c /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
-                                        0x1b9 (size before relaxing)
+ .debug_str     0x0000000000000d1c       0x14 ../barcode_bsp//libhal_bsp.a(alt_errno.o)
+                                        0x13f (size before relaxing)
+ .debug_str     0x0000000000000d30       0x72 ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+                                        0x1f4 (size before relaxing)
+ .debug_str     0x0000000000000da2       0x1f ../barcode_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x14f (size before relaxing)
+ .debug_str     0x0000000000000dc1       0xb8 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+                                        0x24d (size before relaxing)
+ .debug_str     0x0000000000000e79       0x37 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x207 (size before relaxing)
+ .debug_str     0x0000000000000eb0       0x3a ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+                                        0x191 (size before relaxing)
+ .debug_str     0x0000000000000eea       0x17 ../barcode_bsp//libhal_bsp.a(alt_irq_vars.o)
+                                        0x134 (size before relaxing)
+ .debug_str     0x0000000000000f01       0x20 ../barcode_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x156 (size before relaxing)
+ .debug_str     0x0000000000000f21       0xd4 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+                                        0x1d9 (size before relaxing)
+ .debug_str     0x0000000000000ff5       0x3d /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+                                        0x1e0 (size before relaxing)
+ .debug_str     0x0000000000001032      0x188 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                                        0x1d3 (size before relaxing)
+ .debug_str     0x00000000000011ba       0x40 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+                                        0x194 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x1b1c
+.debug_loc      0x0000000000000000     0x1c58
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x2e obj/default/main.o
- .debug_loc     0x000000000000002e       0xda obj/default/network.o
- .debug_loc     0x0000000000000108       0xdc obj/default/video.o
- .debug_loc     0x00000000000001e4       0x1e /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_loc     0x0000000000000202      0x12d /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_loc     0x000000000000032f      0x1de ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_loc     0x000000000000050d       0x2c ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
- .debug_loc     0x0000000000000539       0x21 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
- .debug_loc     0x000000000000055a       0x21 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x000000000000057b       0x8b ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_loc     0x0000000000000606      0xa7c ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
- .debug_loc     0x0000000000001082       0x75 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .debug_loc     0x00000000000010f7       0x7e ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_loc     0x0000000000001175       0x7e ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_loc     0x00000000000011f3      0x170 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
- .debug_loc     0x0000000000001363      0x193 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_loc     0x00000000000014f6       0x72 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x0000000000001568       0x52 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_loc     0x00000000000015ba       0x94 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_loc     0x000000000000164e      0x4ce /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000000      0x20b obj/default/main.o
+ .debug_loc     0x000000000000020b       0xda obj/default/network.o
+ .debug_loc     0x00000000000002e5      0x135 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_loc     0x000000000000041a       0x1e /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000000438      0x1de ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_loc     0x0000000000000616       0x2c ../barcode_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_loc     0x0000000000000642       0x21 ../barcode_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x0000000000000663       0x21 ../barcode_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x0000000000000684       0x8b ../barcode_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x000000000000070f      0xa7c ../barcode_bsp//libhal_bsp.a(altera_avalon_sgdma.o)
+ .debug_loc     0x000000000000118b       0x67 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x00000000000011f2       0x7e ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_loc     0x0000000000001270       0x7e ../barcode_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_loc     0x00000000000012ee      0x170 ../barcode_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x000000000000145e      0x193 ../barcode_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x00000000000015f1       0x72 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000000000001663       0x94 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_loc     0x00000000000016f7      0x4ce /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000001bc5       0x93 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -879,32 +848,29 @@ LOAD /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/.
  *(.debug_varnames)
 
 .debug_alt_sim_info
-                0x0000000000000000       0x50
+                0x0000000000000000       0x40
  *(.debug_alt_sim_info)
  .debug_alt_sim_info
-                0x0000000000000000       0x20 ../barcode_bsp//obj/HAL/src/crt0.o
+                0x0000000000000000       0x10 ../barcode_bsp//obj/HAL/src/crt0.o
  .debug_alt_sim_info
-                0x0000000000000020       0x30 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
-                0x00000000000cb000                __alt_data_end = 0xcb000
-                0x00000000000cb000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x0000000000000010       0x30 ../barcode_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x00000000001cb000                __alt_data_end = 0x1cb000
+                0x00000000001cb000                PROVIDE (__alt_stack_pointer, __alt_data_end)
                 [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
                 [!provide]                        PROVIDE (__alt_heap_start, end)
-                [!provide]                        PROVIDE (__alt_heap_limit, 0xcb000)
+                [!provide]                        PROVIDE (__alt_heap_limit, 0x1cb000)
 OUTPUT(barcode.elf elf32-littlenios2)
 
-.debug_ranges   0x0000000000000000      0x1f8
+.debug_ranges   0x0000000000000000      0x250
  .debug_ranges  0x0000000000000000       0x20 ../barcode_bsp//obj/HAL/src/crt0.o
- .debug_ranges  0x0000000000000020       0x18 obj/default/main.o
- .debug_ranges  0x0000000000000038       0x18 obj/default/video.o
- .debug_ranges  0x0000000000000050       0x18 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-rand.o)
- .debug_ranges  0x0000000000000068       0x10 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-strlen.o)
- .debug_ranges  0x0000000000000078       0x18 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(_muldi3.o)
- .debug_ranges  0x0000000000000090       0x48 ../barcode_bsp//libhal_bsp.a(alt_load.o)
- .debug_ranges  0x00000000000000d8       0x18 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
- .debug_ranges  0x00000000000000f0       0x20 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_ranges  0x0000000000000110       0x28 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_ranges  0x0000000000000138       0x10 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_ranges  0x0000000000000148       0x30 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_ranges  0x0000000000000178       0x10 ../barcode_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_ranges  0x0000000000000188       0x10 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcmp.o)
- .debug_ranges  0x0000000000000198       0x60 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a(lib2-divmod.o)
+ .debug_ranges  0x0000000000000020       0xb8 obj/default/main.o
+ .debug_ranges  0x00000000000000d8       0x10 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcpy.o)
+ .debug_ranges  0x00000000000000e8       0x10 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .debug_ranges  0x00000000000000f8       0x48 ../barcode_bsp//libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x0000000000000140       0x18 ../barcode_bsp//libhal_bsp.a(alt_printf.o)
+ .debug_ranges  0x0000000000000158       0x20 ../barcode_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_ranges  0x0000000000000178       0x28 ../barcode_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000000000001a0       0x10 ../barcode_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000000000001b0       0x30 ../barcode_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000000000001e0       0x10 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-memcmp.o)
+ .debug_ranges  0x00000000000001f0       0x60 /home/luuk/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)

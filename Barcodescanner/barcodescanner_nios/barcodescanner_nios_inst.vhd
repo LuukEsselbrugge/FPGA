@@ -16,6 +16,7 @@
 			eth_tse_pcs_mac_rx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
 			eth_tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
 			reset_reset_n                           : in  std_logic                     := 'X';             -- reset_n
+			switches_export                         : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- export
 			videoram_address                        : in  std_logic_vector(11 downto 0) := (others => 'X'); -- address
 			videoram_chipselect                     : in  std_logic                     := 'X';             -- chipselect
 			videoram_clken                          : in  std_logic                     := 'X';             -- clken
@@ -44,6 +45,7 @@
 			eth_tse_pcs_mac_rx_clock_connection_clk => CONNECTED_TO_eth_tse_pcs_mac_rx_clock_connection_clk, -- eth_tse_pcs_mac_rx_clock_connection.clk
 			eth_tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_eth_tse_pcs_mac_tx_clock_connection_clk, -- eth_tse_pcs_mac_tx_clock_connection.clk
 			reset_reset_n                           => CONNECTED_TO_reset_reset_n,                           --                               reset.reset_n
+			switches_export                         => CONNECTED_TO_switches_export,                         --                            switches.export
 			videoram_address                        => CONNECTED_TO_videoram_address,                        --                            videoram.address
 			videoram_chipselect                     => CONNECTED_TO_videoram_chipselect,                     --                                    .chipselect
 			videoram_clken                          => CONNECTED_TO_videoram_clken,                          --                                    .clken

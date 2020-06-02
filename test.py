@@ -29,15 +29,16 @@ while True:
     FPGA_packet=s.recv(1024)
     #print(FPGA_packet)
     data = FPGA_packet.split(b'\xaaii')
-    barcode = data[1].decode();
-    print('Barcode request: ', barcode)
+    if len(data) > 1:
+     barcode = data[1].decode();
+     print('Barcode request: ', barcode)
 
-    cursor.execute("SELECT * from Products WHERE Barcode=%s", (barcode,))
-    product = cursor.fetchall()
-    if len(product) > 0:
-      print('sending product information for '+product[0][1]+' to FPGA')
-      sendeth(product[0][1].encode()+b','+product[0][2].encode())
-    else:
-      print('Product not found')
-      sendeth(b'Product Not Found')
+     cursor.execute("SELECT * from Products WHERE Barcode=%s", (barcode,))
+     product = cursor.fetchall()
+     if len(product) > 0:
+       print('sending product information for '+product[0][1]+' to FPGA')
+       sendeth(product[0][2].encode().lower())
+     else:
+       print('Product not found')
+       sendeth(b'Product Not Found')
   

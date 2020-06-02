@@ -23,6 +23,15 @@ state_empty 0 0 0
 state_middle 1 0 1 
 state_full 0 1 1 
 
+State Machine - |barcodescanner|NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_nios2:nios2|barcodescanner_nios_nios2_cpu:cpu|barcodescanner_nios_nios2_cpu_nios2_oci:the_barcodescanner_nios_nios2_cpu_nios2_oci|barcodescanner_nios_nios2_cpu_debug_slave_wrapper:the_barcodescanner_nios_nios2_cpu_debug_slave_wrapper|barcodescanner_nios_nios2_cpu_debug_slave_tck:the_barcodescanner_nios_nios2_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
 State Machine - |barcodescanner|NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_eth_tse:eth_tse|altera_eth_tse_mac:i_tse_mac|altera_tse_top_mdio:U_MDIO|altera_tse_mdio_cntl:U_CNTL|state
 Name state.STM_TYP_HOST_RD_END state.STM_TYP_HOST_RD_REG_WAIT state.STM_TYP_HOST_RD_REG state.STM_TYP_HOST_RD_WAIT2 state.STM_TYP_HOST_RD_WAIT1 state.STM_TYP_HOST_RD_WAIT state.STM_TYP_HOST_RD_WR_ADDR state.STM_TYP_HOST_WR_END state.STM_TYP_HOST_WR_WAIT state.STM_TYP_HOST_WR_WAIT2 state.STM_TYP_HOST_WR_WAIT1 state.STM_TYP_HOST_WR_WR_DATA state.STM_TYP_HOST_WR_WR_ADDR state.STM_TYP_IDLE 
 state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -116,12 +125,3 @@ state.stm_typ_idle 0 0 0 0
 state.stm_typ_sfd 0 0 1 1 
 state.stm_typ_frm 0 1 0 1 
 state.stm_typ_end_frm 1 0 0 1 
-
-State Machine - |barcodescanner|NIOS:inst|barcodescanner_nios:system_inst|barcodescanner_nios_nios2:nios2|barcodescanner_nios_nios2_nios2_oci:the_barcodescanner_nios_nios2_nios2_oci|barcodescanner_nios_nios2_jtag_debug_module_wrapper:the_barcodescanner_nios_nios2_jtag_debug_module_wrapper|barcodescanner_nios_nios2_jtag_debug_module_tck:the_barcodescanner_nios_nios2_jtag_debug_module_tck|DRsize
-Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
-DRsize.000 0 0 0 0 0 0 
-DRsize.001 0 0 0 0 1 1 
-DRsize.010 0 0 0 1 0 1 
-DRsize.011 0 0 1 0 0 1 
-DRsize.100 0 1 0 0 0 1 
-DRsize.101 1 0 0 0 0 1 

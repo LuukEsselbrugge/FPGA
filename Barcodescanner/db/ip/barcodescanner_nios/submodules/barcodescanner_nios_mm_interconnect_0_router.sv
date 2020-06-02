@@ -49,21 +49,21 @@ module barcodescanner_nios_mm_interconnect_0_router_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 5 
    )
-  (output [94 - 92 : 0] default_destination_id,
-   output [8-1 : 0] default_wr_channel,
-   output [8-1 : 0] default_rd_channel,
-   output [8-1 : 0] default_src_channel
+  (output [96 - 93 : 0] default_destination_id,
+   output [9-1 : 0] default_wr_channel,
+   output [9-1 : 0] default_rd_channel,
+   output [9-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[94 - 92 : 0];
+    DEFAULT_DESTID[96 - 93 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 8'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 9'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module barcodescanner_nios_mm_interconnect_0_router_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 8'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 8'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 9'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 9'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module barcodescanner_nios_mm_interconnect_0_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [108-1 : 0]    sink_data,
+    input  [110-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module barcodescanner_nios_mm_interconnect_0_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [108-1    : 0] src_data,
-    output reg [8-1 : 0] src_channel,
+    output reg [110-1    : 0] src_data,
+    output reg [9-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,12 +114,12 @@ module barcodescanner_nios_mm_interconnect_0_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 94;
-    localparam PKT_DEST_ID_L = 92;
-    localparam PKT_PROTECTION_H = 98;
-    localparam PKT_PROTECTION_L = 96;
-    localparam ST_DATA_W = 108;
-    localparam ST_CHANNEL_W = 8;
+    localparam PKT_DEST_ID_H = 96;
+    localparam PKT_DEST_ID_L = 93;
+    localparam PKT_PROTECTION_H = 100;
+    localparam PKT_PROTECTION_L = 98;
+    localparam ST_DATA_W = 110;
+    localparam ST_CHANNEL_W = 9;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 70;
@@ -135,19 +135,20 @@ module barcodescanner_nios_mm_interconnect_0_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h4000 - 64'h0); 
-    localparam PAD1 = log2ceil(64'h100000 - 64'h80000); 
-    localparam PAD2 = log2ceil(64'h101000 - 64'h100000); 
-    localparam PAD3 = log2ceil(64'h102000 - 64'h101800); 
-    localparam PAD4 = log2ceil(64'h102400 - 64'h102000); 
-    localparam PAD5 = log2ceil(64'h102440 - 64'h102400); 
-    localparam PAD6 = log2ceil(64'h102480 - 64'h102440); 
-    localparam PAD7 = log2ceil(64'h102488 - 64'h102480); 
+    localparam PAD1 = log2ceil(64'h9000 - 64'h8000); 
+    localparam PAD2 = log2ceil(64'ha000 - 64'h9800); 
+    localparam PAD3 = log2ceil(64'ha040 - 64'ha000); 
+    localparam PAD4 = log2ceil(64'ha080 - 64'ha040); 
+    localparam PAD5 = log2ceil(64'ha090 - 64'ha080); 
+    localparam PAD6 = log2ceil(64'ha098 - 64'ha090); 
+    localparam PAD7 = log2ceil(64'h102400 - 64'h102000); 
+    localparam PAD8 = log2ceil(64'h200000 - 64'h180000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h102488;
+    localparam ADDR_RANGE = 64'h200000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -171,11 +172,16 @@ module barcodescanner_nios_mm_interconnect_0_router
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [8-1 : 0] default_src_channel;
+    wire [9-1 : 0] default_src_channel;
 
 
 
 
+    // -------------------------------------------------------
+    // Write and read transaction signals
+    // -------------------------------------------------------
+    wire read_transaction;
+    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     barcodescanner_nios_mm_interconnect_0_router_default_decode the_default_decode(
@@ -197,50 +203,56 @@ module barcodescanner_nios_mm_interconnect_0_router
 
     // ( 0x0 .. 0x4000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 21'h0   ) begin
-            src_channel = 8'b10000000;
+            src_channel = 9'b010000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
-    // ( 0x80000 .. 0x100000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 21'h80000   ) begin
-            src_channel = 8'b00100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
-    end
-
-    // ( 0x100000 .. 0x101000 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 21'h100000   ) begin
-            src_channel = 8'b01000000;
+    // ( 0x8000 .. 0x9000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 21'h8000   ) begin
+            src_channel = 9'b001000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
-    // ( 0x101800 .. 0x102000 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 21'h101800   ) begin
-            src_channel = 8'b00010000;
+    // ( 0x9800 .. 0xa000 )
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 21'h9800   ) begin
+            src_channel = 9'b000010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x102000 .. 0x102400 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 21'h102000   ) begin
-            src_channel = 8'b00000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+    // ( 0xa000 .. 0xa040 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 21'ha000   ) begin
+            src_channel = 9'b000001000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
     end
 
-    // ( 0x102400 .. 0x102440 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 21'h102400   ) begin
-            src_channel = 8'b00001000;
+    // ( 0xa040 .. 0xa080 )
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 21'ha040   ) begin
+            src_channel = 9'b000000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
-    // ( 0x102440 .. 0x102480 )
-    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 21'h102440   ) begin
-            src_channel = 8'b00000100;
+    // ( 0xa080 .. 0xa090 )
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 21'ha080  && read_transaction  ) begin
+            src_channel = 9'b100000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
-    // ( 0x102480 .. 0x102488 )
-    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 21'h102480   ) begin
-            src_channel = 8'b00000001;
+    // ( 0xa090 .. 0xa098 )
+    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 21'ha090   ) begin
+            src_channel = 9'b000000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+    end
+
+    // ( 0x102000 .. 0x102400 )
+    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 21'h102000   ) begin
+            src_channel = 9'b000000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+    end
+
+    // ( 0x180000 .. 0x200000 )
+    if ( {address[RG:PAD8],{PAD8{1'b0}}} == 21'h180000   ) begin
+            src_channel = 9'b000100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
 end

@@ -68,11 +68,12 @@ BEGIN
 			END IF;
 			
 			
-			IF(h_count < 50 AND v_count < 50) THEN
+			IF(h_count < 200 AND v_count < 10) THEN
 				--change pixel read adress
-				video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count+50*v_count, video_adress'length));
+				--video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED((h_count+5*v_count)+1, video_adress'length));
+				video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count+200*v_count, video_adress'length));
 				red <= video_data(7 downto 0);
-				blue <= video_data(15 downto 8);
+				blue <= video_data(15 downto 8);	
 				green <= video_data(23 downto 16);
 			END IF;
 	

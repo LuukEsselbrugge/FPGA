@@ -62,7 +62,7 @@ void setup(void)
 	alt_avalon_sgdma_do_async_transfer( sgdma_rx_dev, &rx_descriptor );
 
 	// Triple-speed Ethernet MegaCore base address
-	volatile int * tse = (int *) 0x00102000;
+	volatile int * tse = (int *) ETH_TSE_BASE;
 
 	// Initialize the MAC address
 	*(tse + 3) = 0x116E6001;
@@ -83,8 +83,9 @@ void setup(void)
 
 	// Software reset the second PHY chip and wait
 	*(tse + 0xA0) = *(tse + 0xA0) | 0x8000;
-	while ( *(tse + 0xA0) & 0x8000  )
-		;
+
+	while ( *(tse + 0xA0) & 0x8000 );
+	alt_printf("help");
 
 	// Enable read and write transfers, 100 mbit Ethernet operation, and CRC forwarding
 	//*(tse + 2) = *(tse + 2) | 0x00000043;

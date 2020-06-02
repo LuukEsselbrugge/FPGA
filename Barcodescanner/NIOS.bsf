@@ -66,6 +66,13 @@ refer to the applicable agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "SW[7..0]" (rect 0 0 36 12)(font "Arial" ))
+		(text "SW[7..0]" (rect 21 123 57 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
 		(pt 312 32)
 		(output)
 		(text "ENET1_GTX_CLK" (rect 0 0 81 12)(font "Arial" ))
