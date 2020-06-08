@@ -359,19 +359,12 @@ void showText(char *chars){
 }
 
 int main(void){
-	alt_printf("yeet");
 	setup();
-
-	clearText();
 	showText("please scan a barcode");
 
 	while(1){
-		//tx_ethernet_isr("Hello");
-		//printf("a\n");
-		usleep(1000000);
+		usleep(2000000);
 		tx_ethernet_isr("69");
-		//refresh_ethernet();
-
 	}
 
 	return 0;

@@ -13,13 +13,16 @@ ENTITY VGA IS
 		blank		:	OUT	STD_LOGIC;
 		v_sync	:	OUT	STD_LOGIC;
 		h_sync	:	OUT	STD_LOGIC;
-		video_adress		:	OUT	STD_LOGIC_VECTOR(11 DOWNTO 0)
+		video_adress		:	OUT	STD_LOGIC_VECTOR(11 DOWNTO 0);
+		redIN				:	IN	STD_LOGIC_VECTOR(7 DOWNTO 0);
+		blueIN				:	IN	STD_LOGIC_VECTOR(7 DOWNTO 0);
+		greenIN				:	IN	STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END VGA;
 
 ARCHITECTURE behavior OF VGA IS
-	CONSTANT h_pixels	:	INTEGER := 128 + 88 + 800 + 40;
-	CONSTANT	v_pixels	:	INTEGER := 4 + 23 + 600 + 1;
+	CONSTANT h_pixels	:	INTEGER := 96 + 48 + 640 + 16;
+	CONSTANT	v_pixels	:	INTEGER := 2 + 33 + 480 + 10;
 BEGIN
 	blank <= '1';
 	sync <= '0';
@@ -44,37 +47,38 @@ BEGIN
 			END IF;
 			
 			-- horizontal sync
-			IF(h_count < 840 OR h_count >= 968) THEN
+			IF(h_count < 656 OR h_count >= 752) THEN
 				h_sync <= '0';
 			ELSE
 				h_sync <= '1';
 			END IF;
 			
 			-- vertical sync
-			IF(v_count < 601 OR v_count >= 605) THEN
+			IF(v_count < 490 OR v_count >= 492) THEN
 				v_sync <= '0';
 			ELSE
 				v_sync <= '1';
 			END IF;
 			
-			IF(h_count < 800 AND v_count < 600) THEN
-				red <= "11111111";
-				blue <= "00000000";
-				green <= "00000000";
+			IF(h_count < 640 AND v_count < 480) THEN
+				red <= redIN;
+				blue <= blueIN;
+				green <= greenIN;
 			ELSE
 				red <= "00000000";
 				blue <= "00000000";
 				green <= "00000000";
 			END IF;
 			
-			
 			IF(h_count < 200 AND v_count < 10) THEN
 				--change pixel read adress
-				--video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED((h_count+5*v_count)+1, video_adress'length));
-				video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count+200*v_count, video_adress'length));
-				red <= video_data(7 downto 0);
-				blue <= video_data(15 downto 8);	
-				green <= video_data(23 downto 16);
+				--video_adress <= STD_LOGIC_VECTOR(TO_UNSIGNED(h_count+200*v_count, video_adress'length));
+				--red <= video_data(7 downto 0);
+				--blue <= video_data(15 downto 8);	
+				--green <= video_data(23 downto 16);
+				red <= "00000000";
+				blue <= "00000000";
+				green <= "00000000";
 			END IF;
 	
 			

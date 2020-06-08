@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 1, 2020 1:14:02 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1591010042457</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 7, 2020 3:06:40 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1591535200668</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp</BspGeneratedLocation>
         <BspSettingsFile>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp/settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../barcodescanner_nios.sopcinfo</SopcDesignFile>
