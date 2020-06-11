@@ -15,6 +15,8 @@ module barcodescanner_nios (
 	eth_tse_mac_status_connection_ena_10,
 	eth_tse_pcs_mac_rx_clock_connection_clk,
 	eth_tse_pcs_mac_tx_clock_connection_clk,
+	pixelr_export,
+	pixelselect_export,
 	reset_reset_n,
 	switches_export,
 	videoram_address,
@@ -23,7 +25,9 @@ module barcodescanner_nios (
 	videoram_write,
 	videoram_readdata,
 	videoram_writedata,
-	videoram_byteenable);	
+	videoram_byteenable,
+	pixelg_export,
+	pixelb_export);	
 
 	input		clk_clk;
 	output		eth_tse_mac_mdio_connection_mdc;
@@ -40,6 +44,8 @@ module barcodescanner_nios (
 	output		eth_tse_mac_status_connection_ena_10;
 	input		eth_tse_pcs_mac_rx_clock_connection_clk;
 	input		eth_tse_pcs_mac_tx_clock_connection_clk;
+	input	[7:0]	pixelr_export;
+	output	[7:0]	pixelselect_export;
 	input		reset_reset_n;
 	input	[7:0]	switches_export;
 	input	[11:0]	videoram_address;
@@ -49,4 +55,6 @@ module barcodescanner_nios (
 	output	[31:0]	videoram_readdata;
 	input	[31:0]	videoram_writedata;
 	input	[3:0]	videoram_byteenable;
+	input	[7:0]	pixelg_export;
+	input	[7:0]	pixelb_export;
 endmodule

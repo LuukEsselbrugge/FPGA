@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Jun  7 15:03:32 2020
+Analysis & Synthesis Status : Successful - Thu Jun 11 21:51:17 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : barcodescanner
 Top-level Entity Name : barcodescanner
 Family : Cyclone IV E
-Total logic elements : 11,907
-    Total combinational functions : 8,725
-    Dedicated logic registers : 6,918
-Total registers : 6930
-Total pins : 79
+Total logic elements : 12,141
+    Total combinational functions : 8,932
+    Dedicated logic registers : 7,018
+Total registers : 7030
+Total pins : 87
 Total virtual pins : 0
 Total memory bits : 2,859,782
 Embedded Multiplier 9-bit elements : 0

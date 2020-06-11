@@ -115,9 +115,9 @@ void rx_ethernet_isr (void *context)
 			;
 
 		// Clear input line before writing
-		for (i = 0; i < (6 + text_length); i++) {
-			alt_printf( "%c", 0x08 );		 // 0x08 --> backspace
-		}
+//		for (i = 0; i < (6 + text_length); i++) {
+//			alt_printf( "%c", 0x08 );		 // 0x08 --> backspace
+//		}
 		//alt_printf( "got: %s\n", rx_frame + 16);
 		if(rx_frame[2] == 0x69){
 
@@ -136,6 +136,19 @@ void rx_ethernet_isr (void *context)
 			for(int x = 0; x < 1024; x++){
 						rx_frame[x] = 0;
 			}
+}
+
+void tx_char(char *c, int x){
+	tx_frame[16 + x] = c;
+}
+
+void transmit(){
+	// Create transmit sgdma descriptor
+				alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
+				// Set up non-blocking transfer of sgdma transmit descriptor
+				alt_avalon_sgdma_do_async_transfer( sgdma_tx_dev, &tx_descriptor );
+				// Wait until transmit descriptor transfer is complete
+				while (alt_avalon_sgdma_check_descriptor_status(&tx_descriptor) != 0);
 }
 
 void tx_ethernet_isr(char *chars){

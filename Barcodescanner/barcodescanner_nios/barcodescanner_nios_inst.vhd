@@ -15,6 +15,8 @@
 			eth_tse_mac_status_connection_ena_10    : out std_logic;                                        -- ena_10
 			eth_tse_pcs_mac_rx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
 			eth_tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
+			pixelr_export                           : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pixelselect_export                      : out std_logic_vector(7 downto 0);                     -- export
 			reset_reset_n                           : in  std_logic                     := 'X';             -- reset_n
 			switches_export                         : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- export
 			videoram_address                        : in  std_logic_vector(11 downto 0) := (others => 'X'); -- address
@@ -23,7 +25,9 @@
 			videoram_write                          : in  std_logic                     := 'X';             -- write
 			videoram_readdata                       : out std_logic_vector(31 downto 0);                    -- readdata
 			videoram_writedata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			videoram_byteenable                     : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- byteenable
+			videoram_byteenable                     : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
+			pixelg_export                           : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pixelb_export                           : in  std_logic_vector(7 downto 0)  := (others => 'X')  -- export
 		);
 	end component barcodescanner_nios;
 
@@ -44,6 +48,8 @@
 			eth_tse_mac_status_connection_ena_10    => CONNECTED_TO_eth_tse_mac_status_connection_ena_10,    --                                    .ena_10
 			eth_tse_pcs_mac_rx_clock_connection_clk => CONNECTED_TO_eth_tse_pcs_mac_rx_clock_connection_clk, -- eth_tse_pcs_mac_rx_clock_connection.clk
 			eth_tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_eth_tse_pcs_mac_tx_clock_connection_clk, -- eth_tse_pcs_mac_tx_clock_connection.clk
+			pixelr_export                           => CONNECTED_TO_pixelr_export,                           --                              pixelr.export
+			pixelselect_export                      => CONNECTED_TO_pixelselect_export,                      --                         pixelselect.export
 			reset_reset_n                           => CONNECTED_TO_reset_reset_n,                           --                               reset.reset_n
 			switches_export                         => CONNECTED_TO_switches_export,                         --                            switches.export
 			videoram_address                        => CONNECTED_TO_videoram_address,                        --                            videoram.address
@@ -52,6 +58,8 @@
 			videoram_write                          => CONNECTED_TO_videoram_write,                          --                                    .write
 			videoram_readdata                       => CONNECTED_TO_videoram_readdata,                       --                                    .readdata
 			videoram_writedata                      => CONNECTED_TO_videoram_writedata,                      --                                    .writedata
-			videoram_byteenable                     => CONNECTED_TO_videoram_byteenable                      --                                    .byteenable
+			videoram_byteenable                     => CONNECTED_TO_videoram_byteenable,                     --                                    .byteenable
+			pixelg_export                           => CONNECTED_TO_pixelg_export,                           --                              pixelg.export
+			pixelb_export                           => CONNECTED_TO_pixelb_export                            --                              pixelb.export
 		);
 

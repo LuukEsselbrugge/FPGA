@@ -23,7 +23,12 @@ module NIOS(
 	
 	input [11:0] videoram_adrr,
 	output [31:0] videoram_data,
-	input [7:0] SW
+
+	input [7:0] SW,
+	input [7:0] pixelsr,
+	input [7:0] pixelsg,
+	input [7:0] pixelsb,
+	output [7:0] pixelselect
 );
 
 	wire sys_clk, clk_125, clk_25, clk_2p5, tx_clk;
@@ -63,7 +68,7 @@ module NIOS(
 
 	
     barcodescanner_nios system_inst(
-        .clk_clk                                   (sys_clk),           //                                   clk.clk
+        .clk_clk                                   (CLOCK_50),           //                                   clk.clk
         .reset_reset_n                             (core_reset_n),      //                                 reset.reset_n
         .eth_tse_pcs_mac_tx_clock_connection_clk 		(tx_clk), 				// eth_tse_0_pcs_mac_tx_clock_connection.clk
         .eth_tse_pcs_mac_rx_clock_connection_clk 		(ENET1_RX_CLK), 		// eth_tse_0_pcs_mac_rx_clock_connection.clk
@@ -85,7 +90,16 @@ module NIOS(
 		  .videoram_clken(1'b1),
 		  .videoram_write(1'b0),
 		  
-		  .switches_export(SW)
+//		  .scanram_address	(scanram_adrr),
+//		  .scanram_writedata	(scanram_data),
+//		  .scanram_chipselect(1'b1),
+//		  .scanram_clken(1'b1),
+//		  .scanram_write(scanram_w),
+		  .pixelr_export(pixelsr),
+		  .pixelg_export(pixelsg),
+		  .pixelb_export(pixelsb),
+		  .switches_export(SW),
+		  .pixelselect_export(pixelselect)
     );	
 
 endmodule 

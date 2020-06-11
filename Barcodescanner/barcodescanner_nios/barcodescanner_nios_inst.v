@@ -14,6 +14,8 @@
 		.eth_tse_mac_status_connection_ena_10    (<connected-to-eth_tse_mac_status_connection_ena_10>),    //                                    .ena_10
 		.eth_tse_pcs_mac_rx_clock_connection_clk (<connected-to-eth_tse_pcs_mac_rx_clock_connection_clk>), // eth_tse_pcs_mac_rx_clock_connection.clk
 		.eth_tse_pcs_mac_tx_clock_connection_clk (<connected-to-eth_tse_pcs_mac_tx_clock_connection_clk>), // eth_tse_pcs_mac_tx_clock_connection.clk
+		.pixelr_export                           (<connected-to-pixelr_export>),                           //                              pixelr.export
+		.pixelselect_export                      (<connected-to-pixelselect_export>),                      //                         pixelselect.export
 		.reset_reset_n                           (<connected-to-reset_reset_n>),                           //                               reset.reset_n
 		.switches_export                         (<connected-to-switches_export>),                         //                            switches.export
 		.videoram_address                        (<connected-to-videoram_address>),                        //                            videoram.address
@@ -22,6 +24,8 @@
 		.videoram_write                          (<connected-to-videoram_write>),                          //                                    .write
 		.videoram_readdata                       (<connected-to-videoram_readdata>),                       //                                    .readdata
 		.videoram_writedata                      (<connected-to-videoram_writedata>),                      //                                    .writedata
-		.videoram_byteenable                     (<connected-to-videoram_byteenable>)                      //                                    .byteenable
+		.videoram_byteenable                     (<connected-to-videoram_byteenable>),                     //                                    .byteenable
+		.pixelg_export                           (<connected-to-pixelg_export>),                           //                              pixelg.export
+		.pixelb_export                           (<connected-to-pixelb_export>)                            //                              pixelb.export
 	);
 

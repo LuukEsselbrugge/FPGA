@@ -1,5 +1,5 @@
 Flow report for barcodescanner
-Sun Jun  7 15:05:02 2020
+Thu Jun 11 21:52:54 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun  7 15:04:53 2020       ;
+; Flow Status                        ; Successful - Thu Jun 11 21:52:44 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; barcodescanner                              ;
 ; Top-level Entity Name              ; barcodescanner                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 10,943 / 114,480 ( 10 % )                   ;
-;     Total combinational functions  ; 8,737 / 114,480 ( 8 % )                     ;
-;     Dedicated logic registers      ; 6,908 / 114,480 ( 6 % )                     ;
-; Total registers                    ; 6920                                        ;
-; Total pins                         ; 79 / 529 ( 15 % )                           ;
+; Total logic elements               ; 11,202 / 114,480 ( 10 % )                   ;
+;     Total combinational functions  ; 8,944 / 114,480 ( 8 % )                     ;
+;     Dedicated logic registers      ; 7,008 / 114,480 ( 6 % )                     ;
+; Total registers                    ; 7020                                        ;
+; Total pins                         ; 87 / 529 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,859,782 / 3,981,312 ( 72 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/07/2020 15:00:50 ;
+; Start date & time ; 06/11/2020 21:48:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; barcodescanner      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------+---------------+---------------------+------------+
 ; Assignment Name                     ; Value                                                                 ; Default Value ; Entity Name         ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------------+---------------+---------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 190135457815481.159153485020845                                       ; --            ; --                  ; --         ;
+; COMPILER_SIGNATURE_ID               ; 963371445308.159190489414985                                          ; --            ; --                  ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                    ; --            ; --                  ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                     ; --            ; --                  ; --         ;
 ; MISC_FILE                           ; barcodescanner_nios/synthesis/../barcodescanner_nios.cmp              ; --            ; --                  ; --         ;
@@ -90,6 +90,8 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                           ; camera/pll_test_bb.v                                                  ; --            ; --                  ; --         ;
 ; MISC_FILE                           ; camera/pll_test.ppf                                                   ; --            ; --                  ; --         ;
 ; MISC_FILE                           ; camera/int_line_bb.v                                                  ; --            ; --                  ; --         ;
+; MISC_FILE                           ; why_bb.v                                                              ; --            ; --                  ; --         ;
+; MISC_FILE                           ; why.ppf                                                               ; --            ; --                  ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                ; --            ; --                  ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                ; --            ; --                  ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                ; --            ; --                  ; Top        ;
@@ -98,7 +100,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                          ; --            ; --                  ; --         ;
 ; SLD_FILE                            ; barcodescanner_nios/synthesis/barcodescanner_nios.regmap              ; --            ; --                  ; --         ;
 ; SLD_FILE                            ; barcodescanner_nios/synthesis/barcodescanner_nios.debuginfo           ; --            ; --                  ; --         ;
-; SLD_INFO                            ; QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591009727 ; --            ; barcodescanner_nios ; --         ;
+; SLD_INFO                            ; QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591900019 ; --            ; barcodescanner_nios ; --         ;
 ; SOPCINFO_FILE                       ; barcodescanner_nios/synthesis/../../barcodescanner_nios.sopcinfo      ; --            ; --                  ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                    ; --            ; --                  ; --         ;
 +-------------------------------------+-----------------------------------------------------------------------+---------------+---------------------+------------+
@@ -109,11 +111,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:33     ; 1.0                     ; 1321 MB             ; 00:03:41                           ;
-; Fitter               ; 00:01:07     ; 1.0                     ; 1630 MB             ; 00:01:23                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 865 MB              ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 1035 MB             ; 00:00:09                           ;
-; Total                ; 00:03:56     ; --                      ; --                  ; 00:05:21                           ;
+; Analysis & Synthesis ; 00:02:53     ; 1.0                     ; 1336 MB             ; 00:04:21                           ;
+; Fitter               ; 00:01:12     ; 1.0                     ; 1636 MB             ; 00:01:29                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 870 MB              ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.1                     ; 1037 MB             ; 00:00:10                           ;
+; Total                ; 00:04:23     ; --                      ; --                  ; 00:06:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

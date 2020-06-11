@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 7, 2020 3:06:40 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1591535200668</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 11, 2020 9:53:33 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1591905213808</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp</BspGeneratedLocation>
         <BspSettingsFile>/home/luuk/FPGA/Barcodescanner/software/barcode_bsp/settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../barcodescanner_nios.sopcinfo</SopcDesignFile>
@@ -939,6 +939,30 @@
                 <addressRange>0x00000000 - 0x0000270F</addressRange>
                 <addressSpan>10000</addressSpan>
                 <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_1</slaveDescriptor>
+                <addressRange>0x00004000 - 0x0000400F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_4</slaveDescriptor>
+                <addressRange>0x00004010 - 0x0000401F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_2</slaveDescriptor>
+                <addressRange>0x00004020 - 0x0000403F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_3</slaveDescriptor>
+                <addressRange>0x00004040 - 0x0000404F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>descriptor_memory</slaveDescriptor>

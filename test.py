@@ -39,6 +39,6 @@ while True:
        print('sending product information for '+product[0][1]+' to FPGA')
        sendeth(product[0][2].encode().lower())
      else:
-       print('Product not found')
-       sendeth(b'Product Not Found')
+       print('product not found')
+       sendeth(b'product not found')
   

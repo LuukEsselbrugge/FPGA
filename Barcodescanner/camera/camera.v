@@ -36,7 +36,9 @@ module camera(
 	input 		          		MIPI_PIXEL_HS,
 	input 		          		MIPI_PIXEL_VS,
 	output		          		MIPI_REFCLK,
-	output		          		MIPI_RESET_n
+	output		          		MIPI_RESET_n,
+	output			[15:0]			H_Cont,
+	output			[15:0]				V_Cont
 );
 
 //=============================================================================
@@ -47,13 +49,13 @@ module camera(
   wire 	[7:0]VGA_B_A;
   wire 	[7:0]VGA_G_A;
   wire 	[7:0]VGA_R_A;
-  wire        VGA_CLK_25M ;
+ wire        VGA_CLK_25M ;
   wire        RESET_N  ; 
   wire  [7:0]sCCD_R;
   wire  [7:0]sCCD_G;
   wire  [7:0]sCCD_B; 
-  wire [15:0] H_Cont ; 
-  wire [15:0] V_Cont ; 
+  //wire [15:0] H_Cont ; 
+  //wire [15:0] V_Cont ; 
   wire        I2C_RELEASE ;  
   wire        CAMERA_I2C_SCL_MIPI ; 
   wire        CAMERA_I2C_SCL_AF ;

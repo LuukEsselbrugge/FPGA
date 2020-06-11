@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
 # SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
 #
-# Generated: Mon Jun 01 13:14:03 CEST 2020
+# Generated: Thu Jun 11 11:48:12 CEST 2020
 
 # DO NOT MODIFY THIS FILE
 #

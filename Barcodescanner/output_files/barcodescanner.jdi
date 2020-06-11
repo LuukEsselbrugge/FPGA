@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="40176233dd432beca48e"/>
+    <hash md5_digest_80b="7c72b43dbefc0099f187"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="barcodescanner_time_limited.sof" usercode="0xFFFFFFFF"/>
@@ -140,8 +140,8 @@
   <sld_infos>
     <sld_info hpath="NIOS:inst|barcodescanner_nios:system_inst" name="system_inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591009727"/>
-        <assignment_value text="QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591534871"/>
+        <assignment_value text="QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591900019"/>
+        <assignment_value text="QSYS_NAME barcodescanner_nios HAS_SOPCINFO 1 GENERATION_ID 1591904918"/>
       </assignment_values>
       <parameters/>
     </sld_info>

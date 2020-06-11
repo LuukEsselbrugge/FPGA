@@ -16,6 +16,14 @@ Progress: Adding onchip_memory [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory
 Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding pio_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_2
+Progress: Adding pio_3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_3
+Progress: Adding pio_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_4
 Progress: Adding sgdma_rx [altera_avalon_sgdma 18.1]
 Progress: Parameterizing module sgdma_rx
 Progress: Adding sgdma_tx [altera_avalon_sgdma 18.1]
@@ -28,6 +36,9 @@ Progress: Validating
 Progress: Done reading input file
 Info: barcodescanner_nios.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: barcodescanner_nios.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_4: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: barcodescanner_nios.sgdma_rx: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: barcodescanner_nios.sgdma_tx: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: barcodescanner_nios.eth_tse.receive/sgdma_rx.in: Ready latency is 2 for source and 0 for sink. Avalon-ST Adapter will be inserted..
@@ -53,6 +64,14 @@ Progress: Adding onchip_memory [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory
 Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding pio_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_2
+Progress: Adding pio_3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_3
+Progress: Adding pio_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_4
 Progress: Adding sgdma_rx [altera_avalon_sgdma 18.1]
 Progress: Parameterizing module sgdma_rx
 Progress: Adding sgdma_tx [altera_avalon_sgdma 18.1]
@@ -65,6 +84,9 @@ Progress: Validating
 Progress: Done reading input file
 Info: barcodescanner_nios.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: barcodescanner_nios.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_3: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: barcodescanner_nios.pio_4: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: barcodescanner_nios.sgdma_rx: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: barcodescanner_nios.sgdma_tx: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: barcodescanner_nios.eth_tse.receive/sgdma_rx.in: Ready latency is 2 for source and 0 for sink. Avalon-ST Adapter will be inserted..
@@ -72,33 +94,37 @@ Warning: barcodescanner_nios.eth_tse: eth_tse.mac_misc_connection must be export
 Info: barcodescanner_nios: Generating barcodescanner_nios "barcodescanner_nios" for QUARTUS_SYNTH
 Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
 Info: VideoRAM: Starting RTL generation for module 'barcodescanner_nios_VideoRAM'
-Info: VideoRAM:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_VideoRAM --dir=/tmp/alt8414_2056479011869453075.dir/0002_VideoRAM_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0002_VideoRAM_gen//barcodescanner_nios_VideoRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: VideoRAM:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_VideoRAM --dir=/tmp/alt8424_5586032682909877281.dir/0002_VideoRAM_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0002_VideoRAM_gen//barcodescanner_nios_VideoRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: VideoRAM: Done RTL generation for module 'barcodescanner_nios_VideoRAM'
 Info: VideoRAM: "barcodescanner_nios" instantiated altera_avalon_onchip_memory2 "VideoRAM"
 Info: descriptor_memory: Starting RTL generation for module 'barcodescanner_nios_descriptor_memory'
-Info: descriptor_memory:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_descriptor_memory --dir=/tmp/alt8414_2056479011869453075.dir/0003_descriptor_memory_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0003_descriptor_memory_gen//barcodescanner_nios_descriptor_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: descriptor_memory:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_descriptor_memory --dir=/tmp/alt8424_5586032682909877281.dir/0003_descriptor_memory_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0003_descriptor_memory_gen//barcodescanner_nios_descriptor_memory_component_configuration.pl  --do_build_sim=0  ]
 Info: descriptor_memory: Done RTL generation for module 'barcodescanner_nios_descriptor_memory'
 Info: descriptor_memory: "barcodescanner_nios" instantiated altera_avalon_onchip_memory2 "descriptor_memory"
 Info: eth_tse: "barcodescanner_nios" instantiated altera_eth_tse "eth_tse"
 Info: jtag_uart: Starting RTL generation for module 'barcodescanner_nios_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=barcodescanner_nios_jtag_uart --dir=/tmp/alt8414_2056479011869453075.dir/0004_jtag_uart_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0004_jtag_uart_gen//barcodescanner_nios_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=barcodescanner_nios_jtag_uart --dir=/tmp/alt8424_5586032682909877281.dir/0004_jtag_uart_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0004_jtag_uart_gen//barcodescanner_nios_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'barcodescanner_nios_jtag_uart'
 Info: jtag_uart: "barcodescanner_nios" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: nios2: "barcodescanner_nios" instantiated altera_nios2_gen2 "nios2"
 Info: onchip_memory: Starting RTL generation for module 'barcodescanner_nios_onchip_memory'
-Info: onchip_memory:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_onchip_memory --dir=/tmp/alt8414_2056479011869453075.dir/0005_onchip_memory_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0005_onchip_memory_gen//barcodescanner_nios_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=barcodescanner_nios_onchip_memory --dir=/tmp/alt8424_5586032682909877281.dir/0005_onchip_memory_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0005_onchip_memory_gen//barcodescanner_nios_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory: Done RTL generation for module 'barcodescanner_nios_onchip_memory'
 Info: onchip_memory: "barcodescanner_nios" instantiated altera_avalon_onchip_memory2 "onchip_memory"
 Info: pio_0: Starting RTL generation for module 'barcodescanner_nios_pio_0'
-Info: pio_0:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=barcodescanner_nios_pio_0 --dir=/tmp/alt8414_2056479011869453075.dir/0006_pio_0_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0006_pio_0_gen//barcodescanner_nios_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=barcodescanner_nios_pio_0 --dir=/tmp/alt8424_5586032682909877281.dir/0006_pio_0_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0006_pio_0_gen//barcodescanner_nios_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'barcodescanner_nios_pio_0'
 Info: pio_0: "barcodescanner_nios" instantiated altera_avalon_pio "pio_0"
+Info: pio_2: Starting RTL generation for module 'barcodescanner_nios_pio_2'
+Info: pio_2:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=barcodescanner_nios_pio_2 --dir=/tmp/alt8424_5586032682909877281.dir/0007_pio_2_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0007_pio_2_gen//barcodescanner_nios_pio_2_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_2: Done RTL generation for module 'barcodescanner_nios_pio_2'
+Info: pio_2: "barcodescanner_nios" instantiated altera_avalon_pio "pio_2"
 Info: sgdma_rx: Starting RTL generation for module 'barcodescanner_nios_sgdma_rx'
-Info: sgdma_rx:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=barcodescanner_nios_sgdma_rx --dir=/tmp/alt8414_2056479011869453075.dir/0007_sgdma_rx_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0007_sgdma_rx_gen//barcodescanner_nios_sgdma_rx_component_configuration.pl  --do_build_sim=0  ]
+Info: sgdma_rx:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=barcodescanner_nios_sgdma_rx --dir=/tmp/alt8424_5586032682909877281.dir/0008_sgdma_rx_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0008_sgdma_rx_gen//barcodescanner_nios_sgdma_rx_component_configuration.pl  --do_build_sim=0  ]
 Info: sgdma_rx: Done RTL generation for module 'barcodescanner_nios_sgdma_rx'
 Info: sgdma_rx: "barcodescanner_nios" instantiated altera_avalon_sgdma "sgdma_rx"
 Info: sgdma_tx: Starting RTL generation for module 'barcodescanner_nios_sgdma_tx'
-Info: sgdma_tx:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=barcodescanner_nios_sgdma_tx --dir=/tmp/alt8414_2056479011869453075.dir/0008_sgdma_tx_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8414_2056479011869453075.dir/0008_sgdma_tx_gen//barcodescanner_nios_sgdma_tx_component_configuration.pl  --do_build_sim=0  ]
+Info: sgdma_tx:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=barcodescanner_nios_sgdma_tx --dir=/tmp/alt8424_5586032682909877281.dir/0009_sgdma_tx_gen/ --quartus_dir=/home/luuk/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8424_5586032682909877281.dir/0009_sgdma_tx_gen//barcodescanner_nios_sgdma_tx_component_configuration.pl  --do_build_sim=0  ]
 Info: sgdma_tx: Done RTL generation for module 'barcodescanner_nios_sgdma_tx'
 Info: sgdma_tx: "barcodescanner_nios" instantiated altera_avalon_sgdma "sgdma_tx"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -110,25 +136,29 @@ Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "barcodescanner_nios" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "barcodescanner_nios" instantiated altera_irq_mapper "irq_mapper"
 Info: avalon_st_adapter: "barcodescanner_nios" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: rst_controller: "barcodescanner_nios" instantiated altera_reset_controller "rst_controller"
 Info: i_tse_mac: "eth_tse" instantiated altera_eth_tse_mac "i_tse_mac"
 Info: cpu: Starting RTL generation for module 'barcodescanner_nios_nios2_cpu'
-Info: cpu:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=barcodescanner_nios_nios2_cpu --dir=/tmp/alt8414_2056479011869453075.dir/0012_cpu_gen/ --quartus_bindir=/home/luuk/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt8414_2056479011869453075.dir/0012_cpu_gen//barcodescanner_nios_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2020.06.01 13:08:59 (*) Starting Nios II generation
-Info: cpu: # 2020.06.01 13:08:59 (*)   Checking for plaintext license.
-Info: cpu: # 2020.06.01 13:08:59 (*)   Couldn't query license setup in Quartus directory /home/luuk/intelFPGA_lite/18.1/quartus/linux64/
-Info: cpu: # 2020.06.01 13:08:59 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2020.06.01 13:08:59 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2020.06.01 13:08:59 (*)   Plaintext license not found.
-Info: cpu: # 2020.06.01 13:08:59 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2020.06.01 13:08:59 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.06.01 13:08:59 (*)   Creating all objects for CPU
-Info: cpu: # 2020.06.01 13:09:00 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.06.01 13:09:00 (*)   Creating plain-text RTL
-Info: cpu: # 2020.06.01 13:09:01 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/luuk/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/luuk/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/luuk/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=barcodescanner_nios_nios2_cpu --dir=/tmp/alt8424_5586032682909877281.dir/0013_cpu_gen/ --quartus_bindir=/home/luuk/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt8424_5586032682909877281.dir/0013_cpu_gen//barcodescanner_nios_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.06.11 20:27:13 (*) Starting Nios II generation
+Info: cpu: # 2020.06.11 20:27:13 (*)   Checking for plaintext license.
+Info: cpu: # 2020.06.11 20:27:14 (*)   Couldn't query license setup in Quartus directory /home/luuk/intelFPGA_lite/18.1/quartus/linux64/
+Info: cpu: # 2020.06.11 20:27:14 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2020.06.11 20:27:14 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2020.06.11 20:27:14 (*)   Plaintext license not found.
+Info: cpu: # 2020.06.11 20:27:14 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.06.11 20:27:14 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.06.11 20:27:14 (*)   Creating all objects for CPU
+Info: cpu: # 2020.06.11 20:27:15 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.06.11 20:27:15 (*)   Creating plain-text RTL
+Info: cpu: # 2020.06.11 20:27:16 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'barcodescanner_nios_nios2_cpu'
 Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"
@@ -165,6 +195,6 @@ Info: Reusing file /home/luuk/FPGA/Barcodescanner/barcodescanner_nios/synthesis/
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: barcodescanner_nios: Done "barcodescanner_nios" with 44 modules, 175 files
+Info: barcodescanner_nios: Done "barcodescanner_nios" with 45 modules, 176 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'barcodescanner_nios'
  * SOPC Builder design path: ../../barcodescanner_nios.sopcinfo
  *
- * Generated: Mon Jun 01 13:14:03 CEST 2020
+ * Generated: Thu Jun 11 20:34:33 CEST 2020
  */
 
 /*
@@ -64,7 +64,7 @@
 #define ALT_CPU_BIG_ENDIAN 0
 #define ALT_CPU_BREAK_ADDR 0x00009820
 #define ALT_CPU_CPU_ARCH_NIOS2_R1
-#define ALT_CPU_CPU_FREQ 100000000u
+#define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
 #define ALT_CPU_CPU_IMPLEMENTATION "tiny"
@@ -76,7 +76,7 @@
 #define ALT_CPU_FLASH_ACCELERATOR_LINES 0
 #define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
 #define ALT_CPU_FLUSHDA_SUPPORTED
-#define ALT_CPU_FREQ 100000000
+#define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
 #define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 0
 #define ALT_CPU_HARDWARE_MULX_PRESENT 0
@@ -101,7 +101,7 @@
 #define NIOS2_BIG_ENDIAN 0
 #define NIOS2_BREAK_ADDR 0x00009820
 #define NIOS2_CPU_ARCH_NIOS2_R1
-#define NIOS2_CPU_FREQ 100000000u
+#define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
 #define NIOS2_CPU_IMPLEMENTATION "tiny"
@@ -391,7 +391,7 @@
 #define PIO_0_DO_TEST_BENCH_WIRING 0
 #define PIO_0_DRIVEN_SIM_VALUE 0
 #define PIO_0_EDGE_TYPE "NONE"
-#define PIO_0_FREQ 100000000
+#define PIO_0_FREQ 50000000
 #define PIO_0_HAS_IN 1
 #define PIO_0_HAS_OUT 0
 #define PIO_0_HAS_TRI 0
@@ -402,6 +402,114 @@
 #define PIO_0_RESET_VALUE 0
 #define PIO_0_SPAN 16
 #define PIO_0_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_1 altera_avalon_pio
+#define PIO_1_BASE 0x4000
+#define PIO_1_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_1_CAPTURE 0
+#define PIO_1_DATA_WIDTH 8
+#define PIO_1_DO_TEST_BENCH_WIRING 0
+#define PIO_1_DRIVEN_SIM_VALUE 0
+#define PIO_1_EDGE_TYPE "NONE"
+#define PIO_1_FREQ 50000000
+#define PIO_1_HAS_IN 1
+#define PIO_1_HAS_OUT 0
+#define PIO_1_HAS_TRI 0
+#define PIO_1_IRQ -1
+#define PIO_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_1_IRQ_TYPE "NONE"
+#define PIO_1_NAME "/dev/pio_1"
+#define PIO_1_RESET_VALUE 0
+#define PIO_1_SPAN 16
+#define PIO_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_2 altera_avalon_pio
+#define PIO_2_BASE 0x4020
+#define PIO_2_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_2_BIT_MODIFYING_OUTPUT_REGISTER 1
+#define PIO_2_CAPTURE 0
+#define PIO_2_DATA_WIDTH 8
+#define PIO_2_DO_TEST_BENCH_WIRING 0
+#define PIO_2_DRIVEN_SIM_VALUE 0
+#define PIO_2_EDGE_TYPE "NONE"
+#define PIO_2_FREQ 50000000
+#define PIO_2_HAS_IN 0
+#define PIO_2_HAS_OUT 1
+#define PIO_2_HAS_TRI 0
+#define PIO_2_IRQ -1
+#define PIO_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_2_IRQ_TYPE "NONE"
+#define PIO_2_NAME "/dev/pio_2"
+#define PIO_2_RESET_VALUE 0
+#define PIO_2_SPAN 32
+#define PIO_2_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_3 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_3 altera_avalon_pio
+#define PIO_3_BASE 0x4040
+#define PIO_3_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_3_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_3_CAPTURE 0
+#define PIO_3_DATA_WIDTH 8
+#define PIO_3_DO_TEST_BENCH_WIRING 0
+#define PIO_3_DRIVEN_SIM_VALUE 0
+#define PIO_3_EDGE_TYPE "NONE"
+#define PIO_3_FREQ 50000000
+#define PIO_3_HAS_IN 1
+#define PIO_3_HAS_OUT 0
+#define PIO_3_HAS_TRI 0
+#define PIO_3_IRQ -1
+#define PIO_3_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_3_IRQ_TYPE "NONE"
+#define PIO_3_NAME "/dev/pio_3"
+#define PIO_3_RESET_VALUE 0
+#define PIO_3_SPAN 16
+#define PIO_3_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_4 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_4 altera_avalon_pio
+#define PIO_4_BASE 0x4010
+#define PIO_4_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_4_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_4_CAPTURE 0
+#define PIO_4_DATA_WIDTH 8
+#define PIO_4_DO_TEST_BENCH_WIRING 0
+#define PIO_4_DRIVEN_SIM_VALUE 0
+#define PIO_4_EDGE_TYPE "NONE"
+#define PIO_4_FREQ 50000000
+#define PIO_4_HAS_IN 1
+#define PIO_4_HAS_OUT 0
+#define PIO_4_HAS_TRI 0
+#define PIO_4_IRQ -1
+#define PIO_4_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_4_IRQ_TYPE "NONE"
+#define PIO_4_NAME "/dev/pio_4"
+#define PIO_4_RESET_VALUE 0
+#define PIO_4_SPAN 16
+#define PIO_4_TYPE "altera_avalon_pio"
 
 
 /*

@@ -358,19 +358,71 @@ void showText(char *chars){
 	drawChars(pixeldata);
 }
 
+char charcode[256] = {};
+int barwidth = 0;
+int actualCount = 0;
+void scanBarcode(){
+	int firstBit = 0;
+	int countingBarWidth = 1;
+	barwidth = 0;
+	actualCount = 0;
+
+	for(int x =0; x < 255; x++){
+		IOWR_ALTERA_AVALON_PIO_DATA(0x4020, x);
+		int r = IORD_ALTERA_AVALON_PIO_DATA(0x4000);
+		int g = IORD_ALTERA_AVALON_PIO_DATA(0x4010);
+		int b = IORD_ALTERA_AVALON_PIO_DATA(0x4040);
+
+		int grey =  0.2126*r + 0.7152*g + 0.0722*b;
+
+		//printf( " R=%d ",grey);
+		usleep(5100);
+		if(grey > 128){
+			if(firstBit==1){
+				countingBarWidth = 0;
+				//alt_printf("0");
+				charcode[actualCount] = '0';
+				actualCount++;
+			}
+		}else{
+			//alt_printf("1");
+			charcode[actualCount] = '1';
+			actualCount++;
+			if(countingBarWidth == 1){
+				barwidth++;
+			}
+			firstBit = 1;
+		}
+	}
+	printf("\nWidth: %d",barwidth);
+	alt_printf("\n");
+
+	for(int x = 0; x < 255; x+=barwidth){
+		printf("%c",charcode[x]);
+		tx_char(charcode[x],x);
+	}
+	transmit();
+	//tx_ethernet_isr(tmp);
+}
 int main(void){
 	setup();
 	showText("please scan a barcode");
 
+	scanBarcode();
+	scanBarcode();
+	scanBarcode();
 	while(1){
-		usleep(2000000);
-		tx_ethernet_isr("69");
+		usleep(200000);
+
+		//tx_ethernet_isr("69");
+
+
 	}
 
 	return 0;
 }
 
 void callback(unsigned char *data){
-	alt_printf( "Responds: %s\n", data + 16);
+	alt_printf( "\nResponds: %s\n", data + 16);
 	showText(data + 16);
 }

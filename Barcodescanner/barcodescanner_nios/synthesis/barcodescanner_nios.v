@@ -19,6 +19,10 @@ module barcodescanner_nios (
 		output wire        eth_tse_mac_status_connection_ena_10,    //                                    .ena_10
 		input  wire        eth_tse_pcs_mac_rx_clock_connection_clk, // eth_tse_pcs_mac_rx_clock_connection.clk
 		input  wire        eth_tse_pcs_mac_tx_clock_connection_clk, // eth_tse_pcs_mac_tx_clock_connection.clk
+		input  wire [7:0]  pixelb_export,                           //                              pixelb.export
+		input  wire [7:0]  pixelg_export,                           //                              pixelg.export
+		input  wire [7:0]  pixelr_export,                           //                              pixelr.export
+		output wire [7:0]  pixelselect_export,                      //                         pixelselect.export
 		input  wire        reset_reset_n,                           //                               reset.reset_n
 		input  wire [7:0]  switches_export,                         //                            switches.export
 		input  wire [11:0] videoram_address,                        //                            videoram.address
@@ -133,6 +137,17 @@ module barcodescanner_nios (
 	wire         mm_interconnect_0_videoram_s1_clken;                       // mm_interconnect_0:VideoRAM_s1_clken -> VideoRAM:clken
 	wire  [31:0] mm_interconnect_0_pio_0_s1_readdata;                       // pio_0:readdata -> mm_interconnect_0:pio_0_s1_readdata
 	wire   [1:0] mm_interconnect_0_pio_0_s1_address;                        // mm_interconnect_0:pio_0_s1_address -> pio_0:address
+	wire  [31:0] mm_interconnect_0_pio_1_s1_readdata;                       // pio_1:readdata -> mm_interconnect_0:pio_1_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_1_s1_address;                        // mm_interconnect_0:pio_1_s1_address -> pio_1:address
+	wire         mm_interconnect_0_pio_2_s1_chipselect;                     // mm_interconnect_0:pio_2_s1_chipselect -> pio_2:chipselect
+	wire  [31:0] mm_interconnect_0_pio_2_s1_readdata;                       // pio_2:readdata -> mm_interconnect_0:pio_2_s1_readdata
+	wire   [2:0] mm_interconnect_0_pio_2_s1_address;                        // mm_interconnect_0:pio_2_s1_address -> pio_2:address
+	wire         mm_interconnect_0_pio_2_s1_write;                          // mm_interconnect_0:pio_2_s1_write -> pio_2:write_n
+	wire  [31:0] mm_interconnect_0_pio_2_s1_writedata;                      // mm_interconnect_0:pio_2_s1_writedata -> pio_2:writedata
+	wire  [31:0] mm_interconnect_0_pio_3_s1_readdata;                       // pio_3:readdata -> mm_interconnect_0:pio_3_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_3_s1_address;                        // mm_interconnect_0:pio_3_s1_address -> pio_3:address
+	wire  [31:0] mm_interconnect_0_pio_4_s1_readdata;                       // pio_4:readdata -> mm_interconnect_0:pio_4_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_4_s1_address;                        // mm_interconnect_0:pio_4_s1_address -> pio_4:address
 	wire         irq_mapper_receiver0_irq;                                  // sgdma_rx:csr_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                  // sgdma_tx:csr_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                  // jtag_uart:av_irq -> irq_mapper:receiver2_irq
@@ -151,7 +166,7 @@ module barcodescanner_nios (
 	wire         avalon_st_adapter_out_0_endofpacket;                       // avalon_st_adapter:out_0_endofpacket -> sgdma_rx:in_endofpacket
 	wire   [5:0] avalon_st_adapter_out_0_error;                             // avalon_st_adapter:out_0_error -> sgdma_rx:in_error
 	wire   [1:0] avalon_st_adapter_out_0_empty;                             // avalon_st_adapter:out_0_empty -> sgdma_rx:in_empty
-	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [VideoRAM:reset, avalon_st_adapter:in_rst_0_reset, descriptor_memory:reset, eth_tse:reset, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, nios2:reset_n, onchip_memory:reset, pio_0:reset_n, rst_translator:in_reset, sgdma_rx:system_reset_n, sgdma_tx:system_reset_n]
+	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [VideoRAM:reset, avalon_st_adapter:in_rst_0_reset, descriptor_memory:reset, eth_tse:reset, irq_mapper:reset, jtag_uart:rst_n, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, nios2:reset_n, onchip_memory:reset, pio_0:reset_n, pio_1:reset_n, pio_2:reset_n, pio_3:reset_n, pio_4:reset_n, rst_translator:in_reset, sgdma_rx:system_reset_n, sgdma_tx:system_reset_n]
 	wire         rst_controller_reset_out_reset_req;                        // rst_controller:reset_req -> [VideoRAM:reset_req, descriptor_memory:reset_req, nios2:reset_req, onchip_memory:reset_req, rst_translator:reset_req_in]
 	wire         nios2_debug_reset_request_reset;                           // nios2:debug_reset_request -> rst_controller:reset_in1
 
@@ -307,6 +322,41 @@ module barcodescanner_nios (
 		.in_port  (switches_export)                      // external_connection.export
 	);
 
+	barcodescanner_nios_pio_0 pio_1 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_pio_1_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pio_1_s1_readdata), //                    .readdata
+		.in_port  (pixelr_export)                        // external_connection.export
+	);
+
+	barcodescanner_nios_pio_2 pio_2 (
+		.clk        (clk_clk),                               //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_pio_2_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_pio_2_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_pio_2_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_pio_2_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_pio_2_s1_readdata),   //                    .readdata
+		.out_port   (pixelselect_export)                     // external_connection.export
+	);
+
+	barcodescanner_nios_pio_0 pio_3 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_pio_3_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pio_3_s1_readdata), //                    .readdata
+		.in_port  (pixelg_export)                        // external_connection.export
+	);
+
+	barcodescanner_nios_pio_0 pio_4 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_pio_4_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pio_4_s1_readdata), //                    .readdata
+		.in_port  (pixelb_export)                        // external_connection.export
+	);
+
 	barcodescanner_nios_sgdma_rx sgdma_rx (
 		.clk                           (clk_clk),                                   //              clk.clk
 		.system_reset_n                (~rst_controller_reset_out_reset),           //            reset.reset_n
@@ -453,6 +503,17 @@ module barcodescanner_nios (
 		.onchip_memory_s1_clken                  (mm_interconnect_0_onchip_memory_s1_clken),                  //                                  .clken
 		.pio_0_s1_address                        (mm_interconnect_0_pio_0_s1_address),                        //                          pio_0_s1.address
 		.pio_0_s1_readdata                       (mm_interconnect_0_pio_0_s1_readdata),                       //                                  .readdata
+		.pio_1_s1_address                        (mm_interconnect_0_pio_1_s1_address),                        //                          pio_1_s1.address
+		.pio_1_s1_readdata                       (mm_interconnect_0_pio_1_s1_readdata),                       //                                  .readdata
+		.pio_2_s1_address                        (mm_interconnect_0_pio_2_s1_address),                        //                          pio_2_s1.address
+		.pio_2_s1_write                          (mm_interconnect_0_pio_2_s1_write),                          //                                  .write
+		.pio_2_s1_readdata                       (mm_interconnect_0_pio_2_s1_readdata),                       //                                  .readdata
+		.pio_2_s1_writedata                      (mm_interconnect_0_pio_2_s1_writedata),                      //                                  .writedata
+		.pio_2_s1_chipselect                     (mm_interconnect_0_pio_2_s1_chipselect),                     //                                  .chipselect
+		.pio_3_s1_address                        (mm_interconnect_0_pio_3_s1_address),                        //                          pio_3_s1.address
+		.pio_3_s1_readdata                       (mm_interconnect_0_pio_3_s1_readdata),                       //                                  .readdata
+		.pio_4_s1_address                        (mm_interconnect_0_pio_4_s1_address),                        //                          pio_4_s1.address
+		.pio_4_s1_readdata                       (mm_interconnect_0_pio_4_s1_readdata),                       //                                  .readdata
 		.sgdma_rx_csr_address                    (mm_interconnect_0_sgdma_rx_csr_address),                    //                      sgdma_rx_csr.address
 		.sgdma_rx_csr_write                      (mm_interconnect_0_sgdma_rx_csr_write),                      //                                  .write
 		.sgdma_rx_csr_read                       (mm_interconnect_0_sgdma_rx_csr_read),                       //                                  .read
