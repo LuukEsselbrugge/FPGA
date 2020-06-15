@@ -373,8 +373,8 @@ void scanBarcode(){
 		int g = IORD_ALTERA_AVALON_PIO_DATA(0x4010);
 		int b = IORD_ALTERA_AVALON_PIO_DATA(0x4040);
 
-		int grey =  0.2126*r + 0.7152*g + 0.0722*b;
-
+		//int grey =  0.2126*r + 0.7152*g + 0.0722*b;
+		int grey = (r+g+b) / 3;
 		//printf( " R=%d ",grey);
 		usleep(5100);
 		if(grey > 128){

@@ -40,5 +40,5 @@ while True:
        sendeth(product[0][2].encode().lower())
      else:
        print('product not found')
-       sendeth(b'product not found')
+       sendeth(b'bakje bami')
   
