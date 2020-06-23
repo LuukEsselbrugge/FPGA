@@ -373,19 +373,16 @@ void scanBarcode(){
 		int g = IORD_ALTERA_AVALON_PIO_DATA(0x4010);
 		int b = IORD_ALTERA_AVALON_PIO_DATA(0x4040);
 
-		//int grey =  0.2126*r + 0.7152*g + 0.0722*b;
-		int grey = (r+g+b) / 3;
-		//printf( " R=%d ",grey);
+		int grey =  0.2126*r + 0.7152*g + 0.0722*b;
+		//int grey = (r+g+b) / 3;
 		usleep(5100);
 		if(grey > 128){
 			if(firstBit==1){
 				countingBarWidth = 0;
-				//alt_printf("0");
 				charcode[actualCount] = '0';
 				actualCount++;
 			}
 		}else{
-			//alt_printf("1");
 			charcode[actualCount] = '1';
 			actualCount++;
 			if(countingBarWidth == 1){
@@ -394,30 +391,23 @@ void scanBarcode(){
 			firstBit = 1;
 		}
 	}
-	printf("\nWidth: %d",barwidth);
-	alt_printf("\n");
-
 	for(int x = 0; x < 255; x+=barwidth){
 		printf("%c",charcode[x]);
 		tx_char(charcode[x],x);
 	}
 	transmit();
-	//tx_ethernet_isr(tmp);
 }
 int main(void){
 	setup();
-	showText("please scan a barcode");
+	//Show default text on screen
+	showText("please hold barcode over line");
 
+	//Delay to Wait for network connection with PC to start
+	usleep(2000000);
+	//Scan barcode
 	scanBarcode();
-	scanBarcode();
-	scanBarcode();
-	while(1){
-		usleep(200000);
 
-		//tx_ethernet_isr("69");
-
-
-	}
+	while(1){}
 
 	return 0;
 }

@@ -85,7 +85,6 @@ void setup(void)
 	*(tse + 0xA0) = *(tse + 0xA0) | 0x8000;
 
 	while ( *(tse + 0xA0) & 0x8000 );
-	alt_printf("help");
 
 	// Enable read and write transfers, 100 mbit Ethernet operation, and CRC forwarding
 	//*(tse + 2) = *(tse + 2) | 0x00000043;

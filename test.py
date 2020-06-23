@@ -22,17 +22,14 @@ def sendeth(payload, src = b'\x69\x69\x69\x69\x69\xAA', dst = b'\x00\xe0\x4d\x69
   assert(len(eth_type) == 2) # 16-bit ethernet type
   s.send((src + dst + eth_type + payload))
 
-
 while True:
     # Wait on ethernet packet from FPGA
-    print('waiting for a packet')
     FPGA_packet=s.recv(1024)
     #print(FPGA_packet)
     data = FPGA_packet.split(b'\xaaii')
     if len(data) > 1:
      barcode = data[1].decode();
      print('Barcode request: ', barcode)
-
      cursor.execute("SELECT * from Products WHERE Barcode=%s", (barcode,))
      product = cursor.fetchall()
      if len(product) > 0:
@@ -40,5 +37,5 @@ while True:
        sendeth(product[0][2].encode().lower())
      else:
        print('product not found')
-       sendeth(b'bakje bami')
+       sendeth(b'product not found')
   
