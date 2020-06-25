@@ -1,5 +1,6 @@
 
 #include "network.h"
+#include "chartemplate.h"
 
 #include "sys/alt_stdio.h"
 #include "sys/alt_irq.h"
@@ -8,286 +9,14 @@
 #include "io.h"
 #include "altera_avalon_pio_regs.h"
 
-	int charTemplate[27][8] = {
-			{
-			  0x0E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1F,
-			  0x11,
-			  0x11,
-			  0x11
-			},
-			{
-			  0x1E,
-			  0x11,
-			  0x11,
-			  0x1E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1F
-			},
-			{
-			  0x1F,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x1F
-			},
-			{
-			  0x1E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1E
-			},
-			{
-			  0x1F,
-			  0x10,
-			  0x10,
-			  0x1F,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x1F
-			},
-			{
-			  0x1F,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x1E,
-			  0x10,
-			  0x10,
-			  0x10
-			},
-			{
-			  0x0F,
-			  0x11,
-			  0x10,
-			  0x10,
-			  0x13,
-			  0x11,
-			  0x11,
-			  0x0E
-			},
-			{
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1F,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11
-			},
-			{
-			  0x1F,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x1F
-			},
-			{
-			  0x01,
-			  0x01,
-			  0x01,
-			  0x01,
-			  0x01,
-			  0x11,
-			  0x11,
-			  0x1F
-			},
-			{
-			  0x11,
-			  0x12,
-			  0x14,
-			  0x18,
-			  0x18,
-			  0x14,
-			  0x12,
-			  0x11
-			},
-			{
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x10,
-			  0x1F
-			},
-			{
-			  0x11,
-			  0x1B,
-			  0x15,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11
-			},
-			{
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x19,
-			  0x15,
-			  0x13,
-			  0x11,
-			  0x11
-			},
-			{
-			  0x0E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x0E
-			},
-			{
-			  0x0F,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1E,
-			  0x10,
-			  0x10,
-			  0x10
-			},
-			{
-			  0x0E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x0E,
-			  0x01
-			},
-			{
-			  0x0E,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x1F,
-			  0x14,
-			  0x12,
-			  0x11
-			},
-			{
-			  0x0F,
-			  0x10,
-			  0x10,
-			  0x1F,
-			  0x01,
-			  0x01,
-			  0x01,
-			  0x1F
-			},
-			{
-			  0x1F,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04
-			},
-			{
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x0E
-			},
-			{
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x0A,
-			  0x04
-			},
-			{
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x11,
-			  0x15,
-			  0x1B,
-			  0x11
-			},
-			{
-			  0x11,
-			  0x0A,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x0A,
-			  0x11
-			},
-			{
-			  0x11,
-			  0x0A,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04,
-			  0x04
-			},
-			{
-			  0x1F,
-			  0x01,
-			  0x02,
-			  0x04,
-			  0x08,
-			  0x10,
-			  0x10,
-			  0x1F
-			},
-			{
-			  0x00,
-			  0x00,
-			  0x00,
-			  0x00,
-			  0x00,
-			  0x00,
-			  0x00,
-			  0x00
-			}
-
-	};
-
+	//Clear all text on screen
 	void clearText(){
 		for(int x = 0; x < 10000; x+=4){
 			IOWR_ALTERA_AVALON_PIO_DATA(x ,(0<<16)| (0<<8) | 0);
 		}
 	}
 
+	//Method to draw raw char pixels to VGA output
 	void drawChars(int pixels[35][8]){
 			int totalChars = 35;
 			int add = 0;
@@ -319,6 +48,7 @@
 		}
 
 
+//Draw char array argument on screen
 void showText(char *chars){
 	int pixeldata[35][8];
 	for(int x = 0; x < 35; x++){
@@ -358,6 +88,7 @@ void showText(char *chars){
 	drawChars(pixeldata);
 }
 
+//Method for decoding the barcode based on pixel data from VGA
 char charcode[256] = {};
 int barwidth = 0;
 int actualCount = 0;
@@ -367,6 +98,7 @@ void scanBarcode(){
 	barwidth = 0;
 	actualCount = 0;
 
+	//Calculate all pixels based on VGA pixel's
 	for(int x =0; x < 255; x++){
 		IOWR_ALTERA_AVALON_PIO_DATA(0x4020, x);
 		int r = IORD_ALTERA_AVALON_PIO_DATA(0x4000);
@@ -374,7 +106,6 @@ void scanBarcode(){
 		int b = IORD_ALTERA_AVALON_PIO_DATA(0x4040);
 
 		int grey =  0.2126*r + 0.7152*g + 0.0722*b;
-		//int grey = (r+g+b) / 3;
 		usleep(5100);
 		if(grey > 128){
 			if(firstBit==1){
@@ -412,6 +143,7 @@ int main(void){
 	return 0;
 }
 
+//Called when network packet is received from server
 void callback(unsigned char *data){
 	alt_printf( "\nResponds: %s\n", data + 16);
 	showText(data + 16);
