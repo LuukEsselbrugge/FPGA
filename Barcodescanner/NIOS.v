@@ -5,11 +5,6 @@ module NIOS(
 	// KEY
 	input  [0: 0] KEY,
 	
-	// Ethernet 0
-	//output        ENET0_MDC,
-	//inout         ENET0_MDIO,
-	//output        ENET0_RESET_N,
-	
 	// Ethernet 1
 	output        ENET1_GTX_CLK,
 	output        ENET1_MDC,
@@ -37,12 +32,9 @@ module NIOS(
 	wire eth_mode, ena_10;
 
 	assign mdio_in   = ENET1_MDIO;
-	//assign ENET0_MDC  = mdc;
 	assign ENET1_MDC  = mdc;
-	//assign ENET0_MDIO = mdio_oen ? 1'bz : mdio_out;
 	assign ENET1_MDIO = mdio_oen ? 1'bz : mdio_out;
-	
-	//assign ENET0_RESET_N = core_reset_n;
+
 	assign ENET1_RESET_N = core_reset_n;
 	
 	my_pll pll_inst(
@@ -90,11 +82,6 @@ module NIOS(
 		  .videoram_clken(1'b1),
 		  .videoram_write(1'b0),
 		  
-//		  .scanram_address	(scanram_adrr),
-//		  .scanram_writedata	(scanram_data),
-//		  .scanram_chipselect(1'b1),
-//		  .scanram_clken(1'b1),
-//		  .scanram_write(scanram_w),
 		  .pixelr_export(pixelsr),
 		  .pixelg_export(pixelsg),
 		  .pixelb_export(pixelsb),

@@ -44,9 +44,6 @@ BEGIN
 				red <= video_data(7 downto 0);
 				blue <= video_data(15 downto 8);	
 				green <= video_data(23 downto 16);
-				--red <=  "11111111";
-				--blue <= "11111111";
-				--green <= "11111111";
 			END IF;
 			
 			IF(h_count > 200 AND h_count < 202+255 AND v_count > 150 AND v_count < 152) THEN
@@ -59,7 +56,6 @@ BEGIN
 				pixelsr <= redIN;
 				pixelsg <= blueIN;
 				pixelsb <= greenIN;
-				--red <= "11111111";
 			END IF;
 			
 		END IF;

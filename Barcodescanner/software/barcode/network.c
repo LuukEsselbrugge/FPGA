@@ -7,8 +7,6 @@
 #include <unistd.h>
 #include "network.h"
 
-
-
 // Function Prototypes
 void rx_ethernet_isr (void *context);
 

@@ -1,4 +1,4 @@
-import socket
+from socket import *
 import sys
 import mysql.connector as mysql
 
@@ -11,32 +11,31 @@ db = mysql.connect(
 )
 cursor = db.cursor()
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('', 420)
-print('Starting FPGA product server {} port {}'.format(*server_address))
-sock.bind(server_address)
-sock.listen(1)
+interface = "enx00e04d69ac3c"
+s = socket(AF_PACKET, SOCK_RAW, htons(3))
+s.bind((interface, 0))
+
+print('Starting FPGA product server')
+
+def sendeth(payload, src = b'\x69\x69\x69\x69\x69\xAA', dst = b'\x00\xe0\x4d\x69\xac\x3c', eth_type = b'\x69\x69'):
+  assert(len(src) == len(dst) == 6) # 48-bit ethernet addresses
+  assert(len(eth_type) == 2) # 16-bit ethernet type
+  s.send((src + dst + eth_type + payload))
 
 while True:
-    # Wait on TCP connection from FPGA
-    print('waiting for a connection')
-    connection, client_address = sock.accept()
-    try:
-        print('connection from', client_address)
-        while True:
-            data = connection.recv(16)
-            barcode = data.decode('utf-8').rstrip()
-            print('received barcode ' + barcode)
-            cursor.execute(
-                "SELECT * from Products WHERE Barcode=%s", (barcode,))
-            product = cursor.fetchall()
-            if len(product) > 0:
-                print('sending product information for '+product[0][1]+' to FPGA')
-                connection.sendall(product[0][1].encode()+b','+product[0][2].encode())
-            else:
-                print('Product not found')
-                connection.sendall('error,product not found'.encode())
-
-    finally:
-        # Clean up the connection
-        connection.close()
+    # Wait on ethernet packet from FPGA
+    FPGA_packet=s.recv(1024)
+    #print(FPGA_packet)
+    data = FPGA_packet.split(b'\xaaii')
+    if len(data) > 1:
+     barcode = data[1].decode();
+     print('Barcode request: ', barcode)
+     cursor.execute("SELECT * from Products WHERE Barcode=%s", (barcode,))
+     product = cursor.fetchall()
+     if len(product) > 0:
+       print('sending product information for '+product[0][1]+' to FPGA')
+       sendeth(product[0][2].encode().lower())
+     else:
+       print('product not found')
+       sendeth(b'product not found')
+  
